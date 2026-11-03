@@ -1,0 +1,35 @@
+[
+  {
+    "hook": "¿Lo sabes?",
+    "category": "mundial",
+    "difficulty": 1,
+    "prompt_es": "¿Qué selección ganó el Mundial de 2010?",
+    "options_es": ["Países Bajos", "España", "Alemania"],
+    "correct_index": 1,
+    "explanation_es": "España ganó la final 1-0 a Países Bajos en la prórroga.",
+    "cta": "¿Acertaste? Juega el reto de hoy",
+    "source": "[añadir fuente verificada]"
+  },
+  {
+    "hook": "Miércoles de Champions",
+    "category": "champions",
+    "difficulty": 2,
+    "prompt_es": "¿Qué equipo ganó la final de Champions de 2005 en Estambul?",
+    "options_es": ["AC Milan", "Liverpool", "Chelsea"],
+    "correct_index": 1,
+    "explanation_es": "El Liverpool remontó un 3-0 al Milan y ganó en los penaltis.",
+    "cta": "¿Acertaste? Juega el reto de hoy",
+    "source": "[añadir fuente verificada]"
+  },
+  {
+    "hook": "Solo para expertos",
+    "category": "eurocopa",
+    "difficulty": 2,
+    "prompt_es": "¿Qué selección ganó la Eurocopa de 2004?",
+    "options_es": ["Portugal", "Francia", "Grecia"],
+    "correct_index": 2,
+    "explanation_es": "Grecia ganó la final 1-0 a la anfitriona, Portugal.",
+    "cta": "¿Acertaste? Juega el reto de hoy",
+    "source": "[añadir fuente verificada]"
+  }
+]

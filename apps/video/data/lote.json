@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "01-mundial-espana",
+    "hook": "¿Lo sabes?",
+    "hook_accent": "Especial Mundial",
+    "category": "mundial",
+    "category_label": "Mundial",
+    "difficulty": 1,
+    "prompt_es": "¿En qué año ganó España su primer Mundial?",
+    "options_es": ["1982", "2010", "2026"],
+    "correct_index": 1,
+    "explanation_es": "En Sudáfrica 2010: 1-0 a Países Bajos, gol de Iniesta en la prórroga. El segundo llegó en 2026.",
+    "cta": "¿Acertaste? Juega el reto de hoy",
+    "source": "FIFA – Final Sudáfrica 2010 (11/07/2010) y final 2026 (19/07/2026, 1-0 a Argentina). Comprobado el 03/11/2026."
+  },
+  {
+    "slug": "02-champions-goleador",
+    "hook": "Miércoles de",
+    "hook_accent": "Champions",
+    "category": "champions",
+    "category_label": "Champions",
+    "difficulty": 1,
+    "prompt_es": "¿Quién es el máximo goleador de la historia de la Champions?",
+    "options_es": ["Lionel Messi", "Cristiano Ronaldo", "Robert Lewandowski"],
+    "correct_index": 1,
+    "explanation_es": "Cristiano Ronaldo, con 140 goles. Messi es segundo con 129.",
+    "cta": "¿Acertaste? Juega el reto de hoy",
+    "source": "UEFA – Estadísticas históricas de la UEFA Champions League (máximos goleadores). Comprobado el 03/11/2026."
+  },
+  {
+    "slug": "03-balon-de-oro",
+    "hook": "El debate eterno",
+    "hook_accent": "Balón de Oro",
+    "category": "premios",
+    "category_label": "Balón de Oro",
+    "difficulty": 1,
+    "prompt_es": "¿Quién tiene más Balones de Oro?",
+    "options_es": ["Lionel Messi", "Cristiano Ronaldo", "Están empatados"],
+    "correct_index": 0,
+    "explanation_es": "Messi tiene 8 (el último en 2023). Cristiano Ronaldo tiene 5.",
+    "cta": "¿Acertaste? Juega el reto de hoy",
+    "source": "France Football – Palmarés del Ballon d'Or. Comprobado el 03/11/2026 (Balón de Oro 2026: Harry Kane)."
+  },
+  {
+    "slug": "04-fichaje-mas-caro",
+    "hook": "Viernes de",
+    "hook_accent": "Fichajes",
+    "category": "fichajes",
+    "category_label": "Fichajes",
+    "difficulty": 1,
+    "prompt_es": "¿Cuál es el fichaje más caro de la historia?",
+    "options_es": ["Mbappé al PSG", "Neymar al PSG", "João Félix al Atlético"],
+    "correct_index": 1,
+    "explanation_es": "222 millones de euros: el PSG pagó la cláusula de Neymar al Barça en 2017.",
+    "cta": "¿Acertaste? Juega el reto de hoy",
+    "source": "Comunicados oficiales FC Barcelona / PSG (agosto de 2017). Récord vigente comprobado el 03/11/2026 (2.º Mbappé, 180 M€)."
+  },
+  {
+    "slug": "05-leyendas-barca-madrid",
+    "hook": "Domingo de",
+    "hook_accent": "Leyendas",
+    "category": "leyendas",
+    "category_label": "Leyendas",
+    "difficulty": 2,
+    "prompt_es": "¿Cuál de estos jugadores jugó en el Barça y en el Real Madrid?",
+    "options_es": ["Raúl González", "Luís Figo", "Xavi Hernández"],
+    "correct_index": 1,
+    "explanation_es": "Figo pasó del Barça al Madrid en el año 2000. Ronaldo Nazário y Laudrup también jugaron en los dos.",
+    "cta": "¿Acertaste? Juega el reto de hoy",
+    "source": "Historial oficial de plantillas de FC Barcelona y Real Madrid"
+  }
+]
