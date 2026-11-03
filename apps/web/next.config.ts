@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // El paquete compartido se publica como TypeScript sin compilar.
+  transpilePackages: ["@checkthevar/shared"],
   experimental: {
     agentFeedback: true,
   },

@@ -1,0 +1,10 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+# pnpm 10 no ejecuta scripts de instalación salvo los permitidos aquí.
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
+  - supabase
+  - unrs-resolver

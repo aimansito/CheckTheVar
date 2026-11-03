@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CHECK THE VAR
 
-## Getting Started
+Plataforma de quiz y juegos de fútbol: respondes, pulsas **CHECK THE VAR** y descubres si es
+**GOL CONFIRMADO** o **GOL ANULADO**. Las reglas del proyecto están en
+[.claude/CLAUDE.md](.claude/CLAUDE.md).
 
-First, run the development server:
+## Estructura
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+apps/web        Next.js 16 (App Router, Tailwind 4): web + futuras rutas API
+apps/video      Remotion: vídeos de quiz para TikTok
+packages/shared Puntuación, tipos y validaciones (zod) compartidos con el servidor
+supabase/       Migraciones (fuente de verdad de la BD) y seed de desarrollo
+docs/           Guías (vídeos, plan de backend)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Puesta en marcha (en cualquier ordenador)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Requisitos: **Node 20+**, **Git** y **pnpm** (`npm i -g pnpm`). Docker solo si quieres
+Supabase en local.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone https://github.com/aimansito/CheckTheVar.git
+cd CheckTheVar
+pnpm install
+pnpm test            # tests de puntuación y validaciones
+pnpm --filter web dev  # http://localhost:3000
+```
 
-## Learn More
+### Variables de entorno
+Crea `apps/web/.env.local` (no se sube a Git) con:
 
-To learn more about Next.js, take a look at the following resources:
+```
+NEXT_PUBLIC_SUPABASE_URL=...
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=...
+SUPABASE_SECRET_KEY=...        # solo servidor; nunca en componentes de cliente
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Los valores salen de Supabase → *Project Settings → API Keys* (o de `pnpm db:start` en local).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Base de datos
+- **Local (con Docker):** `pnpm db:start` y `pnpm db:reset` (aplica migraciones + `supabase/seed.sql`).
+- **Nube (sin Docker, p. ej. en clase):** ver [docs/plan-backend.md](docs/plan-backend.md#1-conectar-supabase).
 
-## Deploy on Vercel
+## Comandos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Comando | Qué hace |
+|---|---|
+| `pnpm dev` | Arranca todas las apps |
+| `pnpm --filter web dev` | Solo la web |
+| `pnpm test` | Tests (Vitest) |
+| `pnpm typecheck` / `pnpm lint` | Comprobaciones de tipos y estilo |
+| `pnpm db:new <nombre>` | Nueva migración en `supabase/migrations/` |
+| `pnpm db:reset` | Reaplica migraciones y seed en local |
+| `pnpm db:types` | Genera tipos TS de la BD en `packages/shared` |
+| `pnpm --filter video studio` | Editor visual de los vídeos |
+| `pnpm --filter video render` | Renderiza los vídeos de `apps/video/data/lote.json` |
