@@ -1,6 +1,7 @@
 import "server-only";
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
+import { connection } from "next/server";
 
 /**
  * Cliente de Supabase con la sesión del USUARIO (clave publicable + cookies): respeta RLS.
@@ -14,6 +15,8 @@ export async function getSupabaseServer() {
       "Faltan NEXT_PUBLIC_SUPABASE_URL o NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY en apps/web/.env.local",
     );
   }
+  // La sesión es siempre de la petición actual (y supabase-js usa Date.now() para la caducidad).
+  await connection();
   const cookieStore = await cookies();
   return createServerClient(url, key, {
     cookies: {

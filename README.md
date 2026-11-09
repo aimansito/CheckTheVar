@@ -36,7 +36,8 @@ NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=...
 SUPABASE_SECRET_KEY=...        # solo servidor; nunca en componentes de cliente
 ```
 
-Los valores salen de Supabase → *Project Settings → API Keys* (o de `pnpm db:start` en local).
+Los valores salen de Supabase → *Project Settings → API Keys*. En local, salen de
+`pnpm exec supabase status -o env` (`API_URL`, `PUBLISHABLE_KEY` y `SECRET_KEY`).
 
 ### Base de datos
 - **Local (con Docker):** `pnpm db:start` y `pnpm db:reset` (aplica migraciones + `supabase/seed.sql`).
@@ -49,6 +50,7 @@ Los valores salen de Supabase → *Project Settings → API Keys* (o de `pnpm db
 | `pnpm dev` | Arranca todas las apps |
 | `pnpm --filter web dev` | Solo la web |
 | `pnpm test` | Tests (Vitest) |
+| `pnpm --filter web test:e2e [url]` | Prueba de integración del reto diario (con Supabase local y la web arrancadas) |
 | `pnpm typecheck` / `pnpm lint` | Comprobaciones de tipos y estilo |
 | `pnpm db:new <nombre>` | Nueva migración en `supabase/migrations/` |
 | `pnpm db:reset` | Reaplica migraciones y seed en local |

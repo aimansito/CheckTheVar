@@ -33,11 +33,28 @@ export type PublicQuestion = {
   options: { id: string; label: string }[];
   /** Tiempo límite en ms (lo mide el servidor, esto es solo para la cuenta atrás visual). */
   timeLimitMs: number;
+  /** Tiempo ya transcurrido desde que el servidor la mostró (al recargar, el reloj no se reinicia). */
+  elapsedMs: number;
+};
+
+/** Estado de una partida al empezarla o retomarla. */
+export type GameStart = {
+  sessionId: string;
+  mode: GameModeSlug;
+  total: number;
+  status: "started" | "finished" | "abandoned";
+  score: number;
+  correctCount: number;
+  answered: number;
+  /** true si ya existía (el reto diario no se puede reiniciar). */
+  resumed: boolean;
 };
 
 /** Respuesta del servidor DESPUÉS de CHECK THE VAR. */
 export type VarVerdict = {
   position: number;
+  /** Opción elegida por el jugador (letra). */
+  choice: string | null;
   /** GOL CONFIRMADO (true) / GOL ANULADO (false). */
   isCorrect: boolean;
   timedOut: boolean;
@@ -54,9 +71,24 @@ export type VarVerdict = {
 export type SessionSummary = {
   sessionId: string;
   mode: GameModeSlug;
+  status: "started" | "finished" | "abandoned";
   score: number;
   correctCount: number;
   total: number;
   /** Solo invitados: puntos pendientes de guardar al registrarse. */
-  pendingPoints?: number;
+  pendingPoints: number | null;
+  /** Solo registrados: días seguidos jugando el reto diario. */
+  streak: number | null;
 };
+
+/** Códigos de error de la API de partida (el texto para el usuario lo pone la UI). */
+export type GameErrorCode =
+  | "invalid_input"
+  | "account_required"
+  | "mode_not_available"
+  | "session_not_found"
+  | "question_not_shown"
+  | "session_closed"
+  | "invalid_choice"
+  | "no_questions"
+  | "server_error";

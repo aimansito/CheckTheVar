@@ -18,15 +18,19 @@ export const sessionParamsSchema = z.object({
   sessionId: z.uuid(),
 });
 
-/** CHECK THE VAR: una opción (tipo test) o un texto (respuesta libre), nunca ambas. */
+/**
+ * CHECK THE VAR: una opción (tipo test), un texto (respuesta libre) o `timeout`
+ * (se acabó el tiempo sin responder). Exactamente uno de los tres.
+ */
 export const answerSchema = z
   .object({
     position: z.number().int().min(1).max(50),
-    optionId: z.string().min(1).max(64).optional(),
+    optionId: z.string().regex(/^[A-Z]$/).optional(),
     text: z.string().trim().min(1).max(80).optional(),
+    timeout: z.literal(true).optional(),
   })
-  .refine((v) => (v.optionId === undefined) !== (v.text === undefined), {
-    message: "Envía optionId o text, no ambos.",
+  .refine((v) => [v.optionId, v.text, v.timeout].filter((x) => x !== undefined).length === 1, {
+    message: "Envía optionId, text o timeout (solo uno).",
   });
 export type AnswerInput = z.infer<typeof answerSchema>;
 
@@ -40,3 +44,23 @@ export function normalizeAnswer(text: string): string {
     .replace(/\s+/g, " ")
     .trim();
 }
+
+/** Registro con email y contraseña. */
+export const signUpSchema = z.object({
+  username: z
+    .string()
+    .trim()
+    .min(3, "Mínimo 3 caracteres.")
+    .max(24, "Máximo 24 caracteres.")
+    .regex(/^[a-zA-Z0-9_]+$/, "Solo letras, números y guion bajo."),
+  email: z.email("Email no válido.").max(254),
+  password: z.string().min(8, "Mínimo 8 caracteres.").max(72),
+  acceptTerms: z.literal("on", { error: "Tienes que aceptar la política de privacidad." }),
+});
+export type SignUpInput = z.infer<typeof signUpSchema>;
+
+export const signInSchema = z.object({
+  email: z.email("Email no válido.").max(254),
+  password: z.string().min(1, "Escribe tu contraseña.").max(72),
+});
+export type SignInInput = z.infer<typeof signInSchema>;

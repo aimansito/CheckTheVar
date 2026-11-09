@@ -101,12 +101,5 @@ select pg_temp.add_question('eurocopa', 2,
   'Grecia ganó la final 1-0 a la anfitriona, Portugal.',
   array['Portugal', 'Francia', 'Grecia'], 3, 2004, 2004);
 
--- Reto diario de hoy con las preguntas cargadas (en producción lo genera un job).
-insert into daily_challenges (game_mode_id, challenge_date)
-values ((select id from game_modes where slug = 'daily'), current_date);
-
-insert into daily_challenge_questions (challenge_id, question_id, position)
-select (select id from daily_challenges where challenge_date = current_date),
-       q.id, row_number() over (order by q.id)
-from questions q
-where q.status = 'published';
+-- El reto diario lo crea public.ensure_daily_challenge() (al empezar la primera partida
+-- del día o con el job de pg_cron), así que aquí no hace falta insertarlo.
