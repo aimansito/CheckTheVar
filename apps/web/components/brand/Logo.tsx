@@ -1,9 +1,15 @@
 import Link from "next/link";
 
-type Size = "sm" | "md" | "lg";
+type Size = "sm" | "header" | "md" | "lg";
 
 const SIZES: Record<Size, { text: string; screen: string; var: string; gap: string }> = {
   sm: { text: "text-[15px] leading-[0.95]", screen: "w-12 h-8", var: "text-base", gap: "gap-2" },
+  header: {
+    text: "text-[20px] sm:text-[26px] leading-[0.92]",
+    screen: "w-16 h-11 sm:w-[84px] sm:h-14",
+    var: "text-xl sm:text-[28px]",
+    gap: "gap-2.5 sm:gap-3",
+  },
   md: { text: "text-2xl leading-[0.95]", screen: "w-20 h-13", var: "text-2xl", gap: "gap-3" },
   lg: { text: "text-6xl leading-[0.95]", screen: "w-44 h-28", var: "text-6xl", gap: "gap-5" },
 };
@@ -18,7 +24,7 @@ export function Logo({ size = "sm", href = "/" }: { size?: Size; href?: string |
         <br />
         THE
       </span>
-      <VarMonitor className={s.screen} stand={size !== "sm"}>
+      <VarMonitor className={s.screen} stand={size === "md" || size === "lg"}>
         <span className={`font-display text-var text-glow ${s.var}`} aria-hidden>
           VAR
         </span>

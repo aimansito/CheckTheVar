@@ -28,7 +28,13 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es" className={`${anton.variable} ${inter.variable} h-full antialiased`}>
+    // suppressHydrationWarning: algunas extensiones del navegador (p. ej. UI.Vision/Kantu) añaden
+    // atributos a <html> antes de hidratar. Solo afecta a los atributos de esta etiqueta.
+    <html
+      lang="es"
+      className={`${anton.variable} ${inter.variable} h-full antialiased`}
+      suppressHydrationWarning
+    >
       <body className="min-h-full flex flex-col bg-bg text-text font-sans">{children}</body>
     </html>
   );

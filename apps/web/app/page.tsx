@@ -105,7 +105,7 @@ function PhoneMock() {
 
 function Modes() {
   return (
-    <section id="modos" className="scroll-mt-20 border-y border-line/60 bg-surface/40">
+    <section id="modos" className="scroll-mt-24 sm:scroll-mt-28 border-y border-line/60 bg-surface/40">
       <div className="mx-auto max-w-6xl px-4 py-16">
         <h2 className="font-display text-4xl uppercase">Modos de juego</h2>
         <p className="mt-2 text-muted">Partidas cortas para cada día y retos para los que de verdad saben.</p>
@@ -147,7 +147,7 @@ function Modes() {
 
 function Leagues() {
   return (
-    <section id="ligas" className="scroll-mt-20">
+    <section id="ligas" className="scroll-mt-24 sm:scroll-mt-28">
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-20 md:grid-cols-2">
         <div>
           <h2 className="font-display text-4xl uppercase leading-none sm:text-5xl">
@@ -213,7 +213,7 @@ function HowItWorks() {
     { n: "03", title: "¿Gol o anulado?", text: "Suma puntos, haz hat-tricks y sube en la clasificación." },
   ];
   return (
-    <section id="como-funciona" className="scroll-mt-20 border-t border-line/60">
+    <section id="como-funciona" className="scroll-mt-24 sm:scroll-mt-28 border-t border-line/60">
       <div className="mx-auto max-w-6xl px-4 py-16">
         <h2 className="font-display text-4xl uppercase">Cómo funciona</h2>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
