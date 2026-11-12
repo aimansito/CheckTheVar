@@ -111,50 +111,38 @@ export function CookieConsent() {
       aria-describedby="cookies-text"
       // Solo se cierra eligiendo: Escape no vale.
       onCancel={(e) => e.preventDefault()}
-      className="m-auto w-[calc(100%-2rem)] max-w-lg overflow-visible bg-transparent p-0 text-text open:animate-pop backdrop:bg-black/80 backdrop:backdrop-blur-sm"
+      className="m-auto w-[calc(100%-2rem)] max-w-md bg-transparent p-0 text-text open:animate-pop backdrop:bg-black/70 backdrop:backdrop-blur-sm"
     >
-      <div className="rounded-3xl border border-line bg-bezel p-2 shadow-2xl shadow-black/60">
-        <div className="flex items-center justify-between px-3 py-2 text-[11px] font-extrabold uppercase tracking-widest">
-          <span className="flex items-center gap-2 text-ko">
-            <span className="h-2 w-2 rounded-full bg-ko animate-blink" aria-hidden />
-            Revisión VAR
-          </span>
-          <span className="text-muted">Revisando la jugada…</span>
-        </div>
-
-        <div className="scanlines relative overflow-hidden rounded-2xl border border-line bg-screen px-6 py-8 sm:px-8">
-          <span aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-var/10 to-transparent animate-scan" />
-          <p className="relative text-xs font-bold uppercase tracking-wider text-var">Antes de empezar</p>
-          <h2 id="cookies-title" className="relative mt-1 font-display text-4xl uppercase leading-none sm:text-5xl">
-            El VAR necesita <span className="text-var text-glow">tu decisión</span>
-          </h2>
-          <p id="cookies-text" className="relative mt-4 text-sm leading-relaxed text-muted">
-            Queremos ver qué jugadas funcionan y cuáles no para mejorar el juego. Para eso usamos cookies de analítica
-            (Microsoft Clarity), que solo se activan si aceptas. Puedes cambiarlo cuando quieras en «Configurar
-            cookies», al pie de la web.{" "}
-            <Link href="/legal/cookies" className="font-semibold text-text underline">
-              Más información
-            </Link>
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 gap-2 pt-2">
+      <div className="rounded-2xl border border-line bg-surface p-6 sm:p-7">
+        <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-var">
+          <span className="h-1.5 w-1.5 rounded-full bg-var" aria-hidden />
+          Revisión VAR
+        </p>
+        <h2 id="cookies-title" className="mt-3 font-display text-3xl uppercase leading-none">
+          ¿Nos ayudas a mejorar?
+        </h2>
+        <p id="cookies-text" className="mt-3 text-sm leading-relaxed text-muted">
+          Usamos cookies de analítica (Microsoft Clarity) solo si aceptas. Puedes cambiarlo cuando quieras al pie de la
+          web.{" "}
+          <Link href="/legal/cookies" className="text-text underline">
+            Más información
+          </Link>
+        </p>
+        <div className="mt-6 grid grid-cols-2 gap-3">
           <button
             type="button"
             onClick={() => decide("denied")}
-            className="rounded-2xl border border-line bg-surface px-4 py-4 text-left transition hover:border-ko"
+            className="rounded-xl border border-line px-4 py-3 text-sm font-bold transition hover:border-muted"
           >
-            <span className="block font-display text-2xl uppercase leading-none">Rechazar</span>
-            <span className="mt-1 block text-[11px] font-bold uppercase tracking-wider text-muted">Solo las necesarias</span>
+            Rechazar
           </button>
           <button
             ref={accept}
             type="button"
             onClick={() => decide("granted")}
-            className="rounded-2xl bg-var px-4 py-4 text-left text-bg transition hover:brightness-110"
+            className="rounded-xl bg-var px-4 py-3 text-sm font-bold text-bg transition hover:brightness-110"
           >
-            <span className="block font-display text-2xl uppercase leading-none">Aceptar</span>
-            <span className="mt-1 block text-[11px] font-bold uppercase tracking-wider">Ayudar a mejorar</span>
+            Aceptar
           </button>
         </div>
       </div>

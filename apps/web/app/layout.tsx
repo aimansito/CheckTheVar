@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Anton, Inter } from "next/font/google";
+import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/next";
 import { CookieConsent } from "@/components/layout/CookieConsent";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
@@ -55,7 +56,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col bg-bg text-text font-sans">
         {children}
-        <CookieConsent />
+        {/* Suspense: el aviso lee la ruta actual (usePathname), que solo existe en el navegador. */}
+        <Suspense fallback={null}>
+          <CookieConsent />
+        </Suspense>
         {/* Vercel Web Analytics: sin cookies ni datos personales, no necesita consentimiento. */}
         <Analytics />
       </body>
