@@ -5,7 +5,7 @@ import { Game } from "@/components/game/Game";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { currentUserId, viewLeague } from "@/lib/leagues";
 
-export const metadata: Metadata = { title: "Jornada de liga" };
+export const metadata: Metadata = { title: "Jornada de liga", robots: { index: false, follow: false } };
 
 export default function MatchdayPage({ params }: PageProps<"/ligas/[id]/jornada">) {
   return (

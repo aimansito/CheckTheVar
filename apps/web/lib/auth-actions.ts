@@ -71,7 +71,8 @@ export async function signUp(_prev: AuthState, form: FormData): Promise<AuthStat
     password,
     options: {
       data: { username, display_name: username, difficulty },
-      emailRedirectTo: `${origin}/auth/confirm${next ? `?next=${encodeURIComponent(next)}` : ""}`,
+      // Siempre con "?next=": la plantilla de email añade "&token_hash=…" detrás de {{ .RedirectTo }}.
+      emailRedirectTo: `${origin}/auth/confirm?next=${encodeURIComponent(next ?? "/perfil?bienvenida=1")}`,
     },
   });
   if (error) {

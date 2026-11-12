@@ -15,6 +15,7 @@
     "@checkthevar/shared": "workspace:*",
     "@supabase/ssr": "^0.12.7",
     "@supabase/supabase-js": "^2.118.0",
+    "@vercel/analytics": "^2.0.1",
     "next": "16.4.4",
     "react": "19.3.0",
     "react-dom": "19.3.0",

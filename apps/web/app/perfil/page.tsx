@@ -9,7 +9,7 @@ import { getCurrentProfile, getModeStats, getTrophies } from "@/lib/auth";
 import { signOut } from "@/lib/auth-actions";
 import { MODES } from "@/lib/game/modes";
 
-export const metadata: Metadata = { title: "Mi perfil" };
+export const metadata: Metadata = { title: "Mi perfil", robots: { index: false, follow: false } };
 
 export default function ProfilePage({ searchParams }: PageProps<"/perfil">) {
   return (

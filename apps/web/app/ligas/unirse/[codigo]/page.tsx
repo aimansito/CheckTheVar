@@ -5,7 +5,7 @@ import { AuthShell } from "@/components/auth/AuthShell";
 import { JoinLeagueForm } from "@/components/leagues/LeagueForms";
 import { currentUserId, inviteInfo } from "@/lib/leagues";
 
-export const metadata: Metadata = { title: "Invitación a una liga" };
+export const metadata: Metadata = { title: "Invitación a una liga", robots: { index: false, follow: false } };
 
 export default function InvitePage({ params }: PageProps<"/ligas/unirse/[codigo]">) {
   return (

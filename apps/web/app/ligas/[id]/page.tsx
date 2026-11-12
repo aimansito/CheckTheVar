@@ -10,7 +10,7 @@ import { formatWhen, levelLabel } from "@/lib/format";
 import { leaveLeague } from "@/lib/league-actions";
 import { currentUserId, viewLeague, type FixtureRow, type LeagueView } from "@/lib/leagues";
 
-export const metadata: Metadata = { title: "Liga" };
+export const metadata: Metadata = { title: "Liga", robots: { index: false, follow: false } };
 
 export default function LeaguePage({ params, searchParams }: PageProps<"/ligas/[id]">) {
   return (

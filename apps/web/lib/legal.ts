@@ -14,7 +14,7 @@ export const LEGAL_OWNER = {
   site: "checkthevar.app",
 } as const;
 
-export const LEGAL_UPDATED = "11 de noviembre de 2026";
+export const LEGAL_UPDATED = "13 de noviembre de 2026";
 
 export type LegalSection = { title: string; body: (string | string[])[] };
 export type LegalDoc = { title: string; intro: string; sections: LegalSection[] };
@@ -58,7 +58,9 @@ export const LEGAL_DOCS: Record<string, LegalDoc> = {
             "Enviarte los emails imprescindibles del servicio: confirmar la cuenta y recuperar la contraseña. Base legal: la ejecución del servicio.",
           ],
           "Si una cuenta queda marcada por posibles trampas, lo revisa una persona. No tomamos decisiones automáticas que te afecten de forma significativa.",
-          "Hoy no usamos analítica ni publicidad. Si algún día lo hacemos, te pediremos antes tu consentimiento.",
+          "Medir cuántas visitas recibe la web y qué páginas se ven, con Vercel Web Analytics: no usa cookies ni guarda datos que te identifiquen. Base legal: nuestro interés legítimo en mantener y mejorar el servicio (art. 6.1.f RGPD).",
+          "Solo si lo aceptas en el aviso de cookies: entender cómo se usa la web (clics, desplazamiento, grabaciones anónimas de la sesión) con Microsoft Clarity. Base legal: tu consentimiento (art. 6.1.a RGPD), que puedes retirar cuando quieras desde «Configurar cookies», al pie de la web.",
+          "No usamos publicidad. Si algún día la añadimos, te pediremos antes tu consentimiento.",
         ],
       },
       {
@@ -68,7 +70,9 @@ export const LEGAL_DOCS: Record<string, LegalDoc> = {
           "Para prestar el servicio usamos proveedores que tratan datos por cuenta nuestra, con contrato de encargado del tratamiento:",
           [
             "Supabase: base de datos y autenticación, con los datos alojados en la Unión Europea (Fráncfort, Alemania).",
-            "Vercel: alojamiento de la web.",
+            "Vercel: alojamiento de la web y estadísticas de visitas sin cookies.",
+            "Microsoft: analítica de uso con Clarity, solo si la aceptas.",
+            "Resend: envío de los emails de la cuenta.",
             "Upstash: almacenamiento temporal para limitar peticiones, si está activado.",
             "Google y Apple: solo si eliges entrar con ellos.",
           ],
@@ -127,12 +131,20 @@ export const LEGAL_DOCS: Record<string, LegalDoc> = {
             "sb-…-auth-token (propia, técnica, mientras dure la sesión): mantiene tu sesión iniciada. Solo existe si entras con tu cuenta.",
           ],
           "Son cookies técnicas, necesarias para el servicio que nos pides, y por eso no requieren tu consentimiento (art. 22.2 LSSI-CE).",
+          "Además, contamos las visitas con Vercel Web Analytics, que no instala cookies ni identifica a nadie.",
         ],
       },
       {
-        title: "2. Lo que no usamos",
+        title: "2. Cookies de analítica (solo si las aceptas)",
         body: [
-          "No usamos cookies de analítica, publicidad ni redes sociales. Si en el futuro las añadimos, te mostraremos un aviso para que elijas antes de activarlas.",
+          "Si aceptas en el aviso de cookies, usamos Microsoft Clarity para entender cómo se juega y mejorar la web: mapas de clics, desplazamiento y grabaciones anónimas de la sesión. Clarity oculta los textos que escribes.",
+          [
+            "_clck (Microsoft, 1 año): identifica tu navegador de forma anónima entre visitas.",
+            "_clsk (Microsoft, 1 día): agrupa las páginas de una misma visita.",
+            "CLID, MUID y ANONCHK (Microsoft, hasta 1 año): identificador y comprobaciones de Clarity.",
+          ],
+          "Si rechazas, Clarity no se carga. Puedes cambiar tu elección cuando quieras desde «Configurar cookies», al pie de la web.",
+          "No usamos cookies de publicidad ni de redes sociales.",
         ],
       },
       {

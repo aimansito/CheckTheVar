@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Anton, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { CookieConsent } from "@/components/layout/CookieConsent";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const anton = Anton({
@@ -14,12 +17,27 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "CHECK THE VAR — Quiz de fútbol",
+    default: "CHECK THE VAR — Quiz de fútbol diario",
     template: "%s · CHECK THE VAR",
   },
-  description:
-    "Retos diarios, rachas y ligas con tus amigos. Responde, pulsa CHECK THE VAR y descubre si es gol confirmado.",
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  alternates: { canonical: "./" },
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    locale: "es_ES",
+    url: "./",
+    title: "CHECK THE VAR — ¿Sabes de fútbol? Que lo diga el VAR.",
+    description: SITE_DESCRIPTION,
+  },
+  twitter: { card: "summary_large_image" },
+  // Verificación de Google Search Console por etiqueta HTML (opcional si se verifica por DNS).
+  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+    : undefined,
 };
 
 export const viewport: Viewport = {
@@ -35,7 +53,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${anton.variable} ${inter.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-bg text-text font-sans">{children}</body>
+      <body className="min-h-full flex flex-col bg-bg text-text font-sans">
+        {children}
+        <CookieConsent />
+        {/* Vercel Web Analytics: sin cookies ni datos personales, no necesita consentimiento. */}
+        <Analytics />
+      </body>
     </html>
   );
 }

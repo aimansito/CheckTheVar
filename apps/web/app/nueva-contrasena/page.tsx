@@ -6,7 +6,7 @@ import { AuthShell } from "@/components/auth/AuthShell";
 import { NewPasswordForm } from "@/components/auth/AuthForms";
 import { getCurrentProfile } from "@/lib/auth";
 
-export const metadata: Metadata = { title: "Nueva contraseña" };
+export const metadata: Metadata = { title: "Nueva contraseña", robots: { index: false, follow: false } };
 
 export default function NewPasswordPage() {
   return (

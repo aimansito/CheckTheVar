@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/brand/Logo";
+import { CookieSettingsButton } from "@/components/layout/CookieConsent";
 
 export function SiteFooter() {
   return (
@@ -10,6 +11,7 @@ export function SiteFooter() {
           <Link href="/legal/aviso" className="hover:text-text">Aviso legal</Link>
           <Link href="/legal/privacidad" className="hover:text-text">Privacidad</Link>
           <Link href="/legal/cookies" className="hover:text-text">Cookies</Link>
+          <CookieSettingsButton className="hover:text-text" />
           <a href="mailto:privacidad@checkthevar.app" className="hover:text-text">Contacto</a>
         </nav>
         <p>Juego independiente. Sin relación con ligas, clubes ni federaciones.</p>
