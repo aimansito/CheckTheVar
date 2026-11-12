@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useSyncExternalStore } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useSyncExternalStore } from "react";
 import { CLARITY_ID } from "@/lib/site";
 
 /**
- * Aviso de cookies y carga de Microsoft Clarity.
- * Clarity solo se descarga si el usuario acepta. Rechazar es tan fácil como aceptar (criterio AEPD).
+ * Aviso de cookies (ventana de "revisión VAR" que bloquea la página hasta elegir) y carga de
+ * Microsoft Clarity. Clarity solo se descarga si el usuario acepta. Rechazar está al mismo nivel
+ * que aceptar y no impide usar la web (criterio AEPD: nada de muros de cookies).
  * Sin NEXT_PUBLIC_CLARITY_ID no se muestra nada: las cookies técnicas no necesitan aviso.
  */
 type Choice = "granted" | "denied" | null;
@@ -60,8 +62,13 @@ function loadClarity(id: string) {
 }
 
 export function CookieConsent() {
-  // En el servidor devolvemos "denied" para no pintar el aviso y evitar saltos al hidratar.
+  // En el servidor devolvemos "denied" para no pintar nada y evitar saltos al hidratar.
   const choice = useSyncExternalStore(subscribe, read, () => "denied" as Choice);
+  const pathname = usePathname();
+  const dialog = useRef<HTMLDialogElement>(null);
+  const accept = useRef<HTMLButtonElement>(null);
+  // En los textos legales no se bloquea la pantalla: hay que poder leer la política antes de decidir.
+  const show = Boolean(CLARITY_ID) && choice === null && !pathname.startsWith("/legal");
 
   useEffect(() => {
     if (CLARITY_ID && choice === "granted") loadClarity(CLARITY_ID);
@@ -78,36 +85,80 @@ export function CookieConsent() {
     return () => window.removeEventListener(OPEN, reopen);
   }, []);
 
-  if (!CLARITY_ID || choice !== null) return null;
+  // Aparece un instante después de entrar, como la revisión del VAR tras la jugada.
+  useEffect(() => {
+    if (!show) return;
+    const t = window.setTimeout(() => {
+      if (dialog.current && !dialog.current.open) {
+        dialog.current.showModal();
+        accept.current?.focus();
+      }
+    }, 700);
+    return () => window.clearTimeout(t);
+  }, [show]);
+
+  if (!show) return null;
+
+  const decide = (c: "granted" | "denied") => {
+    dialog.current?.close();
+    save(c);
+  };
 
   return (
-    <div role="dialog" aria-label="Aviso de cookies" className="fixed inset-x-0 bottom-0 z-50 p-4">
-      <div className="mx-auto flex max-w-3xl flex-col gap-4 rounded-2xl border border-line bg-surface p-5 shadow-2xl sm:flex-row sm:items-center">
-        <p className="flex-1 text-sm text-muted">
-          Usamos cookies de analítica (Microsoft Clarity) para ver cómo se usa la web y mejorarla. Solo se activan si
-          aceptas.{" "}
-          <Link href="/legal/cookies" className="font-semibold text-text underline">
-            Más información
-          </Link>
-        </p>
-        <div className="flex shrink-0 gap-3">
+    <dialog
+      ref={dialog}
+      aria-labelledby="cookies-title"
+      aria-describedby="cookies-text"
+      // Solo se cierra eligiendo: Escape no vale.
+      onCancel={(e) => e.preventDefault()}
+      className="m-auto w-[calc(100%-2rem)] max-w-lg overflow-visible bg-transparent p-0 text-text open:animate-pop backdrop:bg-black/80 backdrop:backdrop-blur-sm"
+    >
+      <div className="rounded-3xl border border-line bg-bezel p-2 shadow-2xl shadow-black/60">
+        <div className="flex items-center justify-between px-3 py-2 text-[11px] font-extrabold uppercase tracking-widest">
+          <span className="flex items-center gap-2 text-ko">
+            <span className="h-2 w-2 rounded-full bg-ko animate-blink" aria-hidden />
+            Revisión VAR
+          </span>
+          <span className="text-muted">Revisando la jugada…</span>
+        </div>
+
+        <div className="scanlines relative overflow-hidden rounded-2xl border border-line bg-screen px-6 py-8 sm:px-8">
+          <span aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-var/10 to-transparent animate-scan" />
+          <p className="relative text-xs font-bold uppercase tracking-wider text-var">Antes de empezar</p>
+          <h2 id="cookies-title" className="relative mt-1 font-display text-4xl uppercase leading-none sm:text-5xl">
+            El VAR necesita <span className="text-var text-glow">tu decisión</span>
+          </h2>
+          <p id="cookies-text" className="relative mt-4 text-sm leading-relaxed text-muted">
+            Queremos ver qué jugadas funcionan y cuáles no para mejorar el juego. Para eso usamos cookies de analítica
+            (Microsoft Clarity), que solo se activan si aceptas. Puedes cambiarlo cuando quieras en «Configurar
+            cookies», al pie de la web.{" "}
+            <Link href="/legal/cookies" className="font-semibold text-text underline">
+              Más información
+            </Link>
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 gap-2 pt-2">
           <button
             type="button"
-            onClick={() => save("denied")}
-            className="rounded-xl border border-line bg-surface px-5 py-2.5 text-sm font-bold hover:border-var"
+            onClick={() => decide("denied")}
+            className="rounded-2xl border border-line bg-surface px-4 py-4 text-left transition hover:border-ko"
           >
-            Rechazar
+            <span className="block font-display text-2xl uppercase leading-none">Rechazar</span>
+            <span className="mt-1 block text-[11px] font-bold uppercase tracking-wider text-muted">Solo las necesarias</span>
           </button>
           <button
+            ref={accept}
             type="button"
-            onClick={() => save("granted")}
-            className="rounded-xl bg-var px-5 py-2.5 text-sm font-bold text-bg hover:brightness-110"
+            onClick={() => decide("granted")}
+            className="rounded-2xl bg-var px-4 py-4 text-left text-bg transition hover:brightness-110"
           >
-            Aceptar
+            <span className="block font-display text-2xl uppercase leading-none">Aceptar</span>
+            <span className="mt-1 block text-[11px] font-bold uppercase tracking-wider">Ayudar a mejorar</span>
           </button>
         </div>
       </div>
-    </div>
+    </dialog>
   );
 }
 
