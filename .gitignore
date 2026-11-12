@@ -24,3 +24,32 @@ apps/video/out/
 .vercel
 npm-debug.log*
 pnpm-debug.log*
+
+# Configuración local de Claude Code y skills (no se suben)
+.claude/
+skills-lock.json
+
+# Más secretos y credenciales
+*.key
+*.p8
+*.p12
+*.pfx
+*.crt
+*.cer
+*.jks
+*.keystore
+*.mobileprovision
+credentials*.json
+service-account*.json
+google-services.json
+GoogleService-Info.plist
+.npmrc
+.secrets/
+secrets/
+
+# Estado local de Supabase CLI
+supabase/.temp/
+supabase/.branches/
+
+# Logs
+*.log
