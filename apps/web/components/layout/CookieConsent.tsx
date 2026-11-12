@@ -119,14 +119,16 @@ export function CookieConsent() {
           Revisión VAR
         </p>
         <h2 id="cookies-title" className="mt-3 font-display text-3xl uppercase leading-none">
-          ¿Nos ayudas a mejorar?
+          Uso de cookies
         </h2>
         <p id="cookies-text" className="mt-3 text-sm leading-relaxed text-muted">
-          Usamos cookies de analítica (Microsoft Clarity) solo si aceptas. Puedes cambiarlo cuando quieras al pie de la
-          web.{" "}
+          Utilizamos cookies propias, necesarias para el funcionamiento de la web, y cookies de análisis de terceros
+          para conocer cómo se usa y mejorarla. Puedes aceptarlas, rechazarlas o cambiar tu elección en cualquier
+          momento. Más información en nuestra{" "}
           <Link href="/legal/cookies" className="text-text underline">
-            Más información
+            Política de cookies
           </Link>
+          .
         </p>
         <div className="mt-6 grid grid-cols-2 gap-3">
           <button
