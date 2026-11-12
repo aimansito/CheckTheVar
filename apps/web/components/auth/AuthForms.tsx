@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { useActionState } from "react";
-import { signIn, signUp, type AuthState } from "@/lib/auth-actions";
+import { DifficultyPicker } from "@/components/game/DifficultyPicker";
+import { requestPasswordReset, signIn, signInWithProvider, signUp, updatePassword } from "@/lib/auth-actions";
 
 const input =
   "mt-1.5 block w-full rounded-xl border border-line bg-bg px-4 py-3 text-base outline-none transition focus:border-var";
 
-function Field({
+export function Field({
   label,
   name,
   type = "text",
@@ -15,6 +16,7 @@ function Field({
   defaultValue,
   autoComplete,
   hint,
+  placeholder,
 }: {
   label: string;
   name: string;
@@ -23,6 +25,7 @@ function Field({
   defaultValue?: string;
   autoComplete?: string;
   hint?: string;
+  placeholder?: string;
 }) {
   return (
     <label className="block text-sm font-semibold">
@@ -32,6 +35,7 @@ function Field({
         type={type}
         defaultValue={defaultValue}
         autoComplete={autoComplete}
+        placeholder={placeholder}
         aria-invalid={Boolean(error)}
         className={`${input} ${error ? "border-ko" : ""}`}
       />
@@ -44,7 +48,7 @@ function Field({
   );
 }
 
-function Alerts({ state }: { state: AuthState }) {
+export function Alerts({ state }: { state: { error?: string; info?: string } }) {
   return (
     <>
       {state.error && <p className="rounded-xl border border-ko bg-ko-bg px-4 py-3 text-sm">{state.error}</p>}
@@ -53,51 +57,123 @@ function Alerts({ state }: { state: AuthState }) {
   );
 }
 
-const submit =
-  "w-full rounded-xl bg-var py-3.5 font-bold text-bg transition hover:brightness-110 disabled:opacity-60";
+const submit = "w-full rounded-xl bg-var py-3.5 font-bold text-bg transition hover:brightness-110 disabled:opacity-60";
 
-export function SignUpForm() {
+/** Botones de Google / Apple. Solo se muestran los proveedores configurados (NEXT_PUBLIC_OAUTH_PROVIDERS). */
+export function OAuthButtons({ providers }: { providers: string[] }) {
+  if (!providers.length) return null;
+  const names: Record<string, string> = { google: "Google", apple: "Apple" };
+  return (
+    <div className="space-y-2">
+      {providers.map((p) => (
+        <form key={p} action={signInWithProvider}>
+          <input type="hidden" name="provider" value={p} />
+          <button className="w-full rounded-xl border border-line bg-bg py-3 font-bold transition hover:border-var">Continuar con {names[p] ?? p}</button>
+        </form>
+      ))}
+      <div className="flex items-center gap-3 py-1 text-xs uppercase tracking-wider text-muted">
+        <span className="h-px flex-1 bg-line" />o con tu email<span className="h-px flex-1 bg-line" />
+      </div>
+    </div>
+  );
+}
+
+export function SignUpForm({ providers = [], next }: { providers?: string[]; next?: string }) {
   const [state, action, pending] = useActionState(signUp, {});
+  const fe = state.fieldErrors ?? {};
+  return (
+    <div className="space-y-4">
+      <OAuthButtons providers={providers} />
+      <form action={action} className="space-y-4" noValidate>
+        {next && <input type="hidden" name="next" value={next} />}
+        <Alerts state={state} />
+        <Field label="Nombre de jugador" name="username" error={fe.username} defaultValue={state.values?.username} autoComplete="username" hint="Así te verán en las ligas. Letras, números y _" />
+        <Field label="Email" name="email" type="email" error={fe.email} defaultValue={state.values?.email} autoComplete="email" />
+        <Field label="Contraseña" name="password" type="password" error={fe.password} autoComplete="new-password" hint="Mínimo 8 caracteres" />
+        <div>
+          <p className="text-sm font-semibold">¿Cuánto sabes de fútbol?</p>
+          <p className="mb-2 mt-0.5 text-xs text-muted">Lo puedes cambiar antes de cada partida y en tu perfil.</p>
+          <DifficultyPicker name="difficulty" defaultValue="aficionado" />
+          {fe.difficulty && <span className="mt-1 block text-xs text-ko">{fe.difficulty}</span>}
+        </div>
+        <label className="flex items-start gap-3 text-sm text-muted">
+          <input name="acceptTerms" type="checkbox" className="mt-0.5 h-5 w-5 accent-var" />
+          <span>
+            Tengo al menos 14 años y acepto la{" "}
+            <Link href="/legal/privacidad" target="_blank" className="text-text underline">
+              política de privacidad
+            </Link>
+            .{fe.acceptTerms && <span className="block text-xs text-ko">{fe.acceptTerms}</span>}
+          </span>
+        </label>
+        <button disabled={pending} className={submit}>
+          {pending ? "Creando cuenta…" : "Crear cuenta gratis"}
+        </button>
+      </form>
+    </div>
+  );
+}
+
+const LINK_ERRORS: Record<string, string> = {
+  enlace: "El enlace no es válido o ha caducado. Inicia sesión o pide uno nuevo.",
+  proveedor: "No se pudo entrar con ese proveedor. Prueba con tu email o inténtalo más tarde.",
+};
+
+export function SignInForm({ linkError, providers = [], next }: { linkError?: string; providers?: string[]; next?: string }) {
+  const [state, action, pending] = useActionState(signIn, {});
+  const fe = state.fieldErrors ?? {};
+  return (
+    <div className="space-y-4">
+      <OAuthButtons providers={providers} />
+      <form action={action} className="space-y-4" noValidate>
+        {next && <input type="hidden" name="next" value={next} />}
+        {linkError && !state.error && LINK_ERRORS[linkError] && (
+          <p className="rounded-xl border border-ko bg-ko-bg px-4 py-3 text-sm">{LINK_ERRORS[linkError]}</p>
+        )}
+        <Alerts state={state} />
+        <Field label="Email" name="email" type="email" error={fe.email} defaultValue={state.values?.email} autoComplete="email" />
+        <Field label="Contraseña" name="password" type="password" error={fe.password} autoComplete="current-password" />
+        <button disabled={pending} className={submit}>
+          {pending ? "Entrando…" : "Iniciar sesión"}
+        </button>
+        <p className="text-center text-sm">
+          <Link href="/recuperar" className="text-muted underline-offset-2 hover:text-text hover:underline">
+            ¿Has olvidado la contraseña?
+          </Link>
+        </p>
+      </form>
+    </div>
+  );
+}
+
+export function ResetRequestForm() {
+  const [state, action, pending] = useActionState(requestPasswordReset, {});
   const fe = state.fieldErrors ?? {};
   return (
     <form action={action} className="space-y-4" noValidate>
       <Alerts state={state} />
-      <Field label="Nombre de jugador" name="username" error={fe.username} defaultValue={state.values?.username} autoComplete="username" hint="Así te verán en las ligas. Letras, números y _" />
-      <Field label="Email" name="email" type="email" error={fe.email} defaultValue={state.values?.email} autoComplete="email" />
-      <Field label="Contraseña" name="password" type="password" error={fe.password} autoComplete="new-password" hint="Mínimo 8 caracteres" />
-      <label className="flex items-start gap-3 text-sm text-muted">
-        <input name="acceptTerms" type="checkbox" className="mt-0.5 h-5 w-5 accent-var" />
-        <span>
-          Acepto la{" "}
-          <Link href="/legal/privacidad" className="text-text underline">
-            política de privacidad
-          </Link>
-          .
-          {fe.acceptTerms && <span className="block text-xs text-ko">{fe.acceptTerms}</span>}
-        </span>
-      </label>
-      <button disabled={pending} className={submit}>
-        {pending ? "Creando cuenta…" : "Crear cuenta gratis"}
-      </button>
+      {!state.info && (
+        <>
+          <Field label="Email de tu cuenta" name="email" type="email" error={fe.email} defaultValue={state.values?.email} autoComplete="email" />
+          <button disabled={pending} className={submit}>
+            {pending ? "Enviando…" : "Enviarme el enlace"}
+          </button>
+        </>
+      )}
     </form>
   );
 }
 
-export function SignInForm({ linkError }: { linkError?: boolean }) {
-  const [state, action, pending] = useActionState(signIn, {});
+export function NewPasswordForm() {
+  const [state, action, pending] = useActionState(updatePassword, {});
   const fe = state.fieldErrors ?? {};
   return (
     <form action={action} className="space-y-4" noValidate>
-      {linkError && !state.error && (
-        <p className="rounded-xl border border-ko bg-ko-bg px-4 py-3 text-sm">
-          El enlace no es válido o ha caducado. Inicia sesión o vuelve a registrarte.
-        </p>
-      )}
       <Alerts state={state} />
-      <Field label="Email" name="email" type="email" error={fe.email} defaultValue={state.values?.email} autoComplete="email" />
-      <Field label="Contraseña" name="password" type="password" error={fe.password} autoComplete="current-password" />
+      <Field label="Nueva contraseña" name="password" type="password" error={fe.password} autoComplete="new-password" hint="Mínimo 8 caracteres" />
+      <Field label="Repite la contraseña" name="confirm" type="password" error={fe.confirm} autoComplete="new-password" />
       <button disabled={pending} className={submit}>
-        {pending ? "Entrando…" : "Iniciar sesión"}
+        {pending ? "Guardando…" : "Guardar contraseña"}
       </button>
     </form>
   );

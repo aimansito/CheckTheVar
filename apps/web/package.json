@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "next typegen && tsc --noEmit",
-    "test:e2e": "node tests/daily-api.e2e.mjs"
+    "test:e2e": "node tests/daily-api.e2e.mjs",
+    "test:e2e:modos": "node tests/modes-api.e2e.mjs"
   },
   "dependencies": {
     "@checkthevar/shared": "workspace:*",

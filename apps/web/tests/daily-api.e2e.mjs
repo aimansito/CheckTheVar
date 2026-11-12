@@ -34,8 +34,8 @@ const again = await call("POST", "/api/game/start", { mode: "daily" });
 check(again.body.sessionId === sid && again.body.resumed, "repetir start devuelve la MISMA partida (no se reinicia)");
 
 const q1 = await call("GET", `/api/game/${sid}/next`);
-const leaks = JSON.stringify(q1.body).match(/is_?correct|correct/i);
-check(q1.status === 200 && q1.body.options?.length === 3 && !leaks, `next sin respuesta correcta: "${q1.body.prompt}"`);
+const leaks = JSON.stringify(q1.body).match(/is_?correct|isCorrect|correctOption|correctLabel|answer_norm|accepted/i);
+check(q1.status === 200 && q1.body.options?.length >= 3 && !leaks, `next sin respuesta correcta: "${q1.body.prompt}"`);
 
 const q1b = await call("GET", `/api/game/${sid}/next`);
 check(q1b.body.position === 1 && q1b.body.elapsedMs >= q1.body.elapsedMs, "recargar devuelve la misma pregunta sin reiniciar el reloj");

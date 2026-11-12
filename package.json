@@ -15,7 +15,10 @@
     "db:stop": "supabase stop",
     "db:reset": "supabase db reset",
     "db:new": "supabase migration new",
-    "db:types": "supabase gen types typescript --local > packages/shared/src/database.types.ts"
+    "datos:validar": "pnpm --filter @checkthevar/datos validar --",
+    "datos:importar": "pnpm --filter @checkthevar/datos importar --",
+    "datos:preguntas": "pnpm --filter @checkthevar/datos preguntas --",
+    "db:types":"supabase gen types typescript --local > packages/shared/src/database.types.ts"
   },
   "devDependencies": {
     "supabase": "^2",

@@ -40,7 +40,7 @@ describe("normalizeAnswer", () => {
 });
 
 describe("signUpSchema", () => {
-  const ok = { username: "pepe_10", email: "pepe@ejemplo.es", password: "12345678", acceptTerms: "on" };
+  const ok = { username: "pepe_10", email: "pepe@ejemplo.es", password: "12345678", difficulty: "aficionado", acceptTerms: "on" };
   it("acepta un registro válido", () => {
     expect(signUpSchema.safeParse(ok).success).toBe(true);
   });

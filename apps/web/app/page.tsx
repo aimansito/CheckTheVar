@@ -2,14 +2,11 @@ import Link from "next/link";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Corners } from "@/components/brand/Logo";
+import { MODES as GAME_MODES } from "@/lib/game/modes";
 
 const MODES = [
-  { name: "Reto diario", desc: "10 preguntas, iguales para todos. Vuelve mañana y mantén la racha.", free: true, href: "/jugar/diario" },
-  { name: "Grid", desc: "Nombra al jugador que cumpla la fila y la columna.", free: false },
-  { name: "Adivina el jugador", desc: "Pistas que se van destapando. Cuantas menos uses, más puntos.", free: false },
-  { name: "Trayectoria", desc: "Adivina quién es solo por la lista de clubes.", free: false },
-  { name: "Más o menos", desc: "Fichajes, goles y récords: ¿más o menos?", free: false },
-  { name: "Liga por temporada", desc: "Compite cada semana con tus amigos. Jornadas temáticas.", free: false, star: true },
+  ...GAME_MODES.filter((m) => m.available).map((m) => ({ name: m.name, desc: m.tagline, free: m.free, href: `/jugar/${m.path}`, star: false })),
+  { name: "Liga por temporada", desc: "Compite cada semana con tus amigos. Jornadas temáticas.", free: false, href: "/ligas", star: true },
 ];
 
 const STANDINGS = [
@@ -63,7 +60,7 @@ function Hero() {
               Jugar el reto de hoy
             </Link>
             <Link
-              href="/registro"
+              href="/ligas"
               className="rounded-xl border border-line bg-surface px-6 py-3.5 font-bold transition hover:border-var"
             >
               Crear liga
@@ -114,7 +111,7 @@ function Modes() {
             const card = (
               <div
                 className={`h-full rounded-2xl border bg-surface p-5 transition ${
-                  m.href ? "border-var/60 hover:border-var" : "border-line"
+                  m.free ? "border-var/60 hover:border-var" : "border-line hover:border-var"
                 } ${m.star ? "bg-gradient-to-br from-ok-bg/60 to-surface" : ""}`}
               >
                 <div className="flex items-start justify-between gap-3">
@@ -128,7 +125,7 @@ function Modes() {
                   </span>
                 </div>
                 <p className="mt-2 text-sm text-muted">{m.desc}</p>
-                {m.href && <p className="mt-4 text-sm font-bold text-var">Jugar ahora →</p>}
+                {m.href && <p className="mt-4 text-sm font-bold text-var">{m.star ? "Ver ligas →" : m.free ? "Jugar ahora →" : "Jugar con cuenta →"}</p>}
               </div>
             );
             return m.href ? (
@@ -165,7 +162,7 @@ function Leagues() {
             ))}
           </div>
           <Link
-            href="/registro"
+            href="/ligas"
             className="mt-8 inline-block rounded-xl bg-var px-6 py-3.5 font-bold text-bg hover:brightness-110"
           >
             Crear mi liga

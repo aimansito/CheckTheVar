@@ -1,0 +1,4452 @@
+{
+  "_lote": {
+    "nombre": "Lote 3 - Premios individuales",
+    "fecha": "2026-11-10",
+    "requiere": "Cargar después de los lotes anteriores (usa sus refs).",
+    "notas": [
+      "Balón de Oro 1956-2026 con 1º, 2º y 3º (empates: varios con el mismo rank). 2020 no se entregó. 2010-2015 fue el 'FIFA Balón de Oro' (fusión FIFA-France Football); se cuenta dentro del Balón de Oro, como hace su página de Wikipedia.",
+      "FIFA World Player 1991-2009 y The Best FIFA 2016-2025: solo ganadores.",
+      "Bota de Oro: ganadores por temporada (year_label '1989-90'); temporadas compartidas con dos rank 1. No se entregó de 1991-92 a 1995-96.",
+      "'team' = club del jugador cuando ganó el premio, según la tabla de Wikipedia.",
+      "Jugadores nuevos de este lote: ficha mínima (nombre y nacionalidad de la tabla del premio; el resto null). full_name es el nombre tal cual aparece en la tabla, no el nombre completo.",
+      "luis-suarez-miramontes es el español Luis Suárez (Balón de Oro 1960), distinto de luis-suarez (uruguayo)."
+    ]
+  },
+  "countries": [
+    {
+      "code": "GB-WLS",
+      "name_es": "Gales",
+      "name_en": "Wales",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "GB-NIR",
+      "name_es": "Irlanda del Norte",
+      "name_en": "Northern Ireland",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "BG",
+      "name_es": "Bulgaria",
+      "name_en": "Bulgaria",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "LR",
+      "name_es": "Liberia",
+      "name_en": "Liberia",
+      "confederation": "CAF"
+    },
+    {
+      "code": "FI",
+      "name_es": "Finlandia",
+      "name_en": "Finland",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "SN",
+      "name_es": "Senegal",
+      "name_en": "Senegal",
+      "confederation": "CAF"
+    },
+    {
+      "code": "CY",
+      "name_es": "Chipre",
+      "name_en": "Cyprus",
+      "confederation": "UEFA"
+    }
+  ],
+  "teams": [
+    {
+      "ref": "blackpool",
+      "type": "club",
+      "name": "Blackpool FC",
+      "short_name": "Blackpool",
+      "country": "GB-ENG",
+      "founded_year": 1887,
+      "source": "https://en.wikipedia.org/wiki/Blackpool_F.C."
+    },
+    {
+      "ref": "wolverhampton",
+      "type": "club",
+      "name": "Wolverhampton Wanderers",
+      "short_name": "Wolves",
+      "country": "GB-ENG",
+      "founded_year": 1877,
+      "source": "https://en.wikipedia.org/wiki/Wolverhampton_Wanderers_F.C."
+    },
+    {
+      "ref": "rot-weiss-essen",
+      "type": "club",
+      "name": "Rot-Weiss Essen",
+      "short_name": "RW Essen",
+      "country": "DE",
+      "founded_year": 1907,
+      "source": "https://en.wikipedia.org/wiki/Rot-Weiss_Essen"
+    },
+    {
+      "ref": "fulham",
+      "type": "club",
+      "name": "Fulham FC",
+      "short_name": "Fulham",
+      "country": "GB-ENG",
+      "founded_year": 1879,
+      "source": "https://en.wikipedia.org/wiki/Fulham_F.C."
+    },
+    {
+      "ref": "dukla-praga",
+      "type": "club",
+      "name": "Dukla Praga",
+      "short_name": "Dukla",
+      "country": "CZ",
+      "founded_year": 1948,
+      "source": "https://en.wikipedia.org/wiki/FK_Dukla_Prague"
+    },
+    {
+      "ref": "fc-koln",
+      "type": "club",
+      "name": "1. FC Colonia",
+      "short_name": "Colonia",
+      "country": "DE",
+      "founded_year": 1948,
+      "source": "https://en.wikipedia.org/wiki/1._FC_Köln"
+    },
+    {
+      "ref": "dynamo-moscu",
+      "type": "club",
+      "name": "Dinamo de Moscú",
+      "short_name": "Dinamo Moscú",
+      "country": "RU",
+      "founded_year": 1923,
+      "source": "https://en.wikipedia.org/wiki/FC_Dynamo_Moscow"
+    },
+    {
+      "ref": "ferencvaros",
+      "type": "club",
+      "name": "Ferencváros",
+      "short_name": "Ferencváros",
+      "country": "HU",
+      "founded_year": 1899,
+      "source": "https://en.wikipedia.org/wiki/Ferencvárosi_TC"
+    },
+    {
+      "ref": "cagliari",
+      "type": "club",
+      "name": "Cagliari Calcio",
+      "short_name": "Cagliari",
+      "country": "IT",
+      "founded_year": 1920,
+      "source": "https://en.wikipedia.org/wiki/Cagliari_Calcio"
+    },
+    {
+      "ref": "west-ham",
+      "type": "club",
+      "name": "West Ham United",
+      "short_name": "West Ham",
+      "country": "GB-ENG",
+      "founded_year": 1895,
+      "source": "https://en.wikipedia.org/wiki/West_Ham_United_F.C."
+    },
+    {
+      "ref": "legia-warszawa",
+      "type": "club",
+      "name": "Legia de Varsovia",
+      "short_name": "Legia",
+      "country": "PL",
+      "founded_year": 1916,
+      "source": "https://en.wikipedia.org/wiki/Legia_Warsaw"
+    },
+    {
+      "ref": "anderlecht",
+      "type": "club",
+      "name": "RSC Anderlecht",
+      "short_name": "Anderlecht",
+      "country": "BE",
+      "founded_year": 1908,
+      "source": "https://en.wikipedia.org/wiki/R.S.C._Anderlecht"
+    },
+    {
+      "ref": "vejle-bk",
+      "type": "club",
+      "name": "Vejle Boldklub",
+      "short_name": "Vejle",
+      "country": "DK",
+      "founded_year": 1891,
+      "source": "https://en.wikipedia.org/wiki/Vejle_Boldklub"
+    },
+    {
+      "ref": "hellas-verona",
+      "type": "club",
+      "name": "Hellas Verona",
+      "short_name": "Verona",
+      "country": "IT",
+      "founded_year": 1903,
+      "source": "https://en.wikipedia.org/wiki/Hellas_Verona_FC"
+    },
+    {
+      "ref": "newcastle-united",
+      "type": "club",
+      "name": "Newcastle United",
+      "short_name": "Newcastle",
+      "country": "GB-ENG",
+      "founded_year": 1881,
+      "source": "https://en.wikipedia.org/wiki/Newcastle_United_F.C."
+    },
+    {
+      "ref": "cska-sofia",
+      "type": "club",
+      "name": "CSKA Sofía",
+      "short_name": "CSKA Sofía",
+      "country": "BG",
+      "founded_year": 1948,
+      "source": "https://en.wikipedia.org/wiki/PFC_CSKA_Sofia"
+    },
+    {
+      "ref": "dinamo-bucuresti",
+      "type": "club",
+      "name": "Dinamo de Bucarest",
+      "short_name": "Dinamo Bucarest",
+      "country": "RO",
+      "founded_year": 1948,
+      "source": "https://en.wikipedia.org/wiki/FC_Dinamo_București"
+    },
+    {
+      "ref": "omonia-nicosia",
+      "type": "club",
+      "name": "AC Omonia",
+      "short_name": "Omonia",
+      "country": "CY",
+      "founded_year": 1948,
+      "source": "https://en.wikipedia.org/wiki/AC_Omonia"
+    },
+    {
+      "ref": "rapid-wien",
+      "type": "club",
+      "name": "SK Rapid Viena",
+      "short_name": "Rapid Viena",
+      "country": "AT",
+      "founded_year": 1899,
+      "source": "https://en.wikipedia.org/wiki/SK_Rapid_Wien"
+    },
+    {
+      "ref": "az-alkmaar",
+      "type": "club",
+      "name": "AZ Alkmaar",
+      "short_name": "AZ",
+      "country": "NL",
+      "founded_year": 1967,
+      "source": "https://en.wikipedia.org/wiki/AZ_Alkmaar"
+    },
+    {
+      "ref": "lierse",
+      "type": "club",
+      "name": "Lierse SK",
+      "short_name": "Lierse",
+      "country": "BE",
+      "founded_year": 1906,
+      "source": "https://en.wikipedia.org/wiki/Lierse_SK_(1906)"
+    },
+    {
+      "ref": "botev-plovdiv",
+      "type": "club",
+      "name": "Botev Plovdiv",
+      "short_name": "Botev",
+      "country": "BG",
+      "founded_year": 1912,
+      "source": "https://en.wikipedia.org/wiki/PFC_Botev_Plovdiv"
+    },
+    {
+      "ref": "austria-wien",
+      "type": "club",
+      "name": "FK Austria Viena",
+      "short_name": "Austria Viena",
+      "country": "AT",
+      "founded_year": 1911,
+      "source": "https://en.wikipedia.org/wiki/FK_Austria_Wien"
+    },
+    {
+      "ref": "vitesse",
+      "type": "club",
+      "name": "SBV Vitesse",
+      "short_name": "Vitesse",
+      "country": "NL",
+      "founded_year": 1892,
+      "source": "https://en.wikipedia.org/wiki/SBV_Vitesse"
+    },
+    {
+      "ref": "sunderland",
+      "type": "club",
+      "name": "Sunderland AFC",
+      "short_name": "Sunderland",
+      "country": "GB-ENG",
+      "founded_year": 1879,
+      "source": "https://en.wikipedia.org/wiki/Sunderland_A.F.C."
+    }
+  ],
+  "players": [
+    {
+      "ref": "stanley-matthews",
+      "full_name": "Stanley Matthews",
+      "known_as": "Stanley Matthews",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-ENG",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "raymond-kopa",
+      "full_name": "Raymond Kopa",
+      "known_as": "Raymond Kopa",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "FR",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "billy-wright",
+      "full_name": "Billy Wright",
+      "known_as": "Billy Wright",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-ENG",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "duncan-edwards",
+      "full_name": "Duncan Edwards",
+      "known_as": "Duncan Edwards",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-ENG",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "helmut-rahn",
+      "full_name": "Helmut Rahn",
+      "known_as": "Helmut Rahn",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "DE",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "just-fontaine",
+      "full_name": "Just Fontaine",
+      "known_as": "Just Fontaine",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "FR",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "john-charles",
+      "full_name": "John Charles",
+      "known_as": "John Charles",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-WLS",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "luis-suarez-miramontes",
+      "full_name": "Luis Suárez Miramontes",
+      "known_as": "Luis Suárez Miramontes",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "ES",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "uwe-seeler",
+      "full_name": "Uwe Seeler",
+      "known_as": "Uwe Seeler",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "DE",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "omar-sivori",
+      "full_name": "Omar Sívori",
+      "known_as": "Omar Sívori",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "IT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "johnny-haynes",
+      "full_name": "Johnny Haynes",
+      "known_as": "Johnny Haynes",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-ENG",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "josef-masopust",
+      "full_name": "Josef Masopust",
+      "known_as": "Josef Masopust",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "CS",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "karl-heinz-schnellinger",
+      "full_name": "Karl-Heinz Schnellinger",
+      "known_as": "Karl-Heinz Schnellinger",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "DE",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "lev-yashin",
+      "full_name": "Lev Yashin",
+      "known_as": "Lev Yashin",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "SU",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "gianni-rivera",
+      "full_name": "Gianni Rivera",
+      "known_as": "Gianni Rivera",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "IT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "jimmy-greaves",
+      "full_name": "Jimmy Greaves",
+      "known_as": "Jimmy Greaves",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-ENG",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "denis-law",
+      "full_name": "Denis Law",
+      "known_as": "Denis Law",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-SCT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "amancio",
+      "full_name": "Amancio",
+      "known_as": "Amancio",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "ES",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "giacinto-facchetti",
+      "full_name": "Giacinto Facchetti",
+      "known_as": "Giacinto Facchetti",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "IT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "bobby-charlton",
+      "full_name": "Bobby Charlton",
+      "known_as": "Bobby Charlton",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-ENG",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "florian-albert",
+      "full_name": "Flórián Albert",
+      "known_as": "Flórián Albert",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "HU",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "jimmy-johnstone",
+      "full_name": "Jimmy Johnstone",
+      "known_as": "Jimmy Johnstone",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-SCT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "george-best",
+      "full_name": "George Best",
+      "known_as": "George Best",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-NIR",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "dragan-dzajic",
+      "full_name": "Dragan Džajić",
+      "known_as": "Dragan Džajić",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "YU",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "gigi-riva",
+      "full_name": "Gigi Riva",
+      "known_as": "Gigi Riva",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "IT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "gerd-muller",
+      "full_name": "Gerd Müller",
+      "known_as": "Gerd Müller",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "DE",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "bobby-moore",
+      "full_name": "Bobby Moore",
+      "known_as": "Bobby Moore",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-ENG",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "sandro-mazzola",
+      "full_name": "Sandro Mazzola",
+      "known_as": "Sandro Mazzola",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "IT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "gunter-netzer",
+      "full_name": "Günter Netzer",
+      "known_as": "Günter Netzer",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "DE",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "dino-zoff",
+      "full_name": "Dino Zoff",
+      "known_as": "Dino Zoff",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "IT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "kazimierz-deyna",
+      "full_name": "Kazimierz Deyna",
+      "known_as": "Kazimierz Deyna",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "PL",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "oleg-blokhin",
+      "full_name": "Oleg Blokhin",
+      "known_as": "Oleg Blokhin",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "SU",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "rob-rensenbrink",
+      "full_name": "Rob Rensenbrink",
+      "known_as": "Rob Rensenbrink",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "NL",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "ivo-viktor",
+      "full_name": "Ivo Viktor",
+      "known_as": "Ivo Viktor",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "CS",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "allan-simonsen",
+      "full_name": "Allan Simonsen",
+      "known_as": "Allan Simonsen",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "DK",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "kevin-keegan",
+      "full_name": "Kevin Keegan",
+      "known_as": "Kevin Keegan",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-ENG",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "hans-krankl",
+      "full_name": "Hans Krankl",
+      "known_as": "Hans Krankl",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "AT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "karl-heinz-rummenigge",
+      "full_name": "Karl-Heinz Rummenigge",
+      "known_as": "Karl-Heinz Rummenigge",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "DE",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "ruud-krol",
+      "full_name": "Ruud Krol",
+      "known_as": "Ruud Krol",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "NL",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "bernd-schuster",
+      "full_name": "Bernd Schuster",
+      "known_as": "Bernd Schuster",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "DE",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "paul-breitner",
+      "full_name": "Paul Breitner",
+      "known_as": "Paul Breitner",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "DE",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "paolo-rossi",
+      "full_name": "Paolo Rossi",
+      "known_as": "Paolo Rossi",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "IT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "alain-giresse",
+      "full_name": "Alain Giresse",
+      "known_as": "Alain Giresse",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "FR",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "zbigniew-boniek",
+      "full_name": "Zbigniew Boniek",
+      "known_as": "Zbigniew Boniek",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "PL",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "kenny-dalglish",
+      "full_name": "Kenny Dalglish",
+      "known_as": "Kenny Dalglish",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-SCT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "jean-tigana",
+      "full_name": "Jean Tigana",
+      "known_as": "Jean Tigana",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "FR",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "preben-elkjaer",
+      "full_name": "Preben Elkjær",
+      "known_as": "Preben Elkjær",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "DK",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "igor-belanov",
+      "full_name": "Igor Belanov",
+      "known_as": "Igor Belanov",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "SU",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "gary-lineker",
+      "full_name": "Gary Lineker",
+      "known_as": "Gary Lineker",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-ENG",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "emilio-butragueno",
+      "full_name": "Emilio Butragueño",
+      "known_as": "Emilio Butragueño",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "ES",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "ruud-gullit",
+      "full_name": "Ruud Gullit",
+      "known_as": "Ruud Gullit",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "NL",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "paulo-futre",
+      "full_name": "Paulo Futre",
+      "known_as": "Paulo Futre",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "PT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "frank-rijkaard",
+      "full_name": "Frank Rijkaard",
+      "known_as": "Frank Rijkaard",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "NL",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "franco-baresi",
+      "full_name": "Franco Baresi",
+      "known_as": "Franco Baresi",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "IT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "lothar-matthaus",
+      "full_name": "Lothar Matthäus",
+      "known_as": "Lothar Matthäus",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "DE",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "salvatore-schillaci",
+      "full_name": "Salvatore Schillaci",
+      "known_as": "Salvatore Schillaci",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "IT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "andreas-brehme",
+      "full_name": "Andreas Brehme",
+      "known_as": "Andreas Brehme",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "DE",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "jean-pierre-papin",
+      "full_name": "Jean-Pierre Papin",
+      "known_as": "Jean-Pierre Papin",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "FR",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "dejan-savicevic",
+      "full_name": "Dejan Savićević",
+      "known_as": "Dejan Savićević",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "YU",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "darko-pancev",
+      "full_name": "Darko Pančev",
+      "known_as": "Darko Pančev",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "YU",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "hristo-stoichkov",
+      "full_name": "Hristo Stoichkov",
+      "known_as": "Hristo Stoichkov",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "BG",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "dennis-bergkamp",
+      "full_name": "Dennis Bergkamp",
+      "known_as": "Dennis Bergkamp",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "NL",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "roberto-baggio",
+      "full_name": "Roberto Baggio",
+      "known_as": "Roberto Baggio",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "IT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "eric-cantona",
+      "full_name": "Eric Cantona",
+      "known_as": "Eric Cantona",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "FR",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "george-weah",
+      "full_name": "George Weah",
+      "known_as": "George Weah",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "LR",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "jurgen-klinsmann",
+      "full_name": "Jürgen Klinsmann",
+      "known_as": "Jürgen Klinsmann",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "DE",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "jari-litmanen",
+      "full_name": "Jari Litmanen",
+      "known_as": "Jari Litmanen",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "FI",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "matthias-sammer",
+      "full_name": "Matthias Sammer",
+      "known_as": "Matthias Sammer",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "DE",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "alan-shearer",
+      "full_name": "Alan Shearer",
+      "known_as": "Alan Shearer",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-ENG",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "predrag-mijatovic",
+      "full_name": "Predrag Mijatović",
+      "known_as": "Predrag Mijatović",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "YU",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "davor-suker",
+      "full_name": "Davor Šuker",
+      "known_as": "Davor Šuker",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "HR",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "michael-owen",
+      "full_name": "Michael Owen",
+      "known_as": "Michael Owen",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-ENG",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "oliver-kahn",
+      "full_name": "Oliver Kahn",
+      "known_as": "Oliver Kahn",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "DE",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "roberto-carlos",
+      "full_name": "Roberto Carlos",
+      "known_as": "Roberto Carlos",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "BR",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "pavel-nedved",
+      "full_name": "Pavel Nedvěd",
+      "known_as": "Pavel Nedvěd",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "CZ",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "deco",
+      "full_name": "Deco",
+      "known_as": "Deco",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "PT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "frank-lampard",
+      "full_name": "Frank Lampard",
+      "known_as": "Frank Lampard",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-ENG",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "steven-gerrard",
+      "full_name": "Steven Gerrard",
+      "known_as": "Steven Gerrard",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-ENG",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "fabio-cannavaro",
+      "full_name": "Fabio Cannavaro",
+      "known_as": "Fabio Cannavaro",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "IT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "franck-ribery",
+      "full_name": "Franck Ribéry",
+      "known_as": "Franck Ribéry",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "FR",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "virgil-van-dijk",
+      "full_name": "Virgil van Dijk",
+      "known_as": "Virgil van Dijk",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "NL",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "jorginho",
+      "full_name": "Jorginho",
+      "known_as": "Jorginho",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "IT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "sadio-mane",
+      "full_name": "Sadio Mané",
+      "known_as": "Sadio Mané",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "SN",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "ousmane-dembele",
+      "full_name": "Ousmane Dembélé",
+      "known_as": "Ousmane Dembélé",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "FR",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "vitinha",
+      "full_name": "Vitinha",
+      "known_as": "Vitinha",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "PT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "romario",
+      "full_name": "Romário",
+      "known_as": "Romário",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "BR",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "ref": "petar-zhekov",
+      "full_name": "Petar Zhekov",
+      "known_as": "Petar Zhekov",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "BG",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "josip-skoblar",
+      "full_name": "Josip Skoblar",
+      "known_as": "Josip Skoblar",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "YU",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "hector-yazalde",
+      "full_name": "Héctor Yazalde",
+      "known_as": "Héctor Yazalde",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "AR",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "dudu-georgescu",
+      "full_name": "Dudu Georgescu",
+      "known_as": "Dudu Georgescu",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "RO",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "sotiris-kaiafas",
+      "full_name": "Sotiris Kaiafas",
+      "known_as": "Sotiris Kaiafas",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "CY",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "kees-kist",
+      "full_name": "Kees Kist",
+      "known_as": "Kees Kist",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "NL",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "erwin-vandenbergh",
+      "full_name": "Erwin Vandenbergh",
+      "known_as": "Erwin Vandenbergh",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "BE",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "georgi-slavkov",
+      "full_name": "Georgi Slavkov",
+      "known_as": "Georgi Slavkov",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "BG",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "wim-kieft",
+      "full_name": "Wim Kieft",
+      "known_as": "Wim Kieft",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "NL",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "fernando-gomes",
+      "full_name": "Fernando Gomes",
+      "known_as": "Fernando Gomes",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "PT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "ian-rush",
+      "full_name": "Ian Rush",
+      "known_as": "Ian Rush",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-WLS",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "toni-polster",
+      "full_name": "Toni Polster",
+      "known_as": "Toni Polster",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "AT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "tanju-colak",
+      "full_name": "Tanju Çolak",
+      "known_as": "Tanju Çolak",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "TR",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "dorin-mateut",
+      "full_name": "Dorin Mateuț",
+      "known_as": "Dorin Mateuț",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "RO",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "hugo-sanchez",
+      "full_name": "Hugo Sánchez",
+      "known_as": "Hugo Sánchez",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "MX",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "nikos-machlas",
+      "full_name": "Nikos Machlas",
+      "known_as": "Nikos Machlas",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GR",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "mario-jardel",
+      "full_name": "Mário Jardel",
+      "known_as": "Mário Jardel",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "BR",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "kevin-phillips",
+      "full_name": "Kevin Phillips",
+      "known_as": "Kevin Phillips",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "GB-ENG",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "henrik-larsson",
+      "full_name": "Henrik Larsson",
+      "known_as": "Henrik Larsson",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "SE",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "roy-makaay",
+      "full_name": "Roy Makaay",
+      "known_as": "Roy Makaay",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "NL",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "diego-forlan",
+      "full_name": "Diego Forlán",
+      "known_as": "Diego Forlán",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "UY",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "luca-toni",
+      "full_name": "Luca Toni",
+      "known_as": "Luca Toni",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "IT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "ref": "ciro-immobile",
+      "full_name": "Ciro Immobile",
+      "known_as": "Ciro Immobile",
+      "aliases": [],
+      "birth_date": null,
+      "death_date": null,
+      "nationality": "IT",
+      "second_nationality": null,
+      "position": null,
+      "height_cm": null,
+      "foot": null,
+      "retired": null,
+      "popularity": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    }
+  ],
+  "awards": [
+    {
+      "ref": "balon-de-oro",
+      "name": "Balón de Oro",
+      "scope": "individual",
+      "organizer": "France Football",
+      "competition": null,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "ref": "fifa-world-player",
+      "name": "Jugador Mundial de la FIFA",
+      "scope": "individual",
+      "organizer": "FIFA",
+      "competition": null,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "ref": "the-best-fifa",
+      "name": "The Best FIFA (jugador masculino)",
+      "scope": "individual",
+      "organizer": "FIFA",
+      "competition": null,
+      "source": "https://en.wikipedia.org/wiki/The_Best_FIFA_Men%27s_Player"
+    },
+    {
+      "ref": "bota-de-oro",
+      "name": "Bota de Oro europea",
+      "scope": "individual",
+      "organizer": "European Sports Media",
+      "competition": null,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    }
+  ],
+  "award_winners": [
+    {
+      "award": "balon-de-oro",
+      "year_label": "1956",
+      "player": "stanley-matthews",
+      "team": "blackpool",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1956",
+      "player": "alfredo-di-stefano",
+      "team": "real-madrid",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1956",
+      "player": "raymond-kopa",
+      "team": "real-madrid",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1957",
+      "player": "alfredo-di-stefano",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1957",
+      "player": "billy-wright",
+      "team": "wolverhampton",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1957",
+      "player": "duncan-edwards",
+      "team": "manchester-united",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1957",
+      "player": "raymond-kopa",
+      "team": "real-madrid",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1958",
+      "player": "raymond-kopa",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1958",
+      "player": "helmut-rahn",
+      "team": "rot-weiss-essen",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1958",
+      "player": "just-fontaine",
+      "team": "stade-de-reims",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1959",
+      "player": "alfredo-di-stefano",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1959",
+      "player": "raymond-kopa",
+      "team": "stade-de-reims",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1959",
+      "player": "john-charles",
+      "team": "juventus",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1960",
+      "player": "luis-suarez-miramontes",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1960",
+      "player": "ferenc-puskas",
+      "team": "real-madrid",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1960",
+      "player": "uwe-seeler",
+      "team": "hamburger-sv",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1961",
+      "player": "omar-sivori",
+      "team": "juventus",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1961",
+      "player": "luis-suarez-miramontes",
+      "team": "inter-milan",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1961",
+      "player": "johnny-haynes",
+      "team": "fulham",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1962",
+      "player": "josef-masopust",
+      "team": "dukla-praga",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1962",
+      "player": "eusebio",
+      "team": "sl-benfica",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1962",
+      "player": "karl-heinz-schnellinger",
+      "team": "fc-koln",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1963",
+      "player": "lev-yashin",
+      "team": "dynamo-moscu",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1963",
+      "player": "gianni-rivera",
+      "team": "ac-milan",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1963",
+      "player": "jimmy-greaves",
+      "team": "tottenham-hotspur",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1964",
+      "player": "denis-law",
+      "team": "manchester-united",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1964",
+      "player": "luis-suarez-miramontes",
+      "team": "inter-milan",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1964",
+      "player": "amancio",
+      "team": "real-madrid",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1965",
+      "player": "eusebio",
+      "team": "sl-benfica",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1965",
+      "player": "giacinto-facchetti",
+      "team": "inter-milan",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1965",
+      "player": "luis-suarez-miramontes",
+      "team": "inter-milan",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1966",
+      "player": "bobby-charlton",
+      "team": "manchester-united",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1966",
+      "player": "eusebio",
+      "team": "sl-benfica",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1966",
+      "player": "franz-beckenbauer",
+      "team": "bayern-munich",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1967",
+      "player": "florian-albert",
+      "team": "ferencvaros",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1967",
+      "player": "bobby-charlton",
+      "team": "manchester-united",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1967",
+      "player": "jimmy-johnstone",
+      "team": "celtic-fc",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1968",
+      "player": "george-best",
+      "team": "manchester-united",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1968",
+      "player": "bobby-charlton",
+      "team": "manchester-united",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1968",
+      "player": "dragan-dzajic",
+      "team": "estrella-roja",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1969",
+      "player": "gianni-rivera",
+      "team": "ac-milan",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1969",
+      "player": "gigi-riva",
+      "team": "cagliari",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1969",
+      "player": "gerd-muller",
+      "team": "bayern-munich",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1970",
+      "player": "gerd-muller",
+      "team": "bayern-munich",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1970",
+      "player": "bobby-moore",
+      "team": "west-ham",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1970",
+      "player": "gigi-riva",
+      "team": "cagliari",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1971",
+      "player": "johan-cruyff",
+      "team": "ajax",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1971",
+      "player": "sandro-mazzola",
+      "team": "inter-milan",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1971",
+      "player": "george-best",
+      "team": "manchester-united",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1972",
+      "player": "franz-beckenbauer",
+      "team": "bayern-munich",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1972",
+      "player": "gerd-muller",
+      "team": "bayern-munich",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1972",
+      "player": "gunter-netzer",
+      "team": "borussia-monchengladbach",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1973",
+      "player": "johan-cruyff",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1973",
+      "player": "dino-zoff",
+      "team": "juventus",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1973",
+      "player": "gerd-muller",
+      "team": "bayern-munich",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1974",
+      "player": "johan-cruyff",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1974",
+      "player": "franz-beckenbauer",
+      "team": "bayern-munich",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1974",
+      "player": "kazimierz-deyna",
+      "team": "legia-warszawa",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1975",
+      "player": "oleg-blokhin",
+      "team": "dynamo-kyiv",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1975",
+      "player": "franz-beckenbauer",
+      "team": "bayern-munich",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1975",
+      "player": "johan-cruyff",
+      "team": "fc-barcelona",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1976",
+      "player": "franz-beckenbauer",
+      "team": "bayern-munich",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1976",
+      "player": "rob-rensenbrink",
+      "team": "anderlecht",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1976",
+      "player": "ivo-viktor",
+      "team": "dukla-praga",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1977",
+      "player": "allan-simonsen",
+      "team": "borussia-monchengladbach",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1977",
+      "player": "kevin-keegan",
+      "team": "hamburger-sv",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1977",
+      "player": "michel-platini",
+      "team": "as-nancy",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1978",
+      "player": "kevin-keegan",
+      "team": "hamburger-sv",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1978",
+      "player": "hans-krankl",
+      "team": "fc-barcelona",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1978",
+      "player": "rob-rensenbrink",
+      "team": "anderlecht",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1979",
+      "player": "kevin-keegan",
+      "team": "hamburger-sv",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1979",
+      "player": "karl-heinz-rummenigge",
+      "team": "bayern-munich",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1979",
+      "player": "ruud-krol",
+      "team": "ajax",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1980",
+      "player": "karl-heinz-rummenigge",
+      "team": "bayern-munich",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1980",
+      "player": "bernd-schuster",
+      "team": "fc-barcelona",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1980",
+      "player": "michel-platini",
+      "team": "as-saint-etienne",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1981",
+      "player": "karl-heinz-rummenigge",
+      "team": "bayern-munich",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1981",
+      "player": "paul-breitner",
+      "team": "bayern-munich",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1981",
+      "player": "bernd-schuster",
+      "team": "fc-barcelona",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1982",
+      "player": "paolo-rossi",
+      "team": "juventus",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1982",
+      "player": "alain-giresse",
+      "team": "girondins-bordeaux",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1982",
+      "player": "zbigniew-boniek",
+      "team": "juventus",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1983",
+      "player": "michel-platini",
+      "team": "juventus",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1983",
+      "player": "kenny-dalglish",
+      "team": "liverpool-fc",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1983",
+      "player": "allan-simonsen",
+      "team": "vejle-bk",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1984",
+      "player": "michel-platini",
+      "team": "juventus",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1984",
+      "player": "jean-tigana",
+      "team": "girondins-bordeaux",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1984",
+      "player": "preben-elkjaer",
+      "team": "hellas-verona",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1985",
+      "player": "michel-platini",
+      "team": "juventus",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1985",
+      "player": "preben-elkjaer",
+      "team": "hellas-verona",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1985",
+      "player": "bernd-schuster",
+      "team": "fc-barcelona",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1986",
+      "player": "igor-belanov",
+      "team": "dynamo-kyiv",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1986",
+      "player": "gary-lineker",
+      "team": "fc-barcelona",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1986",
+      "player": "emilio-butragueno",
+      "team": "real-madrid",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1987",
+      "player": "ruud-gullit",
+      "team": "ac-milan",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1987",
+      "player": "paulo-futre",
+      "team": "atletico-madrid",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1987",
+      "player": "emilio-butragueno",
+      "team": "real-madrid",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1988",
+      "player": "marco-van-basten",
+      "team": "ac-milan",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1988",
+      "player": "ruud-gullit",
+      "team": "ac-milan",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1988",
+      "player": "frank-rijkaard",
+      "team": "ac-milan",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1989",
+      "player": "marco-van-basten",
+      "team": "ac-milan",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1989",
+      "player": "franco-baresi",
+      "team": "ac-milan",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1989",
+      "player": "frank-rijkaard",
+      "team": "ac-milan",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1990",
+      "player": "lothar-matthaus",
+      "team": "inter-milan",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1990",
+      "player": "salvatore-schillaci",
+      "team": "juventus",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1990",
+      "player": "andreas-brehme",
+      "team": "inter-milan",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1991",
+      "player": "jean-pierre-papin",
+      "team": "olympique-marseille",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1991",
+      "player": "dejan-savicevic",
+      "team": "estrella-roja",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1991",
+      "player": "darko-pancev",
+      "team": "estrella-roja",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1991",
+      "player": "lothar-matthaus",
+      "team": "inter-milan",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1992",
+      "player": "marco-van-basten",
+      "team": "ac-milan",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1992",
+      "player": "hristo-stoichkov",
+      "team": "fc-barcelona",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1992",
+      "player": "dennis-bergkamp",
+      "team": "ajax",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1993",
+      "player": "roberto-baggio",
+      "team": "juventus",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1993",
+      "player": "dennis-bergkamp",
+      "team": "inter-milan",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1993",
+      "player": "eric-cantona",
+      "team": "manchester-united",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1994",
+      "player": "hristo-stoichkov",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1994",
+      "player": "roberto-baggio",
+      "team": "juventus",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1994",
+      "player": "paolo-maldini",
+      "team": "ac-milan",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1995",
+      "player": "george-weah",
+      "team": "ac-milan",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1995",
+      "player": "jurgen-klinsmann",
+      "team": "bayern-munich",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1995",
+      "player": "jari-litmanen",
+      "team": "ajax",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1996",
+      "player": "matthias-sammer",
+      "team": "borussia-dortmund",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1996",
+      "player": "ronaldo-nazario",
+      "team": "fc-barcelona",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1996",
+      "player": "alan-shearer",
+      "team": "newcastle-united",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1997",
+      "player": "ronaldo-nazario",
+      "team": "inter-milan",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1997",
+      "player": "predrag-mijatovic",
+      "team": "real-madrid",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1997",
+      "player": "zinedine-zidane",
+      "team": "juventus",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1998",
+      "player": "zinedine-zidane",
+      "team": "juventus",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1998",
+      "player": "davor-suker",
+      "team": "real-madrid",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1998",
+      "player": "ronaldo-nazario",
+      "team": "inter-milan",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1999",
+      "player": "rivaldo",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1999",
+      "player": "david-beckham",
+      "team": "manchester-united",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "1999",
+      "player": "andriy-shevchenko",
+      "team": "ac-milan",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2000",
+      "player": "luis-figo",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2000",
+      "player": "zinedine-zidane",
+      "team": "juventus",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2000",
+      "player": "andriy-shevchenko",
+      "team": "ac-milan",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2001",
+      "player": "michael-owen",
+      "team": "liverpool-fc",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2001",
+      "player": "raul-gonzalez",
+      "team": "real-madrid",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2001",
+      "player": "oliver-kahn",
+      "team": "bayern-munich",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2002",
+      "player": "ronaldo-nazario",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2002",
+      "player": "roberto-carlos",
+      "team": "real-madrid",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2002",
+      "player": "oliver-kahn",
+      "team": "bayern-munich",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2003",
+      "player": "pavel-nedved",
+      "team": "juventus",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2003",
+      "player": "thierry-henry",
+      "team": "arsenal-fc",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2003",
+      "player": "paolo-maldini",
+      "team": "ac-milan",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2004",
+      "player": "andriy-shevchenko",
+      "team": "ac-milan",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2004",
+      "player": "deco",
+      "team": "fc-barcelona",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2004",
+      "player": "ronaldinho",
+      "team": "fc-barcelona",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2005",
+      "player": "ronaldinho",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2005",
+      "player": "frank-lampard",
+      "team": "chelsea-fc",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2005",
+      "player": "steven-gerrard",
+      "team": "liverpool-fc",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2006",
+      "player": "fabio-cannavaro",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2006",
+      "player": "gianluigi-buffon",
+      "team": "juventus",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2006",
+      "player": "thierry-henry",
+      "team": "arsenal-fc",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2007",
+      "player": "kaka",
+      "team": "ac-milan",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2007",
+      "player": "cristiano-ronaldo",
+      "team": "manchester-united",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2007",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2008",
+      "player": "cristiano-ronaldo",
+      "team": "manchester-united",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2008",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2008",
+      "player": "fernando-torres",
+      "team": "liverpool-fc",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2009",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2009",
+      "player": "cristiano-ronaldo",
+      "team": "real-madrid",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2009",
+      "player": "xavi-hernandez",
+      "team": "fc-barcelona",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2010",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2010",
+      "player": "andres-iniesta",
+      "team": "fc-barcelona",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2010",
+      "player": "xavi-hernandez",
+      "team": "fc-barcelona",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2011",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2011",
+      "player": "cristiano-ronaldo",
+      "team": "real-madrid",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2011",
+      "player": "xavi-hernandez",
+      "team": "fc-barcelona",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2012",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2012",
+      "player": "cristiano-ronaldo",
+      "team": "real-madrid",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2012",
+      "player": "andres-iniesta",
+      "team": "fc-barcelona",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2013",
+      "player": "cristiano-ronaldo",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2013",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2013",
+      "player": "franck-ribery",
+      "team": "bayern-munich",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2014",
+      "player": "cristiano-ronaldo",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2014",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2014",
+      "player": "manuel-neuer",
+      "team": "bayern-munich",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2015",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2015",
+      "player": "cristiano-ronaldo",
+      "team": "real-madrid",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2015",
+      "player": "neymar",
+      "team": "fc-barcelona",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2016",
+      "player": "cristiano-ronaldo",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2016",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2016",
+      "player": "antoine-griezmann",
+      "team": "atletico-madrid",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2017",
+      "player": "cristiano-ronaldo",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2017",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2017",
+      "player": "neymar",
+      "team": "paris-saint-germain",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2018",
+      "player": "luka-modric",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2018",
+      "player": "cristiano-ronaldo",
+      "team": "juventus",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2018",
+      "player": "antoine-griezmann",
+      "team": "atletico-madrid",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2019",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2019",
+      "player": "virgil-van-dijk",
+      "team": "liverpool-fc",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2019",
+      "player": "cristiano-ronaldo",
+      "team": "juventus",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2021",
+      "player": "lionel-messi",
+      "team": "paris-saint-germain",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2021",
+      "player": "robert-lewandowski",
+      "team": "bayern-munich",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2021",
+      "player": "jorginho",
+      "team": "chelsea-fc",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2022",
+      "player": "karim-benzema",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2022",
+      "player": "sadio-mane",
+      "team": "bayern-munich",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2022",
+      "player": "kevin-de-bruyne",
+      "team": "manchester-city",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2023",
+      "player": "lionel-messi",
+      "team": "inter-miami",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2023",
+      "player": "erling-haaland",
+      "team": "manchester-city",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2023",
+      "player": "kylian-mbappe",
+      "team": "paris-saint-germain",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2024",
+      "player": "rodri",
+      "team": "manchester-city",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2024",
+      "player": "vinicius-junior",
+      "team": "real-madrid",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2024",
+      "player": "jude-bellingham",
+      "team": "real-madrid",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2025",
+      "player": "ousmane-dembele",
+      "team": "paris-saint-germain",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2025",
+      "player": "lamine-yamal",
+      "team": "fc-barcelona",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2025",
+      "player": "vitinha",
+      "team": "paris-saint-germain",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2026",
+      "player": "harry-kane",
+      "team": "bayern-munich",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2026",
+      "player": "kylian-mbappe",
+      "team": "real-madrid",
+      "rank": 2,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "balon-de-oro",
+      "year_label": "2026",
+      "player": "lamine-yamal",
+      "team": "fc-barcelona",
+      "rank": 3,
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "award": "fifa-world-player",
+      "year_label": "1991",
+      "player": "lothar-matthaus",
+      "team": "inter-milan",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "award": "fifa-world-player",
+      "year_label": "1992",
+      "player": "marco-van-basten",
+      "team": "ac-milan",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "award": "fifa-world-player",
+      "year_label": "1993",
+      "player": "roberto-baggio",
+      "team": "juventus",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "award": "fifa-world-player",
+      "year_label": "1994",
+      "player": "romario",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "award": "fifa-world-player",
+      "year_label": "1995",
+      "player": "george-weah",
+      "team": "ac-milan",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "award": "fifa-world-player",
+      "year_label": "1996",
+      "player": "ronaldo-nazario",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "award": "fifa-world-player",
+      "year_label": "1997",
+      "player": "ronaldo-nazario",
+      "team": "inter-milan",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "award": "fifa-world-player",
+      "year_label": "1998",
+      "player": "zinedine-zidane",
+      "team": "juventus",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "award": "fifa-world-player",
+      "year_label": "1999",
+      "player": "rivaldo",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "award": "fifa-world-player",
+      "year_label": "2000",
+      "player": "zinedine-zidane",
+      "team": "juventus",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "award": "fifa-world-player",
+      "year_label": "2001",
+      "player": "luis-figo",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "award": "fifa-world-player",
+      "year_label": "2002",
+      "player": "ronaldo-nazario",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "award": "fifa-world-player",
+      "year_label": "2003",
+      "player": "zinedine-zidane",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "award": "fifa-world-player",
+      "year_label": "2004",
+      "player": "ronaldinho",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "award": "fifa-world-player",
+      "year_label": "2005",
+      "player": "ronaldinho",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "award": "fifa-world-player",
+      "year_label": "2006",
+      "player": "fabio-cannavaro",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "award": "fifa-world-player",
+      "year_label": "2007",
+      "player": "kaka",
+      "team": "ac-milan",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "award": "fifa-world-player",
+      "year_label": "2008",
+      "player": "cristiano-ronaldo",
+      "team": "manchester-united",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "award": "fifa-world-player",
+      "year_label": "2009",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Player_of_the_Year"
+    },
+    {
+      "award": "the-best-fifa",
+      "year_label": "2016",
+      "player": "cristiano-ronaldo",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/The_Best_FIFA_Men%27s_Player"
+    },
+    {
+      "award": "the-best-fifa",
+      "year_label": "2017",
+      "player": "cristiano-ronaldo",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/The_Best_FIFA_Men%27s_Player"
+    },
+    {
+      "award": "the-best-fifa",
+      "year_label": "2018",
+      "player": "luka-modric",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/The_Best_FIFA_Men%27s_Player"
+    },
+    {
+      "award": "the-best-fifa",
+      "year_label": "2019",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/The_Best_FIFA_Men%27s_Player"
+    },
+    {
+      "award": "the-best-fifa",
+      "year_label": "2020",
+      "player": "robert-lewandowski",
+      "team": "bayern-munich",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/The_Best_FIFA_Men%27s_Player"
+    },
+    {
+      "award": "the-best-fifa",
+      "year_label": "2021",
+      "player": "robert-lewandowski",
+      "team": "bayern-munich",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/The_Best_FIFA_Men%27s_Player"
+    },
+    {
+      "award": "the-best-fifa",
+      "year_label": "2022",
+      "player": "lionel-messi",
+      "team": "paris-saint-germain",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/The_Best_FIFA_Men%27s_Player"
+    },
+    {
+      "award": "the-best-fifa",
+      "year_label": "2023",
+      "player": "lionel-messi",
+      "team": "inter-miami",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/The_Best_FIFA_Men%27s_Player"
+    },
+    {
+      "award": "the-best-fifa",
+      "year_label": "2024",
+      "player": "vinicius-junior",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/The_Best_FIFA_Men%27s_Player"
+    },
+    {
+      "award": "the-best-fifa",
+      "year_label": "2025",
+      "player": "ousmane-dembele",
+      "team": "paris-saint-germain",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/The_Best_FIFA_Men%27s_Player"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1967-68",
+      "player": "eusebio",
+      "team": "sl-benfica",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1968-69",
+      "player": "petar-zhekov",
+      "team": "cska-sofia",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1969-70",
+      "player": "gerd-muller",
+      "team": "bayern-munich",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1970-71",
+      "player": "josip-skoblar",
+      "team": "olympique-marseille",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1971-72",
+      "player": "gerd-muller",
+      "team": "bayern-munich",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1972-73",
+      "player": "eusebio",
+      "team": "sl-benfica",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1973-74",
+      "player": "hector-yazalde",
+      "team": "sporting-cp",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1974-75",
+      "player": "dudu-georgescu",
+      "team": "dinamo-bucuresti",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1975-76",
+      "player": "sotiris-kaiafas",
+      "team": "omonia-nicosia",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1976-77",
+      "player": "dudu-georgescu",
+      "team": "dinamo-bucuresti",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1977-78",
+      "player": "hans-krankl",
+      "team": "rapid-wien",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1978-79",
+      "player": "kees-kist",
+      "team": "az-alkmaar",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1979-80",
+      "player": "erwin-vandenbergh",
+      "team": "lierse",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1980-81",
+      "player": "georgi-slavkov",
+      "team": "botev-plovdiv",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1981-82",
+      "player": "wim-kieft",
+      "team": "ajax",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1982-83",
+      "player": "fernando-gomes",
+      "team": "fc-porto",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1983-84",
+      "player": "ian-rush",
+      "team": "liverpool-fc",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1984-85",
+      "player": "fernando-gomes",
+      "team": "fc-porto",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1985-86",
+      "player": "marco-van-basten",
+      "team": "ajax",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1986-87",
+      "player": "toni-polster",
+      "team": "austria-wien",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1987-88",
+      "player": "tanju-colak",
+      "team": "galatasaray",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1988-89",
+      "player": "dorin-mateut",
+      "team": "dinamo-bucuresti",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1989-90",
+      "player": "hristo-stoichkov",
+      "team": "cska-sofia",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1989-90",
+      "player": "hugo-sanchez",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1990-91",
+      "player": "darko-pancev",
+      "team": "estrella-roja",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1996-97",
+      "player": "ronaldo-nazario",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1997-98",
+      "player": "nikos-machlas",
+      "team": "vitesse",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1998-99",
+      "player": "mario-jardel",
+      "team": "fc-porto",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "1999-00",
+      "player": "kevin-phillips",
+      "team": "sunderland",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2000-01",
+      "player": "henrik-larsson",
+      "team": "celtic-fc",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2001-02",
+      "player": "mario-jardel",
+      "team": "sporting-cp",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2002-03",
+      "player": "roy-makaay",
+      "team": "deportivo-la-coruna",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2003-04",
+      "player": "thierry-henry",
+      "team": "arsenal-fc",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2004-05",
+      "player": "thierry-henry",
+      "team": "arsenal-fc",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2004-05",
+      "player": "diego-forlan",
+      "team": "villarreal-cf",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2005-06",
+      "player": "luca-toni",
+      "team": "acf-fiorentina",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2006-07",
+      "player": "francesco-totti",
+      "team": "as-roma",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2007-08",
+      "player": "cristiano-ronaldo",
+      "team": "manchester-united",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2008-09",
+      "player": "diego-forlan",
+      "team": "atletico-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2009-10",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2010-11",
+      "player": "cristiano-ronaldo",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2011-12",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2012-13",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2013-14",
+      "player": "luis-suarez",
+      "team": "liverpool-fc",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2013-14",
+      "player": "cristiano-ronaldo",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2014-15",
+      "player": "cristiano-ronaldo",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2015-16",
+      "player": "luis-suarez",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2016-17",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2017-18",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2018-19",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2019-20",
+      "player": "ciro-immobile",
+      "team": "ss-lazio",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2020-21",
+      "player": "robert-lewandowski",
+      "team": "bayern-munich",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2021-22",
+      "player": "robert-lewandowski",
+      "team": "bayern-munich",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2022-23",
+      "player": "erling-haaland",
+      "team": "manchester-city",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2023-24",
+      "player": "harry-kane",
+      "team": "bayern-munich",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2024-25",
+      "player": "kylian-mbappe",
+      "team": "real-madrid",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "award": "bota-de-oro",
+      "year_label": "2025-26",
+      "player": "harry-kane",
+      "team": "bayern-munich",
+      "rank": 1,
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    }
+  ]
+}

@@ -4,8 +4,8 @@ import { Logo } from "@/components/brand/Logo";
 import { getCurrentProfile } from "@/lib/auth";
 
 const NAV = [
-  { href: "/#modos", label: "Juegos" },
-  { href: "/#ligas", label: "Ligas" },
+  { href: "/jugar", label: "Juegos" },
+  { href: "/ligas", label: "Ligas" },
   { href: "/#como-funciona", label: "Cómo funciona" },
 ];
 

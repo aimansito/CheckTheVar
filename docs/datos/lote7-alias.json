@@ -1,0 +1,451 @@
+{
+  "_lote": {
+    "nombre": "Lote 7 - Alias y apodos de jugadores",
+    "fecha": "2026-11-10",
+    "requiere": "Cargar después de los lotes 1-6.",
+    "notas": [
+      "Apodos muy conocidos y nombres alternativos para el autocompletado del Grid y las respuestas de texto libre.",
+      "No se repiten known_as ni full_name, ni variantes sin tildes: la búsqueda ya las normaliza.",
+      "'Ronaldo' a secas es alias de ronaldo-nazario (como lo llama Wikipedia); Cristiano Ronaldo tiene 'CR7' y 'Cristiano'.",
+      "Los alias de los jugadores del lote 5 van dentro de su ficha."
+    ]
+  },
+  "player_aliases": [
+    {
+      "player": "lionel-messi",
+      "aliases": [
+        "Leo Messi",
+        "La Pulga",
+        "Lionel Messi"
+      ]
+    },
+    {
+      "player": "cristiano-ronaldo",
+      "aliases": [
+        "CR7",
+        "Cristiano"
+      ]
+    },
+    {
+      "player": "neymar",
+      "aliases": [
+        "Neymar Jr",
+        "Ney"
+      ]
+    },
+    {
+      "player": "kylian-mbappe",
+      "aliases": [
+        "Kylian Mbappé"
+      ]
+    },
+    {
+      "player": "erling-haaland",
+      "aliases": [
+        "Erling Haaland"
+      ]
+    },
+    {
+      "player": "robert-lewandowski",
+      "aliases": [
+        "Lewy"
+      ]
+    },
+    {
+      "player": "karim-benzema",
+      "aliases": [
+        "Karim Benzema"
+      ]
+    },
+    {
+      "player": "luis-suarez",
+      "aliases": [
+        "El Pistolero"
+      ]
+    },
+    {
+      "player": "mohamed-salah",
+      "aliases": [
+        "Mo Salah"
+      ]
+    },
+    {
+      "player": "kevin-de-bruyne",
+      "aliases": [
+        "KDB"
+      ]
+    },
+    {
+      "player": "vinicius-junior",
+      "aliases": [
+        "Vini Jr.",
+        "Vinícius",
+        "Vini"
+      ]
+    },
+    {
+      "player": "lamine-yamal",
+      "aliases": [
+        "Lamine",
+        "Yamal"
+      ]
+    },
+    {
+      "player": "rodri",
+      "aliases": [
+        "Rodrigo Hernández"
+      ]
+    },
+    {
+      "player": "andres-iniesta",
+      "aliases": [
+        "Don Andrés"
+      ]
+    },
+    {
+      "player": "xavi-hernandez",
+      "aliases": [
+        "Xavi Hernández"
+      ]
+    },
+    {
+      "player": "sergio-busquets",
+      "aliases": [
+        "Busi"
+      ]
+    },
+    {
+      "player": "iker-casillas",
+      "aliases": [
+        "San Iker"
+      ]
+    },
+    {
+      "player": "gianluigi-buffon",
+      "aliases": [
+        "Gigi Buffon"
+      ]
+    },
+    {
+      "player": "zlatan-ibrahimovic",
+      "aliases": [
+        "Zlatan",
+        "Ibra"
+      ]
+    },
+    {
+      "player": "kaka",
+      "aliases": [
+        "Ricardo Kaká"
+      ]
+    },
+    {
+      "player": "ronaldinho",
+      "aliases": [
+        "Ronaldinho Gaúcho",
+        "Dinho"
+      ]
+    },
+    {
+      "player": "ronaldo-nazario",
+      "aliases": [
+        "R9",
+        "El Fenómeno",
+        "Ronaldo Nazário"
+      ]
+    },
+    {
+      "player": "zinedine-zidane",
+      "aliases": [
+        "Zizou",
+        "Zinedine Zidane"
+      ]
+    },
+    {
+      "player": "thierry-henry",
+      "aliases": [
+        "Titi"
+      ]
+    },
+    {
+      "player": "david-beckham",
+      "aliases": [
+        "Becks"
+      ]
+    },
+    {
+      "player": "francesco-totti",
+      "aliases": [
+        "Il Capitano"
+      ]
+    },
+    {
+      "player": "fernando-torres",
+      "aliases": [
+        "El Niño",
+        "Torres"
+      ]
+    },
+    {
+      "player": "david-villa",
+      "aliases": [
+        "El Guaje"
+      ]
+    },
+    {
+      "player": "samuel-etoo",
+      "aliases": [
+        "Samuel Eto'o"
+      ]
+    },
+    {
+      "player": "andriy-shevchenko",
+      "aliases": [
+        "Sheva"
+      ]
+    },
+    {
+      "player": "johan-cruyff",
+      "aliases": [
+        "El Flaco",
+        "Cruijff",
+        "Johan Cruyff"
+      ]
+    },
+    {
+      "player": "diego-maradona",
+      "aliases": [
+        "El Pelusa",
+        "D10S",
+        "Pelusa"
+      ]
+    },
+    {
+      "player": "pele",
+      "aliases": [
+        "O Rei"
+      ]
+    },
+    {
+      "player": "alfredo-di-stefano",
+      "aliases": [
+        "La Saeta Rubia"
+      ]
+    },
+    {
+      "player": "franz-beckenbauer",
+      "aliases": [
+        "Der Kaiser",
+        "El Káiser"
+      ]
+    },
+    {
+      "player": "ferenc-puskas",
+      "aliases": [
+        "Cañoncito Pum",
+        "Pancho Puskás"
+      ]
+    },
+    {
+      "player": "eusebio",
+      "aliases": [
+        "La Pantera Negra"
+      ]
+    },
+    {
+      "player": "gerd-muller",
+      "aliases": [
+        "Der Bomber",
+        "Torpedo Müller"
+      ]
+    },
+    {
+      "player": "paolo-rossi",
+      "aliases": [
+        "Pablito"
+      ]
+    },
+    {
+      "player": "gigi-riva",
+      "aliases": [
+        "Rombo di Tuono",
+        "Luigi Riva"
+      ]
+    },
+    {
+      "player": "roberto-baggio",
+      "aliases": [
+        "Il Divin Codino",
+        "Baggio"
+      ]
+    },
+    {
+      "player": "lev-yashin",
+      "aliases": [
+        "La Araña Negra",
+        "Yashin"
+      ]
+    },
+    {
+      "player": "emilio-butragueno",
+      "aliases": [
+        "El Buitre",
+        "Butragueño"
+      ]
+    },
+    {
+      "player": "eric-cantona",
+      "aliases": [
+        "King Eric",
+        "Cantona"
+      ]
+    },
+    {
+      "player": "kenny-dalglish",
+      "aliases": [
+        "King Kenny"
+      ]
+    },
+    {
+      "player": "romario",
+      "aliases": [
+        "Baixinho"
+      ]
+    },
+    {
+      "player": "gonzalo-higuain",
+      "aliases": [
+        "Pipita",
+        "Higuaín"
+      ]
+    },
+    {
+      "player": "hernan-crespo",
+      "aliases": [
+        "Valdanito"
+      ]
+    },
+    {
+      "player": "christian-vieri",
+      "aliases": [
+        "Bobo Vieri"
+      ]
+    },
+    {
+      "player": "karl-heinz-rummenigge",
+      "aliases": [
+        "Kalle"
+      ]
+    },
+    {
+      "player": "jurgen-klinsmann",
+      "aliases": [
+        "Klinsi"
+      ]
+    },
+    {
+      "player": "steven-gerrard",
+      "aliases": [
+        "Stevie G"
+      ]
+    },
+    {
+      "player": "frank-lampard",
+      "aliases": [
+        "Super Frank"
+      ]
+    },
+    {
+      "player": "virgil-van-dijk",
+      "aliases": [
+        "VVD",
+        "Van Dijk"
+      ]
+    },
+    {
+      "player": "romelu-lukaku",
+      "aliases": [
+        "Big Rom"
+      ]
+    },
+    {
+      "player": "mario-jardel",
+      "aliases": [
+        "Super Mário"
+      ]
+    },
+    {
+      "player": "hugo-sanchez",
+      "aliases": [
+        "Hugol"
+      ]
+    },
+    {
+      "player": "luis-suarez-miramontes",
+      "aliases": [
+        "Luisito Suárez"
+      ]
+    },
+    {
+      "player": "amancio",
+      "aliases": [
+        "El Brujo",
+        "Amancio Amaro"
+      ]
+    },
+    {
+      "player": "mario-kempes",
+      "aliases": [
+        "El Matador"
+      ]
+    },
+    {
+      "player": "geoff-hurst",
+      "aliases": [
+        "Sir Geoff Hurst"
+      ]
+    },
+    {
+      "player": "bobby-charlton",
+      "aliases": [
+        "Sir Bobby Charlton"
+      ]
+    },
+    {
+      "player": "stanley-matthews",
+      "aliases": [
+        "Sir Stanley Matthews"
+      ]
+    },
+    {
+      "player": "cesc-fabregas",
+      "aliases": [
+        "Cesc"
+      ]
+    },
+    {
+      "player": "angel-di-maria",
+      "aliases": [
+        "Fideo"
+      ]
+    },
+    {
+      "player": "ferran-torres",
+      "aliases": [
+        "Ferran"
+      ]
+    },
+    {
+      "player": "nico-williams",
+      "aliases": [
+        "Nico"
+      ]
+    },
+    {
+      "player": "juan-alberto-schiaffino",
+      "aliases": [
+        "Pepe Schiaffino"
+      ]
+    }
+  ]
+}

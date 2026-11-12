@@ -1,10 +1,19 @@
 import "server-only";
 import {
+  DEFAULT_DIFFICULTY,
+  DIFFICULTY_LEVELS,
   GUEST_MODES,
-  SCORING,
+  MODE_RULES,
+  applyDifficulty,
+  normalizeAnswer,
   scoreAnswer,
+  scoreClueAnswer,
+  scoringFor,
   type AnswerInput,
+  type DifficultyLevel,
+  type ClueReveal,
   type GameErrorCode,
+  type GameModeSlug,
   type GameStart,
   type PublicQuestion,
   type SessionSummary,
@@ -15,8 +24,9 @@ import { getSupabaseAdmin } from "@/lib/supabase/admin";
 import type { Player } from "./player";
 
 /**
- * Lógica de partida en el servidor. La BD (funciones game_*) guarda y corrige;
- * aquí se calculan los puntos con scoring.ts, la única fuente de los valores.
+ * Lógica de partida en el servidor, común a todos los modos. La BD (funciones game_*)
+ * guarda y corrige; aquí se aplican las reglas de MODE_RULES y se calculan los puntos
+ * con scoring.ts, la única fuente de los valores.
  */
 
 export class GameError extends Error {
@@ -35,6 +45,12 @@ const SQL_ERRORS: Record<string, [GameErrorCode, number]> = {
   invalid_choice: ["invalid_choice", 400],
   no_questions: ["no_questions", 503],
   player_required: ["account_required", 401],
+  account_required: ["account_required", 401],
+  premium_required: ["premium_required", 403],
+  mode_not_available: ["mode_not_available", 404],
+  not_member: ["not_member", 403],
+  matchday_closed: ["matchday_closed", 409],
+  invalid_input: ["invalid_input", 400],
 };
 
 async function rpc<T>(fn: string, args: Record<string, unknown>): Promise<T> {
@@ -50,15 +66,45 @@ async function rpc<T>(fn: string, args: Record<string, unknown>): Promise<T> {
 
 const who = (p: Player) => ({ p_user: p.userId, p_guest: p.guestId });
 
+/** Nivel por defecto del jugador (el de su perfil). */
+async function profileDifficulty(userId: string): Promise<DifficultyLevel> {
+  const { data } = await getSupabaseAdmin().from("users").select("difficulty").eq("id", userId).maybeSingle();
+  const d = data?.difficulty as string | undefined;
+  return d && d in DIFFICULTY_LEVELS ? (d as DifficultyLevel) : DEFAULT_DIFFICULTY;
+}
+
 export async function startGame(input: StartGameInput, player: Player): Promise<GameStart> {
   if (player.kind === "guest" && !GUEST_MODES.includes(input.mode)) {
     throw new GameError("account_required", 401);
   }
-  if (input.mode !== "daily") {
-    // De momento solo está implementado el reto diario.
-    throw new GameError("mode_not_available", 501);
+  const rule = MODE_RULES[input.mode];
+  if (!rule.available) throw new GameError("mode_not_available", 404);
+
+  if (input.mode === "league") {
+    if (!input.matchdayId || player.kind !== "user") throw new GameError("invalid_input", 400);
+    return rpc<GameStart>("game_start_league", { p_user: player.userId, p_matchday: input.matchdayId });
   }
-  return rpc<GameStart>("game_start_daily", who(player));
+  if (input.mode === "daily") {
+    // El reto diario es igual para todos: sin nivel.
+    return rpc<GameStart>("game_start", {
+      ...who(player), p_mode: "daily", p_kind: rule.kind, p_total: rule.questions, p_duration_ms: null,
+      p_level: null, p_min: null, p_max: null, p_old: false,
+    });
+  }
+
+  const level = input.difficulty ?? (player.kind === "user" ? await profileDifficulty(player.userId) : DEFAULT_DIFFICULTY);
+  const d = DIFFICULTY_LEVELS[level];
+  return rpc<GameStart>("game_start", {
+    ...who(player),
+    p_mode: input.mode,
+    p_kind: rule.kind,
+    p_total: rule.questions,
+    p_duration_ms: rule.durationMs,
+    p_level: level,
+    p_min: d.min,
+    p_max: d.max,
+    p_old: d.oldEra,
+  });
 }
 
 type SqlNext =
@@ -73,28 +119,39 @@ export async function nextQuestion(
   if (r.done) return { done: true };
   const { done: _done, ...question } = r;
   void _done;
-  return { ...question, timeLimitMs: SCORING.questionTimeMs };
+  const rule = MODE_RULES[question.mode as GameModeSlug] ?? MODE_RULES.daily;
+  return { ...question, timeLimitMs: rule.questionTimeMs };
+}
+
+export async function revealClue(sessionId: string, player: Player, position: number): Promise<ClueReveal> {
+  return rpc<ClueReveal>("game_clue", { p_session: sessionId, ...who(player), p_position: position, p_lang: "es" });
 }
 
 type SqlSubmit = {
   alreadyAnswered: boolean;
   scored: boolean;
+  mode: GameModeSlug;
+  difficulty: DifficultyLevel | null;
   position: number;
-  total: number;
-  isLast: boolean;
+  total: number | null;
+  format: "multiple_choice" | "free_text" | "true_false";
   choice: string | null;
+  answerText: string | null;
   rawCorrect: boolean;
   isCorrect?: boolean | null;
   points?: number;
   elapsedMs: number;
+  cluesUsed: number;
+  cluesTotal: number;
   streakBefore: number;
-  correctOptionId: string;
+  correctOptionId: string | null;
   correctLabel: string;
   explanation: string | null;
   sessionScore: number;
+  status: "started" | "finished" | "abandoned";
 };
 
-type SqlRecord = { sessionScore: number; correctCount: number; status: string; total: number };
+type SqlRecord = { sessionScore: number; correctCount: number; status: string; total: number | null };
 
 /** CHECK THE VAR. Idempotente: repetir la misma posición devuelve el mismo veredicto. */
 export async function submitAnswer(
@@ -102,24 +159,27 @@ export async function submitAnswer(
   player: Player,
   input: AnswerInput,
 ): Promise<VarVerdict> {
-  if (input.text !== undefined) {
-    throw new GameError("invalid_choice", 400); // el reto diario es solo tipo test
-  }
   const sub = await rpc<SqlSubmit>("game_submit", {
     p_session: sessionId,
     ...who(player),
     p_position: input.position,
-    p_choice: input.timeout ? null : input.optionId,
+    p_choice: input.timeout || input.text !== undefined ? null : input.optionId,
+    p_text: input.timeout || input.text === undefined ? null : normalizeAnswer(input.text),
     p_lang: "es",
   });
 
-  const score = scoreAnswer({
-    isCorrect: sub.rawCorrect,
-    elapsedMs: sub.elapsedMs,
-    streakBefore: sub.streakBefore,
-  });
+  const mode: GameModeSlug = sub.mode in MODE_RULES ? sub.mode : "daily";
+  const rule = MODE_RULES[mode];
+  const base = { isCorrect: sub.rawCorrect, elapsedMs: sub.elapsedMs, streakBefore: sub.streakBefore };
+  const raw =
+    sub.format === "free_text" && sub.cluesTotal > 0
+      ? scoreClueAnswer({ ...base, cluesUsed: sub.cluesUsed, cluesTotal: sub.cluesTotal }, scoringFor(mode))
+      : scoreAnswer(base, scoringFor(mode));
+  // Más puntos cuanto más alto el nivel (el reto diario no tiene nivel: multiplicador 1).
+  const score = sub.difficulty && sub.difficulty in DIFFICULTY_LEVELS ? applyDifficulty(raw, sub.difficulty) : raw;
 
   let sessionScore = sub.sessionScore;
+  let status = sub.status;
   if (!sub.scored) {
     const rec = await rpc<SqlRecord>("game_record_score", {
       p_session: sessionId,
@@ -128,8 +188,10 @@ export async function submitAnswer(
       p_counted: score.counted,
       p_points: score.total,
       p_elapsed_ms: Math.max(0, Math.round(sub.elapsedMs)),
+      p_finish: rule.endsOnMiss && !score.counted,
     });
     sessionScore = rec.sessionScore;
+    status = rec.status as SqlSubmit["status"];
   }
 
   // Si ya estaba puntuada, se devuelve lo guardado (no se recalcula).
@@ -138,7 +200,7 @@ export async function submitAnswer(
 
   return {
     position: sub.position,
-    choice: sub.choice,
+    choice: sub.format === "free_text" ? sub.answerText : sub.choice,
     isCorrect,
     timedOut: score.timedOut,
     correctOptionId: sub.correctOptionId,
@@ -148,10 +210,14 @@ export async function submitAnswer(
     isHatTrick: isCorrect && score.isHatTrick,
     streak: isCorrect ? score.streakAfter : 0,
     sessionScore,
-    isLast: sub.isLast,
+    isLast: status !== "started",
   };
 }
 
 export async function getSummary(sessionId: string, player: Player): Promise<SessionSummary> {
   return rpc<SessionSummary>("game_summary", { p_session: sessionId, ...who(player) });
+}
+
+export async function abandonGame(sessionId: string, player: Player): Promise<SessionSummary> {
+  return rpc<SessionSummary>("game_abandon", { p_session: sessionId, ...who(player) });
 }

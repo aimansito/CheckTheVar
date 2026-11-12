@@ -1,9 +1,11 @@
 "use server";
 
-import { signInSchema, signUpSchema } from "@checkthevar/shared";
+import { newPasswordSchema, oauthSchema, resetRequestSchema, signInSchema, signUpSchema } from "@checkthevar/shared";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { currentGuestId } from "@/lib/game/player";
+import { LIMITS, clientIp, rateLimit } from "@/lib/rate-limit";
+import { safeNext } from "@/lib/safe-next";
 import { getSupabaseAdmin } from "@/lib/supabase/admin";
 import { getSupabaseServer } from "@/lib/supabase/server";
 
@@ -13,6 +15,16 @@ export type AuthState = {
   info?: string;
   values?: { username?: string; email?: string };
 };
+
+const TOO_MANY = "Demasiados intentos. Espera unos minutos y vuelve a probarlo.";
+
+/** Origen público de la web (para los enlaces de email y OAuth). */
+async function siteOrigin(): Promise<string> {
+  const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
+  if (fromEnv) return fromEnv;
+  const h = await headers();
+  return h.get("origin") ?? `${h.get("x-forwarded-proto") ?? "http"}://${h.get("host") ?? "localhost:3000"}`;
+}
 
 /** Pasa a la cuenta los puntos y la partida de hoy jugados como invitado. */
 async function claimGuestPoints(userId: string): Promise<void> {
@@ -37,7 +49,13 @@ export async function signUp(_prev: AuthState, form: FormData): Promise<AuthStat
   const parsed = signUpSchema.safeParse(raw);
   if (!parsed.success) return { fieldErrors: fieldErrors(parsed.error.issues), values };
 
-  const { username, email, password } = parsed.data;
+  const ip = await clientIp();
+  if (!(await rateLimit(`signup:${ip}`, LIMITS.signUpPerIp.limit, LIMITS.signUpPerIp.windowSec)).ok) {
+    return { error: TOO_MANY, values };
+  }
+
+  const { username, email, password, difficulty } = parsed.data;
+  const next = safeNext(raw.next);
 
   const { data: taken } = await getSupabaseAdmin()
     .from("users")
@@ -46,14 +64,14 @@ export async function signUp(_prev: AuthState, form: FormData): Promise<AuthStat
     .maybeSingle();
   if (taken) return { fieldErrors: { username: "Ese nombre ya está cogido." }, values };
 
-  const origin = (await headers()).get("origin") ?? "";
+  const origin = await siteOrigin();
   const supabase = await getSupabaseServer();
   const { data, error } = await supabase.auth.signUp({
     email,
     password,
     options: {
-      data: { username, display_name: username },
-      emailRedirectTo: `${origin}/auth/confirm`,
+      data: { username, display_name: username, difficulty },
+      emailRedirectTo: `${origin}/auth/confirm${next ? `?next=${encodeURIComponent(next)}` : ""}`,
     },
   });
   if (error) {
@@ -69,7 +87,7 @@ export async function signUp(_prev: AuthState, form: FormData): Promise<AuthStat
   }
 
   if (data.user) await claimGuestPoints(data.user.id);
-  redirect("/perfil?bienvenida=1");
+  redirect(next ?? "/perfil?bienvenida=1");
 }
 
 export async function signIn(_prev: AuthState, form: FormData): Promise<AuthState> {
@@ -78,13 +96,69 @@ export async function signIn(_prev: AuthState, form: FormData): Promise<AuthStat
   const parsed = signInSchema.safeParse(raw);
   if (!parsed.success) return { fieldErrors: fieldErrors(parsed.error.issues), values };
 
+  const ip = await clientIp();
+  if (!(await rateLimit(`signin:${ip}`, LIMITS.signInPerIp.limit, LIMITS.signInPerIp.windowSec)).ok) {
+    return { error: TOO_MANY, values };
+  }
+
   const supabase = await getSupabaseServer();
   const { data, error } = await supabase.auth.signInWithPassword(parsed.data);
   if (error || !data.user) {
     return { error: "Email o contraseña incorrectos.", values };
   }
   await claimGuestPoints(data.user.id);
-  redirect("/perfil");
+  redirect(safeNext(raw.next) ?? "/perfil");
+}
+
+/** Acceso con Google o Apple (OAuth con PKCE: el código vuelve a /auth/callback). */
+export async function signInWithProvider(form: FormData): Promise<void> {
+  const parsed = oauthSchema.safeParse({ provider: form.get("provider") });
+  if (!parsed.success) redirect("/entrar?error=proveedor");
+
+  const supabase = await getSupabaseServer();
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: parsed.data.provider,
+    options: { redirectTo: `${await siteOrigin()}/auth/callback` },
+  });
+  if (error || !data.url) redirect("/entrar?error=proveedor");
+  redirect(data.url);
+}
+
+export async function requestPasswordReset(_prev: AuthState, form: FormData): Promise<AuthState> {
+  const raw = Object.fromEntries(form);
+  const values = { email: String(raw.email ?? "") };
+  const parsed = resetRequestSchema.safeParse(raw);
+  if (!parsed.success) return { fieldErrors: fieldErrors(parsed.error.issues), values };
+
+  const ip = await clientIp();
+  if (!(await rateLimit(`reset:${ip}`, LIMITS.resetPerIp.limit, LIMITS.resetPerIp.windowSec)).ok) {
+    return { error: TOO_MANY, values };
+  }
+
+  const supabase = await getSupabaseServer();
+  const { error } = await supabase.auth.resetPasswordForEmail(parsed.data.email, {
+    redirectTo: `${await siteOrigin()}/auth/confirm?next=/nueva-contrasena`,
+  });
+  if (error) console.error("[auth] reset falló:", error.message);
+  // Misma respuesta exista o no la cuenta: no se revela qué emails están registrados.
+  return { info: "Si ese email tiene cuenta, te hemos enviado un enlace para cambiar la contraseña.", values };
+}
+
+export async function updatePassword(_prev: AuthState, form: FormData): Promise<AuthState> {
+  const parsed = newPasswordSchema.safeParse(Object.fromEntries(form));
+  if (!parsed.success) return { fieldErrors: fieldErrors(parsed.error.issues) };
+
+  const supabase = await getSupabaseServer();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) redirect("/entrar?error=enlace");
+
+  const { error } = await supabase.auth.updateUser({ password: parsed.data.password });
+  if (error) {
+    return { error: /same password/i.test(error.message) ? "Esa ya es tu contraseña." : "No se pudo cambiar la contraseña. Inténtalo de nuevo." };
+  }
+  redirect("/perfil?contrasena=1");
 }
 
 export async function signOut(): Promise<void> {

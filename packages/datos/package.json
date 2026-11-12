@@ -1,0 +1,23 @@
+{
+  "name": "@checkthevar/datos",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Validación e importación de los lotes JSON de datos de fútbol (docs/datos) a Supabase.",
+  "scripts": {
+    "importar": "node src/importar.ts",
+    "validar": "node src/importar.ts --validar",
+    "preguntas": "node src/preguntas.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2",
+    "zod": "^4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24",
+    "typescript": "^5",
+    "vitest": "^4"
+  }
+}

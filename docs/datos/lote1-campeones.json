@@ -1,0 +1,3772 @@
+{
+  "_lote": {
+    "nombre": "Lote 1 - Campeones de Mundial, Eurocopa y Copa de Europa/Champions",
+    "fecha": "2026-11-09",
+    "notas": [
+      "Selecciones históricas: RFA (seleccion-alemania-federal) va separada de seleccion-alemania; URSS, Checoslovaquia y Yugoslavia usan sus códigos ISO históricos SU, CS, YU.",
+      "Clubes: founded_year es el año del campo 'Founded' del infobox de en.wikipedia (si el club cambió de nombre, es el año de la entidad original). 'country' es el país donde tiene sede; el AS Mónaco va como MC (Mónaco).",
+      "host_country es null cuando hubo varias sedes (Mundial 2002 y 2026, Eurocopa 2000, 2008, 2012 y 2020).",
+      "matches: home_team es el campeón y away_team el subcampeón (orden de las tablas de Wikipedia), no indica quién jugaba en casa. penalties va como texto 'campeón-subcampeón', p. ej. '4-2'. scorers vacío: goleadores pendientes para otro lote.",
+      "match_date = end_date del torneo (el torneo termina el día de la final). En la Eurocopa 1960 y 1964 la fuente no da fechas, así que va null.",
+      "Mundial 1950: no hubo final; se recoge el partido decisivo de la liguilla final (Uruguay 2-1 Brasil).",
+      "Eurocopa 1968: se recoge el partido de desempate (2-0); el primer partido acabó 1-1 tras la prórroga.",
+      "Copa de Europa/Champions: solo campeón y subcampeón; fechas y partidos de las finales pendientes para otro lote."
+    ]
+  },
+  "countries": [
+    {
+      "code": "UY",
+      "name_es": "Uruguay",
+      "name_en": "Uruguay",
+      "confederation": "CONMEBOL"
+    },
+    {
+      "code": "AR",
+      "name_es": "Argentina",
+      "name_en": "Argentina",
+      "confederation": "CONMEBOL"
+    },
+    {
+      "code": "BR",
+      "name_es": "Brasil",
+      "name_en": "Brazil",
+      "confederation": "CONMEBOL"
+    },
+    {
+      "code": "IT",
+      "name_es": "Italia",
+      "name_en": "Italy",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "FR",
+      "name_es": "Francia",
+      "name_en": "France",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "DE",
+      "name_es": "Alemania",
+      "name_en": "Germany",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "ES",
+      "name_es": "España",
+      "name_en": "Spain",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "NL",
+      "name_es": "Países Bajos",
+      "name_en": "Netherlands",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "HU",
+      "name_es": "Hungría",
+      "name_en": "Hungary",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "SE",
+      "name_es": "Suecia",
+      "name_en": "Sweden",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "CL",
+      "name_es": "Chile",
+      "name_en": "Chile",
+      "confederation": "CONMEBOL"
+    },
+    {
+      "code": "MX",
+      "name_es": "México",
+      "name_en": "Mexico",
+      "confederation": "CONCACAF"
+    },
+    {
+      "code": "US",
+      "name_es": "Estados Unidos",
+      "name_en": "United States",
+      "confederation": "CONCACAF"
+    },
+    {
+      "code": "CA",
+      "name_es": "Canadá",
+      "name_en": "Canada",
+      "confederation": "CONCACAF"
+    },
+    {
+      "code": "KR",
+      "name_es": "Corea del Sur",
+      "name_en": "South Korea",
+      "confederation": "AFC"
+    },
+    {
+      "code": "JP",
+      "name_es": "Japón",
+      "name_en": "Japan",
+      "confederation": "AFC"
+    },
+    {
+      "code": "ZA",
+      "name_es": "Sudáfrica",
+      "name_en": "South Africa",
+      "confederation": "CAF"
+    },
+    {
+      "code": "RU",
+      "name_es": "Rusia",
+      "name_en": "Russia",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "QA",
+      "name_es": "Catar",
+      "name_en": "Qatar",
+      "confederation": "AFC"
+    },
+    {
+      "code": "HR",
+      "name_es": "Croacia",
+      "name_en": "Croatia",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "CH",
+      "name_es": "Suiza",
+      "name_en": "Switzerland",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "BE",
+      "name_es": "Bélgica",
+      "name_en": "Belgium",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "PT",
+      "name_es": "Portugal",
+      "name_en": "Portugal",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "GR",
+      "name_es": "Grecia",
+      "name_en": "Greece",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "AT",
+      "name_es": "Austria",
+      "name_en": "Austria",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "PL",
+      "name_es": "Polonia",
+      "name_en": "Poland",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "UA",
+      "name_es": "Ucrania",
+      "name_en": "Ukraine",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "DK",
+      "name_es": "Dinamarca",
+      "name_en": "Denmark",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "CZ",
+      "name_es": "República Checa",
+      "name_en": "Czech Republic",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "RO",
+      "name_es": "Rumanía",
+      "name_en": "Romania",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "RS",
+      "name_es": "Serbia",
+      "name_en": "Serbia",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "SU",
+      "name_es": "Unión Soviética",
+      "name_en": "Soviet Union",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "CS",
+      "name_es": "Checoslovaquia",
+      "name_en": "Czechoslovakia",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "YU",
+      "name_es": "Yugoslavia",
+      "name_en": "Yugoslavia",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "GB-ENG",
+      "name_es": "Inglaterra",
+      "name_en": "England",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "GB-SCT",
+      "name_es": "Escocia",
+      "name_en": "Scotland",
+      "confederation": "UEFA"
+    },
+    {
+      "code": "MC",
+      "name_es": "Mónaco",
+      "name_en": "Monaco",
+      "confederation": "UEFA"
+    }
+  ],
+  "teams": [
+    {
+      "ref": "seleccion-uruguay",
+      "type": "national",
+      "name": "Selección de Uruguay",
+      "short_name": "Uruguay",
+      "country": "UY",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "seleccion-argentina",
+      "type": "national",
+      "name": "Selección de Argentina",
+      "short_name": "Argentina",
+      "country": "AR",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "seleccion-italia",
+      "type": "national",
+      "name": "Selección de Italia",
+      "short_name": "Italia",
+      "country": "IT",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "seleccion-checoslovaquia",
+      "type": "national",
+      "name": "Selección de Checoslovaquia",
+      "short_name": "Checoslovaquia",
+      "country": "CS",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "seleccion-hungria",
+      "type": "national",
+      "name": "Selección de Hungría",
+      "short_name": "Hungría",
+      "country": "HU",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "seleccion-brasil",
+      "type": "national",
+      "name": "Selección de Brasil",
+      "short_name": "Brasil",
+      "country": "BR",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "seleccion-alemania-federal",
+      "type": "national",
+      "name": "Selección de Alemania Federal (RFA)",
+      "short_name": "RFA",
+      "country": "DE",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "seleccion-alemania",
+      "type": "national",
+      "name": "Selección de Alemania",
+      "short_name": "Alemania",
+      "country": "DE",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "seleccion-suecia",
+      "type": "national",
+      "name": "Selección de Suecia",
+      "short_name": "Suecia",
+      "country": "SE",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "seleccion-inglaterra",
+      "type": "national",
+      "name": "Selección de Inglaterra",
+      "short_name": "Inglaterra",
+      "country": "GB-ENG",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "seleccion-paises-bajos",
+      "type": "national",
+      "name": "Selección de Países Bajos",
+      "short_name": "Países Bajos",
+      "country": "NL",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "seleccion-francia",
+      "type": "national",
+      "name": "Selección de Francia",
+      "short_name": "Francia",
+      "country": "FR",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "seleccion-espana",
+      "type": "national",
+      "name": "Selección de España",
+      "short_name": "España",
+      "country": "ES",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "seleccion-croacia",
+      "type": "national",
+      "name": "Selección de Croacia",
+      "short_name": "Croacia",
+      "country": "HR",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "seleccion-urss",
+      "type": "national",
+      "name": "Selección de la Unión Soviética",
+      "short_name": "URSS",
+      "country": "SU",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "seleccion-yugoslavia",
+      "type": "national",
+      "name": "Selección de Yugoslavia",
+      "short_name": "Yugoslavia",
+      "country": "YU",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "seleccion-belgica",
+      "type": "national",
+      "name": "Selección de Bélgica",
+      "short_name": "Bélgica",
+      "country": "BE",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "seleccion-dinamarca",
+      "type": "national",
+      "name": "Selección de Dinamarca",
+      "short_name": "Dinamarca",
+      "country": "DK",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "seleccion-republica-checa",
+      "type": "national",
+      "name": "Selección de la República Checa",
+      "short_name": "Rep. Checa",
+      "country": "CZ",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "seleccion-grecia",
+      "type": "national",
+      "name": "Selección de Grecia",
+      "short_name": "Grecia",
+      "country": "GR",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "seleccion-portugal",
+      "type": "national",
+      "name": "Selección de Portugal",
+      "short_name": "Portugal",
+      "country": "PT",
+      "founded_year": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "real-madrid",
+      "type": "club",
+      "name": "Real Madrid CF",
+      "short_name": "Real Madrid",
+      "country": "ES",
+      "founded_year": 1902,
+      "source": "https://en.wikipedia.org/wiki/Real_Madrid_CF"
+    },
+    {
+      "ref": "fc-barcelona",
+      "type": "club",
+      "name": "FC Barcelona",
+      "short_name": "Barça",
+      "country": "ES",
+      "founded_year": 1899,
+      "source": "https://en.wikipedia.org/wiki/FC_Barcelona"
+    },
+    {
+      "ref": "atletico-madrid",
+      "type": "club",
+      "name": "Club Atlético de Madrid",
+      "short_name": "Atlético",
+      "country": "ES",
+      "founded_year": 1903,
+      "source": "https://en.wikipedia.org/wiki/Atlético_Madrid"
+    },
+    {
+      "ref": "valencia-cf",
+      "type": "club",
+      "name": "Valencia CF",
+      "short_name": "Valencia",
+      "country": "ES",
+      "founded_year": 1919,
+      "source": "https://en.wikipedia.org/wiki/Valencia_CF"
+    },
+    {
+      "ref": "stade-de-reims",
+      "type": "club",
+      "name": "Stade de Reims",
+      "short_name": "Reims",
+      "country": "FR",
+      "founded_year": 1931,
+      "source": "https://en.wikipedia.org/wiki/Stade_de_Reims"
+    },
+    {
+      "ref": "olympique-marseille",
+      "type": "club",
+      "name": "Olympique de Marsella",
+      "short_name": "Marsella",
+      "country": "FR",
+      "founded_year": 1899,
+      "source": "https://en.wikipedia.org/wiki/Olympique_de_Marseille"
+    },
+    {
+      "ref": "as-saint-etienne",
+      "type": "club",
+      "name": "AS Saint-Étienne",
+      "short_name": "Saint-Étienne",
+      "country": "FR",
+      "founded_year": 1933,
+      "source": "https://en.wikipedia.org/wiki/AS_Saint-Étienne"
+    },
+    {
+      "ref": "as-monaco",
+      "type": "club",
+      "name": "AS Mónaco",
+      "short_name": "Mónaco",
+      "country": "MC",
+      "founded_year": 1924,
+      "source": "https://en.wikipedia.org/wiki/AS_Monaco_FC"
+    },
+    {
+      "ref": "paris-saint-germain",
+      "type": "club",
+      "name": "Paris Saint-Germain",
+      "short_name": "PSG",
+      "country": "FR",
+      "founded_year": 1970,
+      "source": "https://en.wikipedia.org/wiki/Paris_Saint-Germain_FC"
+    },
+    {
+      "ref": "acf-fiorentina",
+      "type": "club",
+      "name": "ACF Fiorentina",
+      "short_name": "Fiorentina",
+      "country": "IT",
+      "founded_year": 1926,
+      "source": "https://en.wikipedia.org/wiki/ACF_Fiorentina"
+    },
+    {
+      "ref": "ac-milan",
+      "type": "club",
+      "name": "AC Milan",
+      "short_name": "Milan",
+      "country": "IT",
+      "founded_year": 1899,
+      "source": "https://en.wikipedia.org/wiki/AC_Milan"
+    },
+    {
+      "ref": "inter-milan",
+      "type": "club",
+      "name": "Inter de Milán",
+      "short_name": "Inter",
+      "country": "IT",
+      "founded_year": 1908,
+      "source": "https://en.wikipedia.org/wiki/Inter_Milan"
+    },
+    {
+      "ref": "juventus",
+      "type": "club",
+      "name": "Juventus FC",
+      "short_name": "Juventus",
+      "country": "IT",
+      "founded_year": 1897,
+      "source": "https://en.wikipedia.org/wiki/Juventus_FC"
+    },
+    {
+      "ref": "as-roma",
+      "type": "club",
+      "name": "AS Roma",
+      "short_name": "Roma",
+      "country": "IT",
+      "founded_year": 1927,
+      "source": "https://en.wikipedia.org/wiki/AS_Roma"
+    },
+    {
+      "ref": "uc-sampdoria",
+      "type": "club",
+      "name": "UC Sampdoria",
+      "short_name": "Sampdoria",
+      "country": "IT",
+      "founded_year": 1946,
+      "source": "https://en.wikipedia.org/wiki/UC_Sampdoria"
+    },
+    {
+      "ref": "eintracht-frankfurt",
+      "type": "club",
+      "name": "Eintracht Fráncfort",
+      "short_name": "Eintracht",
+      "country": "DE",
+      "founded_year": 1899,
+      "source": "https://en.wikipedia.org/wiki/Eintracht_Frankfurt"
+    },
+    {
+      "ref": "bayern-munich",
+      "type": "club",
+      "name": "FC Bayern de Múnich",
+      "short_name": "Bayern",
+      "country": "DE",
+      "founded_year": 1900,
+      "source": "https://en.wikipedia.org/wiki/FC_Bayern_Munich"
+    },
+    {
+      "ref": "borussia-monchengladbach",
+      "type": "club",
+      "name": "Borussia Mönchengladbach",
+      "short_name": "Gladbach",
+      "country": "DE",
+      "founded_year": 1900,
+      "source": "https://en.wikipedia.org/wiki/Borussia_Mönchengladbach"
+    },
+    {
+      "ref": "hamburger-sv",
+      "type": "club",
+      "name": "Hamburgo SV",
+      "short_name": "Hamburgo",
+      "country": "DE",
+      "founded_year": 1887,
+      "source": "https://en.wikipedia.org/wiki/Hamburger_SV"
+    },
+    {
+      "ref": "borussia-dortmund",
+      "type": "club",
+      "name": "Borussia Dortmund",
+      "short_name": "Dortmund",
+      "country": "DE",
+      "founded_year": 1909,
+      "source": "https://en.wikipedia.org/wiki/Borussia_Dortmund"
+    },
+    {
+      "ref": "bayer-leverkusen",
+      "type": "club",
+      "name": "Bayer 04 Leverkusen",
+      "short_name": "Leverkusen",
+      "country": "DE",
+      "founded_year": 1904,
+      "source": "https://en.wikipedia.org/wiki/Bayer_04_Leverkusen"
+    },
+    {
+      "ref": "sl-benfica",
+      "type": "club",
+      "name": "SL Benfica",
+      "short_name": "Benfica",
+      "country": "PT",
+      "founded_year": 1904,
+      "source": "https://en.wikipedia.org/wiki/S.L._Benfica"
+    },
+    {
+      "ref": "fc-porto",
+      "type": "club",
+      "name": "FC Porto",
+      "short_name": "Oporto",
+      "country": "PT",
+      "founded_year": 1893,
+      "source": "https://en.wikipedia.org/wiki/FC_Porto"
+    },
+    {
+      "ref": "ajax",
+      "type": "club",
+      "name": "AFC Ajax",
+      "short_name": "Ajax",
+      "country": "NL",
+      "founded_year": 1900,
+      "source": "https://en.wikipedia.org/wiki/AFC_Ajax"
+    },
+    {
+      "ref": "feyenoord",
+      "type": "club",
+      "name": "Feyenoord",
+      "short_name": "Feyenoord",
+      "country": "NL",
+      "founded_year": 1908,
+      "source": "https://en.wikipedia.org/wiki/Feyenoord"
+    },
+    {
+      "ref": "psv-eindhoven",
+      "type": "club",
+      "name": "PSV Eindhoven",
+      "short_name": "PSV",
+      "country": "NL",
+      "founded_year": 1913,
+      "source": "https://en.wikipedia.org/wiki/PSV_Eindhoven"
+    },
+    {
+      "ref": "celtic-fc",
+      "type": "club",
+      "name": "Celtic FC",
+      "short_name": "Celtic",
+      "country": "GB-SCT",
+      "founded_year": 1887,
+      "source": "https://en.wikipedia.org/wiki/Celtic_F.C."
+    },
+    {
+      "ref": "manchester-united",
+      "type": "club",
+      "name": "Manchester United",
+      "short_name": "Man United",
+      "country": "GB-ENG",
+      "founded_year": 1878,
+      "source": "https://en.wikipedia.org/wiki/Manchester_United_F.C."
+    },
+    {
+      "ref": "liverpool-fc",
+      "type": "club",
+      "name": "Liverpool FC",
+      "short_name": "Liverpool",
+      "country": "GB-ENG",
+      "founded_year": 1892,
+      "source": "https://en.wikipedia.org/wiki/Liverpool_F.C."
+    },
+    {
+      "ref": "nottingham-forest",
+      "type": "club",
+      "name": "Nottingham Forest",
+      "short_name": "Forest",
+      "country": "GB-ENG",
+      "founded_year": 1865,
+      "source": "https://en.wikipedia.org/wiki/Nottingham_Forest_F.C."
+    },
+    {
+      "ref": "aston-villa",
+      "type": "club",
+      "name": "Aston Villa",
+      "short_name": "Villa",
+      "country": "GB-ENG",
+      "founded_year": 1874,
+      "source": "https://en.wikipedia.org/wiki/Aston_Villa_F.C."
+    },
+    {
+      "ref": "chelsea-fc",
+      "type": "club",
+      "name": "Chelsea FC",
+      "short_name": "Chelsea",
+      "country": "GB-ENG",
+      "founded_year": 1905,
+      "source": "https://en.wikipedia.org/wiki/Chelsea_F.C."
+    },
+    {
+      "ref": "manchester-city",
+      "type": "club",
+      "name": "Manchester City",
+      "short_name": "Man City",
+      "country": "GB-ENG",
+      "founded_year": 1880,
+      "source": "https://en.wikipedia.org/wiki/Manchester_City_F.C."
+    },
+    {
+      "ref": "leeds-united",
+      "type": "club",
+      "name": "Leeds United",
+      "short_name": "Leeds",
+      "country": "GB-ENG",
+      "founded_year": 1919,
+      "source": "https://en.wikipedia.org/wiki/Leeds_United_F.C."
+    },
+    {
+      "ref": "arsenal-fc",
+      "type": "club",
+      "name": "Arsenal FC",
+      "short_name": "Arsenal",
+      "country": "GB-ENG",
+      "founded_year": 1886,
+      "source": "https://en.wikipedia.org/wiki/Arsenal_F.C."
+    },
+    {
+      "ref": "tottenham-hotspur",
+      "type": "club",
+      "name": "Tottenham Hotspur",
+      "short_name": "Tottenham",
+      "country": "GB-ENG",
+      "founded_year": 1882,
+      "source": "https://en.wikipedia.org/wiki/Tottenham_Hotspur_F.C."
+    },
+    {
+      "ref": "fk-partizan",
+      "type": "club",
+      "name": "FK Partizan",
+      "short_name": "Partizan",
+      "country": "RS",
+      "founded_year": 1945,
+      "source": "https://en.wikipedia.org/wiki/FK_Partizan"
+    },
+    {
+      "ref": "estrella-roja",
+      "type": "club",
+      "name": "Estrella Roja de Belgrado",
+      "short_name": "Estrella Roja",
+      "country": "RS",
+      "founded_year": 1945,
+      "source": "https://en.wikipedia.org/wiki/Red_Star_Belgrade"
+    },
+    {
+      "ref": "panathinaikos",
+      "type": "club",
+      "name": "Panathinaikos FC",
+      "short_name": "Panathinaikos",
+      "country": "GR",
+      "founded_year": 1908,
+      "source": "https://en.wikipedia.org/wiki/Panathinaikos_F.C."
+    },
+    {
+      "ref": "club-brujas",
+      "type": "club",
+      "name": "Club Brujas",
+      "short_name": "Brujas",
+      "country": "BE",
+      "founded_year": 1891,
+      "source": "https://en.wikipedia.org/wiki/Club_Brugge_KV"
+    },
+    {
+      "ref": "malmo-ff",
+      "type": "club",
+      "name": "Malmö FF",
+      "short_name": "Malmö",
+      "country": "SE",
+      "founded_year": 1910,
+      "source": "https://en.wikipedia.org/wiki/Malmö_FF"
+    },
+    {
+      "ref": "steaua-bucuresti",
+      "type": "club",
+      "name": "Steaua de Bucarest",
+      "short_name": "Steaua",
+      "country": "RO",
+      "founded_year": 1947,
+      "source": "https://en.wikipedia.org/wiki/FCSB"
+    }
+  ],
+  "competitions": [
+    {
+      "ref": "mundial",
+      "name": "Copa Mundial de la FIFA",
+      "type": "international",
+      "country": null,
+      "tier": null,
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Cup"
+    },
+    {
+      "ref": "eurocopa",
+      "name": "Eurocopa (Campeonato Europeo de la UEFA)",
+      "type": "international",
+      "country": null,
+      "tier": null,
+      "source": "https://en.wikipedia.org/wiki/UEFA_European_Championship"
+    },
+    {
+      "ref": "champions-league",
+      "name": "Copa de Europa / UEFA Champions League",
+      "type": "continental_club",
+      "country": null,
+      "tier": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    }
+  ],
+  "seasons": [
+    {
+      "ref": "mundial-1930",
+      "competition": "mundial",
+      "label": "1930",
+      "start_date": "1930-07-13",
+      "end_date": "1930-07-30",
+      "host_country": "UY",
+      "source": "https://en.wikipedia.org/wiki/1930_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-1934",
+      "competition": "mundial",
+      "label": "1934",
+      "start_date": "1934-05-27",
+      "end_date": "1934-06-10",
+      "host_country": "IT",
+      "source": "https://en.wikipedia.org/wiki/1934_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-1938",
+      "competition": "mundial",
+      "label": "1938",
+      "start_date": "1938-06-04",
+      "end_date": "1938-06-19",
+      "host_country": "FR",
+      "source": "https://en.wikipedia.org/wiki/1938_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-1950",
+      "competition": "mundial",
+      "label": "1950",
+      "start_date": "1950-06-24",
+      "end_date": "1950-07-16",
+      "host_country": "BR",
+      "source": "https://en.wikipedia.org/wiki/1950_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-1954",
+      "competition": "mundial",
+      "label": "1954",
+      "start_date": "1954-06-16",
+      "end_date": "1954-07-04",
+      "host_country": "CH",
+      "source": "https://en.wikipedia.org/wiki/1954_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-1958",
+      "competition": "mundial",
+      "label": "1958",
+      "start_date": "1958-06-08",
+      "end_date": "1958-06-29",
+      "host_country": "SE",
+      "source": "https://en.wikipedia.org/wiki/1958_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-1962",
+      "competition": "mundial",
+      "label": "1962",
+      "start_date": "1962-05-30",
+      "end_date": "1962-06-17",
+      "host_country": "CL",
+      "source": "https://en.wikipedia.org/wiki/1962_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-1966",
+      "competition": "mundial",
+      "label": "1966",
+      "start_date": "1966-07-11",
+      "end_date": "1966-07-30",
+      "host_country": "GB-ENG",
+      "source": "https://en.wikipedia.org/wiki/1966_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-1970",
+      "competition": "mundial",
+      "label": "1970",
+      "start_date": "1970-05-31",
+      "end_date": "1970-06-21",
+      "host_country": "MX",
+      "source": "https://en.wikipedia.org/wiki/1970_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-1974",
+      "competition": "mundial",
+      "label": "1974",
+      "start_date": "1974-06-13",
+      "end_date": "1974-07-07",
+      "host_country": "DE",
+      "source": "https://en.wikipedia.org/wiki/1974_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-1978",
+      "competition": "mundial",
+      "label": "1978",
+      "start_date": "1978-06-01",
+      "end_date": "1978-06-25",
+      "host_country": "AR",
+      "source": "https://en.wikipedia.org/wiki/1978_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-1982",
+      "competition": "mundial",
+      "label": "1982",
+      "start_date": "1982-06-13",
+      "end_date": "1982-07-11",
+      "host_country": "ES",
+      "source": "https://en.wikipedia.org/wiki/1982_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-1986",
+      "competition": "mundial",
+      "label": "1986",
+      "start_date": "1986-05-31",
+      "end_date": "1986-06-29",
+      "host_country": "MX",
+      "source": "https://en.wikipedia.org/wiki/1986_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-1990",
+      "competition": "mundial",
+      "label": "1990",
+      "start_date": "1990-06-08",
+      "end_date": "1990-07-08",
+      "host_country": "IT",
+      "source": "https://en.wikipedia.org/wiki/1990_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-1994",
+      "competition": "mundial",
+      "label": "1994",
+      "start_date": "1994-06-17",
+      "end_date": "1994-07-17",
+      "host_country": "US",
+      "source": "https://en.wikipedia.org/wiki/1994_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-1998",
+      "competition": "mundial",
+      "label": "1998",
+      "start_date": "1998-06-10",
+      "end_date": "1998-07-12",
+      "host_country": "FR",
+      "source": "https://en.wikipedia.org/wiki/1998_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-2002",
+      "competition": "mundial",
+      "label": "2002",
+      "start_date": "2002-05-31",
+      "end_date": "2002-06-30",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/2002_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-2006",
+      "competition": "mundial",
+      "label": "2006",
+      "start_date": "2006-06-09",
+      "end_date": "2006-07-09",
+      "host_country": "DE",
+      "source": "https://en.wikipedia.org/wiki/2006_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-2010",
+      "competition": "mundial",
+      "label": "2010",
+      "start_date": "2010-06-11",
+      "end_date": "2010-07-11",
+      "host_country": "ZA",
+      "source": "https://en.wikipedia.org/wiki/2010_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-2014",
+      "competition": "mundial",
+      "label": "2014",
+      "start_date": "2014-06-12",
+      "end_date": "2014-07-13",
+      "host_country": "BR",
+      "source": "https://en.wikipedia.org/wiki/2014_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-2018",
+      "competition": "mundial",
+      "label": "2018",
+      "start_date": "2018-06-14",
+      "end_date": "2018-07-15",
+      "host_country": "RU",
+      "source": "https://en.wikipedia.org/wiki/2018_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-2022",
+      "competition": "mundial",
+      "label": "2022",
+      "start_date": "2022-11-20",
+      "end_date": "2022-12-18",
+      "host_country": "QA",
+      "source": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup"
+    },
+    {
+      "ref": "mundial-2026",
+      "competition": "mundial",
+      "label": "2026",
+      "start_date": "2026-06-11",
+      "end_date": "2026-07-19",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+    },
+    {
+      "ref": "eurocopa-1960",
+      "competition": "eurocopa",
+      "label": "1960",
+      "start_date": null,
+      "end_date": null,
+      "host_country": "FR",
+      "source": "https://en.wikipedia.org/wiki/UEFA_Euro_1960"
+    },
+    {
+      "ref": "eurocopa-1964",
+      "competition": "eurocopa",
+      "label": "1964",
+      "start_date": null,
+      "end_date": null,
+      "host_country": "ES",
+      "source": "https://en.wikipedia.org/wiki/UEFA_Euro_1964"
+    },
+    {
+      "ref": "eurocopa-1968",
+      "competition": "eurocopa",
+      "label": "1968",
+      "start_date": "1968-06-05",
+      "end_date": "1968-06-10",
+      "host_country": "IT",
+      "source": "https://en.wikipedia.org/wiki/UEFA_Euro_1968"
+    },
+    {
+      "ref": "eurocopa-1972",
+      "competition": "eurocopa",
+      "label": "1972",
+      "start_date": "1972-06-14",
+      "end_date": "1972-06-18",
+      "host_country": "BE",
+      "source": "https://en.wikipedia.org/wiki/UEFA_Euro_1972"
+    },
+    {
+      "ref": "eurocopa-1976",
+      "competition": "eurocopa",
+      "label": "1976",
+      "start_date": "1976-06-16",
+      "end_date": "1976-06-20",
+      "host_country": "YU",
+      "source": "https://en.wikipedia.org/wiki/UEFA_Euro_1976"
+    },
+    {
+      "ref": "eurocopa-1980",
+      "competition": "eurocopa",
+      "label": "1980",
+      "start_date": "1980-06-11",
+      "end_date": "1980-06-22",
+      "host_country": "IT",
+      "source": "https://en.wikipedia.org/wiki/UEFA_Euro_1980"
+    },
+    {
+      "ref": "eurocopa-1984",
+      "competition": "eurocopa",
+      "label": "1984",
+      "start_date": "1984-06-12",
+      "end_date": "1984-06-27",
+      "host_country": "FR",
+      "source": "https://en.wikipedia.org/wiki/UEFA_Euro_1984"
+    },
+    {
+      "ref": "eurocopa-1988",
+      "competition": "eurocopa",
+      "label": "1988",
+      "start_date": "1988-06-10",
+      "end_date": "1988-06-25",
+      "host_country": "DE",
+      "source": "https://en.wikipedia.org/wiki/UEFA_Euro_1988"
+    },
+    {
+      "ref": "eurocopa-1992",
+      "competition": "eurocopa",
+      "label": "1992",
+      "start_date": "1992-06-10",
+      "end_date": "1992-06-26",
+      "host_country": "SE",
+      "source": "https://en.wikipedia.org/wiki/UEFA_Euro_1992"
+    },
+    {
+      "ref": "eurocopa-1996",
+      "competition": "eurocopa",
+      "label": "1996",
+      "start_date": "1996-06-08",
+      "end_date": "1996-06-30",
+      "host_country": "GB-ENG",
+      "source": "https://en.wikipedia.org/wiki/UEFA_Euro_1996"
+    },
+    {
+      "ref": "eurocopa-2000",
+      "competition": "eurocopa",
+      "label": "2000",
+      "start_date": "2000-06-10",
+      "end_date": "2000-07-02",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/UEFA_Euro_2000"
+    },
+    {
+      "ref": "eurocopa-2004",
+      "competition": "eurocopa",
+      "label": "2004",
+      "start_date": "2004-06-12",
+      "end_date": "2004-07-04",
+      "host_country": "PT",
+      "source": "https://en.wikipedia.org/wiki/UEFA_Euro_2004"
+    },
+    {
+      "ref": "eurocopa-2008",
+      "competition": "eurocopa",
+      "label": "2008",
+      "start_date": "2008-06-07",
+      "end_date": "2008-06-29",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/UEFA_Euro_2008"
+    },
+    {
+      "ref": "eurocopa-2012",
+      "competition": "eurocopa",
+      "label": "2012",
+      "start_date": "2012-06-08",
+      "end_date": "2012-07-01",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/UEFA_Euro_2012"
+    },
+    {
+      "ref": "eurocopa-2016",
+      "competition": "eurocopa",
+      "label": "2016",
+      "start_date": "2016-06-10",
+      "end_date": "2016-07-10",
+      "host_country": "FR",
+      "source": "https://en.wikipedia.org/wiki/UEFA_Euro_2016"
+    },
+    {
+      "ref": "eurocopa-2020",
+      "competition": "eurocopa",
+      "label": "2020",
+      "start_date": "2021-06-11",
+      "end_date": "2021-07-11",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/UEFA_Euro_2020"
+    },
+    {
+      "ref": "eurocopa-2024",
+      "competition": "eurocopa",
+      "label": "2024",
+      "start_date": "2024-06-14",
+      "end_date": "2024-07-14",
+      "host_country": "DE",
+      "source": "https://en.wikipedia.org/wiki/UEFA_Euro_2024"
+    },
+    {
+      "ref": "champions-league-1955-56",
+      "competition": "champions-league",
+      "label": "1955-56",
+      "start_date": null,
+      "end_date": "1956-06-13",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1956-57",
+      "competition": "champions-league",
+      "label": "1956-57",
+      "start_date": null,
+      "end_date": "1957-05-30",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1957-58",
+      "competition": "champions-league",
+      "label": "1957-58",
+      "start_date": null,
+      "end_date": "1958-05-28",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1958-59",
+      "competition": "champions-league",
+      "label": "1958-59",
+      "start_date": null,
+      "end_date": "1959-06-03",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1959-60",
+      "competition": "champions-league",
+      "label": "1959-60",
+      "start_date": null,
+      "end_date": "1960-05-18",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1960-61",
+      "competition": "champions-league",
+      "label": "1960-61",
+      "start_date": null,
+      "end_date": "1961-05-31",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1961-62",
+      "competition": "champions-league",
+      "label": "1961-62",
+      "start_date": null,
+      "end_date": "1962-05-02",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1962-63",
+      "competition": "champions-league",
+      "label": "1962-63",
+      "start_date": null,
+      "end_date": "1963-05-22",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1963-64",
+      "competition": "champions-league",
+      "label": "1963-64",
+      "start_date": null,
+      "end_date": "1964-05-27",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1964-65",
+      "competition": "champions-league",
+      "label": "1964-65",
+      "start_date": null,
+      "end_date": "1965-05-27",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1965-66",
+      "competition": "champions-league",
+      "label": "1965-66",
+      "start_date": null,
+      "end_date": "1966-05-11",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1966-67",
+      "competition": "champions-league",
+      "label": "1966-67",
+      "start_date": null,
+      "end_date": "1967-05-25",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1967-68",
+      "competition": "champions-league",
+      "label": "1967-68",
+      "start_date": null,
+      "end_date": "1968-05-29",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1968-69",
+      "competition": "champions-league",
+      "label": "1968-69",
+      "start_date": null,
+      "end_date": "1969-05-28",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1969-70",
+      "competition": "champions-league",
+      "label": "1969-70",
+      "start_date": null,
+      "end_date": "1970-05-06",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1970-71",
+      "competition": "champions-league",
+      "label": "1970-71",
+      "start_date": null,
+      "end_date": "1971-06-02",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1971-72",
+      "competition": "champions-league",
+      "label": "1971-72",
+      "start_date": null,
+      "end_date": "1972-05-31",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1972-73",
+      "competition": "champions-league",
+      "label": "1972-73",
+      "start_date": null,
+      "end_date": "1973-05-30",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1973-74",
+      "competition": "champions-league",
+      "label": "1973-74",
+      "start_date": null,
+      "end_date": "1974-05-17",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1974-75",
+      "competition": "champions-league",
+      "label": "1974-75",
+      "start_date": null,
+      "end_date": "1975-05-28",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1975-76",
+      "competition": "champions-league",
+      "label": "1975-76",
+      "start_date": null,
+      "end_date": "1976-05-12",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1976-77",
+      "competition": "champions-league",
+      "label": "1976-77",
+      "start_date": null,
+      "end_date": "1977-05-25",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1977-78",
+      "competition": "champions-league",
+      "label": "1977-78",
+      "start_date": null,
+      "end_date": "1978-05-10",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1978-79",
+      "competition": "champions-league",
+      "label": "1978-79",
+      "start_date": null,
+      "end_date": "1979-05-30",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1979-80",
+      "competition": "champions-league",
+      "label": "1979-80",
+      "start_date": null,
+      "end_date": "1980-05-28",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1980-81",
+      "competition": "champions-league",
+      "label": "1980-81",
+      "start_date": null,
+      "end_date": "1981-05-27",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1981-82",
+      "competition": "champions-league",
+      "label": "1981-82",
+      "start_date": null,
+      "end_date": "1982-05-26",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1982-83",
+      "competition": "champions-league",
+      "label": "1982-83",
+      "start_date": null,
+      "end_date": "1983-05-25",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1983-84",
+      "competition": "champions-league",
+      "label": "1983-84",
+      "start_date": null,
+      "end_date": "1984-05-30",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1984-85",
+      "competition": "champions-league",
+      "label": "1984-85",
+      "start_date": null,
+      "end_date": "1985-05-29",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1985-86",
+      "competition": "champions-league",
+      "label": "1985-86",
+      "start_date": null,
+      "end_date": "1986-05-07",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1986-87",
+      "competition": "champions-league",
+      "label": "1986-87",
+      "start_date": null,
+      "end_date": "1987-05-27",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1987-88",
+      "competition": "champions-league",
+      "label": "1987-88",
+      "start_date": null,
+      "end_date": "1988-05-25",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1988-89",
+      "competition": "champions-league",
+      "label": "1988-89",
+      "start_date": null,
+      "end_date": "1989-05-24",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1989-90",
+      "competition": "champions-league",
+      "label": "1989-90",
+      "start_date": null,
+      "end_date": "1990-05-23",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1990-91",
+      "competition": "champions-league",
+      "label": "1990-91",
+      "start_date": null,
+      "end_date": "1991-05-29",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1991-92",
+      "competition": "champions-league",
+      "label": "1991-92",
+      "start_date": null,
+      "end_date": "1992-05-20",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1992-93",
+      "competition": "champions-league",
+      "label": "1992-93",
+      "start_date": null,
+      "end_date": "1993-05-26",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1993-94",
+      "competition": "champions-league",
+      "label": "1993-94",
+      "start_date": null,
+      "end_date": "1994-05-18",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1994-95",
+      "competition": "champions-league",
+      "label": "1994-95",
+      "start_date": null,
+      "end_date": "1995-05-24",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1995-96",
+      "competition": "champions-league",
+      "label": "1995-96",
+      "start_date": null,
+      "end_date": "1996-05-22",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1996-97",
+      "competition": "champions-league",
+      "label": "1996-97",
+      "start_date": null,
+      "end_date": "1997-05-28",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1997-98",
+      "competition": "champions-league",
+      "label": "1997-98",
+      "start_date": null,
+      "end_date": "1998-05-20",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1998-99",
+      "competition": "champions-league",
+      "label": "1998-99",
+      "start_date": null,
+      "end_date": "1999-05-26",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-1999-00",
+      "competition": "champions-league",
+      "label": "1999-00",
+      "start_date": null,
+      "end_date": "2000-05-24",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2000-01",
+      "competition": "champions-league",
+      "label": "2000-01",
+      "start_date": null,
+      "end_date": "2001-05-23",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2001-02",
+      "competition": "champions-league",
+      "label": "2001-02",
+      "start_date": null,
+      "end_date": "2002-05-15",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2002-03",
+      "competition": "champions-league",
+      "label": "2002-03",
+      "start_date": null,
+      "end_date": "2003-05-28",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2003-04",
+      "competition": "champions-league",
+      "label": "2003-04",
+      "start_date": null,
+      "end_date": "2004-05-26",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2004-05",
+      "competition": "champions-league",
+      "label": "2004-05",
+      "start_date": null,
+      "end_date": "2005-05-25",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2005-06",
+      "competition": "champions-league",
+      "label": "2005-06",
+      "start_date": null,
+      "end_date": "2006-05-17",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2006-07",
+      "competition": "champions-league",
+      "label": "2006-07",
+      "start_date": null,
+      "end_date": "2007-05-23",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2007-08",
+      "competition": "champions-league",
+      "label": "2007-08",
+      "start_date": null,
+      "end_date": "2008-05-21",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2008-09",
+      "competition": "champions-league",
+      "label": "2008-09",
+      "start_date": null,
+      "end_date": "2009-05-27",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2009-10",
+      "competition": "champions-league",
+      "label": "2009-10",
+      "start_date": null,
+      "end_date": "2010-05-22",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2010-11",
+      "competition": "champions-league",
+      "label": "2010-11",
+      "start_date": null,
+      "end_date": "2011-05-28",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2011-12",
+      "competition": "champions-league",
+      "label": "2011-12",
+      "start_date": null,
+      "end_date": "2012-05-19",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2012-13",
+      "competition": "champions-league",
+      "label": "2012-13",
+      "start_date": null,
+      "end_date": "2013-05-25",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2013-14",
+      "competition": "champions-league",
+      "label": "2013-14",
+      "start_date": null,
+      "end_date": "2014-05-24",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2014-15",
+      "competition": "champions-league",
+      "label": "2014-15",
+      "start_date": null,
+      "end_date": "2015-06-06",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2015-16",
+      "competition": "champions-league",
+      "label": "2015-16",
+      "start_date": null,
+      "end_date": "2016-05-28",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2016-17",
+      "competition": "champions-league",
+      "label": "2016-17",
+      "start_date": null,
+      "end_date": "2017-06-03",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2017-18",
+      "competition": "champions-league",
+      "label": "2017-18",
+      "start_date": null,
+      "end_date": "2018-05-26",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2018-19",
+      "competition": "champions-league",
+      "label": "2018-19",
+      "start_date": null,
+      "end_date": "2019-06-01",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2019-20",
+      "competition": "champions-league",
+      "label": "2019-20",
+      "start_date": null,
+      "end_date": "2020-08-23",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2020-21",
+      "competition": "champions-league",
+      "label": "2020-21",
+      "start_date": null,
+      "end_date": "2021-05-29",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2021-22",
+      "competition": "champions-league",
+      "label": "2021-22",
+      "start_date": null,
+      "end_date": "2022-05-28",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2022-23",
+      "competition": "champions-league",
+      "label": "2022-23",
+      "start_date": null,
+      "end_date": "2023-06-10",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2023-24",
+      "competition": "champions-league",
+      "label": "2023-24",
+      "start_date": null,
+      "end_date": "2024-06-01",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2024-25",
+      "competition": "champions-league",
+      "label": "2024-25",
+      "start_date": null,
+      "end_date": "2025-05-31",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "ref": "champions-league-2025-26",
+      "competition": "champions-league",
+      "label": "2025-26",
+      "start_date": null,
+      "end_date": "2026-05-30",
+      "host_country": null,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    }
+  ],
+  "competition_winners": [
+    {
+      "season": "mundial-1930",
+      "team": "seleccion-uruguay",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1930",
+      "team": "seleccion-argentina",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1934",
+      "team": "seleccion-italia",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1934",
+      "team": "seleccion-checoslovaquia",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1938",
+      "team": "seleccion-italia",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1938",
+      "team": "seleccion-hungria",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1950",
+      "team": "seleccion-uruguay",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1950",
+      "team": "seleccion-brasil",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1954",
+      "team": "seleccion-alemania-federal",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1954",
+      "team": "seleccion-hungria",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1958",
+      "team": "seleccion-brasil",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1958",
+      "team": "seleccion-suecia",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1962",
+      "team": "seleccion-brasil",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1962",
+      "team": "seleccion-checoslovaquia",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1966",
+      "team": "seleccion-inglaterra",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1966",
+      "team": "seleccion-alemania-federal",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1970",
+      "team": "seleccion-brasil",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1970",
+      "team": "seleccion-italia",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1974",
+      "team": "seleccion-alemania-federal",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1974",
+      "team": "seleccion-paises-bajos",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1978",
+      "team": "seleccion-argentina",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1978",
+      "team": "seleccion-paises-bajos",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1982",
+      "team": "seleccion-italia",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1982",
+      "team": "seleccion-alemania-federal",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1986",
+      "team": "seleccion-argentina",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1986",
+      "team": "seleccion-alemania-federal",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1990",
+      "team": "seleccion-alemania-federal",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1990",
+      "team": "seleccion-argentina",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1994",
+      "team": "seleccion-brasil",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1994",
+      "team": "seleccion-italia",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1998",
+      "team": "seleccion-francia",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-1998",
+      "team": "seleccion-brasil",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-2002",
+      "team": "seleccion-brasil",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-2002",
+      "team": "seleccion-alemania",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-2006",
+      "team": "seleccion-italia",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-2006",
+      "team": "seleccion-francia",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-2010",
+      "team": "seleccion-espana",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-2010",
+      "team": "seleccion-paises-bajos",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-2014",
+      "team": "seleccion-alemania",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-2014",
+      "team": "seleccion-argentina",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-2018",
+      "team": "seleccion-francia",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-2018",
+      "team": "seleccion-croacia",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-2022",
+      "team": "seleccion-argentina",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-2022",
+      "team": "seleccion-francia",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "season": "mundial-2026",
+      "team": "seleccion-espana",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_final"
+    },
+    {
+      "season": "mundial-2026",
+      "team": "seleccion-argentina",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_final"
+    },
+    {
+      "season": "eurocopa-1960",
+      "team": "seleccion-urss",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-1960",
+      "team": "seleccion-yugoslavia",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-1964",
+      "team": "seleccion-espana",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-1964",
+      "team": "seleccion-urss",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-1968",
+      "team": "seleccion-italia",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-1968",
+      "team": "seleccion-yugoslavia",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-1972",
+      "team": "seleccion-alemania-federal",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-1972",
+      "team": "seleccion-urss",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-1976",
+      "team": "seleccion-checoslovaquia",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-1976",
+      "team": "seleccion-alemania-federal",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-1980",
+      "team": "seleccion-alemania-federal",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-1980",
+      "team": "seleccion-belgica",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-1984",
+      "team": "seleccion-francia",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-1984",
+      "team": "seleccion-espana",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-1988",
+      "team": "seleccion-paises-bajos",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-1988",
+      "team": "seleccion-urss",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-1992",
+      "team": "seleccion-dinamarca",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-1992",
+      "team": "seleccion-alemania",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-1996",
+      "team": "seleccion-alemania",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-1996",
+      "team": "seleccion-republica-checa",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-2000",
+      "team": "seleccion-francia",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-2000",
+      "team": "seleccion-italia",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-2004",
+      "team": "seleccion-grecia",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-2004",
+      "team": "seleccion-portugal",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-2008",
+      "team": "seleccion-espana",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-2008",
+      "team": "seleccion-alemania",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-2012",
+      "team": "seleccion-espana",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-2012",
+      "team": "seleccion-italia",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-2016",
+      "team": "seleccion-portugal",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-2016",
+      "team": "seleccion-francia",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-2020",
+      "team": "seleccion-italia",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-2020",
+      "team": "seleccion-inglaterra",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-2024",
+      "team": "seleccion-espana",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "eurocopa-2024",
+      "team": "seleccion-inglaterra",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "season": "champions-league-1955-56",
+      "team": "real-madrid",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1955-56",
+      "team": "stade-de-reims",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1956-57",
+      "team": "real-madrid",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1956-57",
+      "team": "acf-fiorentina",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1957-58",
+      "team": "real-madrid",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1957-58",
+      "team": "ac-milan",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1958-59",
+      "team": "real-madrid",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1958-59",
+      "team": "stade-de-reims",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1959-60",
+      "team": "real-madrid",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1959-60",
+      "team": "eintracht-frankfurt",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1960-61",
+      "team": "sl-benfica",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1960-61",
+      "team": "fc-barcelona",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1961-62",
+      "team": "sl-benfica",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1961-62",
+      "team": "real-madrid",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1962-63",
+      "team": "ac-milan",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1962-63",
+      "team": "sl-benfica",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1963-64",
+      "team": "inter-milan",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1963-64",
+      "team": "real-madrid",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1964-65",
+      "team": "inter-milan",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1964-65",
+      "team": "sl-benfica",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1965-66",
+      "team": "real-madrid",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1965-66",
+      "team": "fk-partizan",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1966-67",
+      "team": "celtic-fc",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1966-67",
+      "team": "inter-milan",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1967-68",
+      "team": "manchester-united",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1967-68",
+      "team": "sl-benfica",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1968-69",
+      "team": "ac-milan",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1968-69",
+      "team": "ajax",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1969-70",
+      "team": "feyenoord",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1969-70",
+      "team": "celtic-fc",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1970-71",
+      "team": "ajax",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1970-71",
+      "team": "panathinaikos",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1971-72",
+      "team": "ajax",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1971-72",
+      "team": "inter-milan",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1972-73",
+      "team": "ajax",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1972-73",
+      "team": "juventus",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1973-74",
+      "team": "bayern-munich",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1973-74",
+      "team": "atletico-madrid",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1974-75",
+      "team": "bayern-munich",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1974-75",
+      "team": "leeds-united",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1975-76",
+      "team": "bayern-munich",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1975-76",
+      "team": "as-saint-etienne",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1976-77",
+      "team": "liverpool-fc",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1976-77",
+      "team": "borussia-monchengladbach",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1977-78",
+      "team": "liverpool-fc",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1977-78",
+      "team": "club-brujas",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1978-79",
+      "team": "nottingham-forest",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1978-79",
+      "team": "malmo-ff",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1979-80",
+      "team": "nottingham-forest",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1979-80",
+      "team": "hamburger-sv",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1980-81",
+      "team": "liverpool-fc",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1980-81",
+      "team": "real-madrid",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1981-82",
+      "team": "aston-villa",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1981-82",
+      "team": "bayern-munich",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1982-83",
+      "team": "hamburger-sv",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1982-83",
+      "team": "juventus",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1983-84",
+      "team": "liverpool-fc",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1983-84",
+      "team": "as-roma",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1984-85",
+      "team": "juventus",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1984-85",
+      "team": "liverpool-fc",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1985-86",
+      "team": "steaua-bucuresti",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1985-86",
+      "team": "fc-barcelona",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1986-87",
+      "team": "fc-porto",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1986-87",
+      "team": "bayern-munich",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1987-88",
+      "team": "psv-eindhoven",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1987-88",
+      "team": "sl-benfica",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1988-89",
+      "team": "ac-milan",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1988-89",
+      "team": "steaua-bucuresti",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1989-90",
+      "team": "ac-milan",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1989-90",
+      "team": "sl-benfica",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1990-91",
+      "team": "estrella-roja",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1990-91",
+      "team": "olympique-marseille",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1991-92",
+      "team": "fc-barcelona",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1991-92",
+      "team": "uc-sampdoria",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1992-93",
+      "team": "olympique-marseille",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1992-93",
+      "team": "ac-milan",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1993-94",
+      "team": "ac-milan",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1993-94",
+      "team": "fc-barcelona",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1994-95",
+      "team": "ajax",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1994-95",
+      "team": "ac-milan",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1995-96",
+      "team": "juventus",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1995-96",
+      "team": "ajax",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1996-97",
+      "team": "borussia-dortmund",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1996-97",
+      "team": "juventus",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1997-98",
+      "team": "real-madrid",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1997-98",
+      "team": "juventus",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1998-99",
+      "team": "manchester-united",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1998-99",
+      "team": "bayern-munich",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1999-00",
+      "team": "real-madrid",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-1999-00",
+      "team": "valencia-cf",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2000-01",
+      "team": "bayern-munich",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2000-01",
+      "team": "valencia-cf",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2001-02",
+      "team": "real-madrid",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2001-02",
+      "team": "bayer-leverkusen",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2002-03",
+      "team": "ac-milan",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2002-03",
+      "team": "juventus",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2003-04",
+      "team": "fc-porto",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2003-04",
+      "team": "as-monaco",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2004-05",
+      "team": "liverpool-fc",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2004-05",
+      "team": "ac-milan",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2005-06",
+      "team": "fc-barcelona",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2005-06",
+      "team": "arsenal-fc",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2006-07",
+      "team": "ac-milan",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2006-07",
+      "team": "liverpool-fc",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2007-08",
+      "team": "manchester-united",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2007-08",
+      "team": "chelsea-fc",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2008-09",
+      "team": "fc-barcelona",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2008-09",
+      "team": "manchester-united",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2009-10",
+      "team": "inter-milan",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2009-10",
+      "team": "bayern-munich",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2010-11",
+      "team": "fc-barcelona",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2010-11",
+      "team": "manchester-united",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2011-12",
+      "team": "chelsea-fc",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2011-12",
+      "team": "bayern-munich",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2012-13",
+      "team": "bayern-munich",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2012-13",
+      "team": "borussia-dortmund",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2013-14",
+      "team": "real-madrid",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2013-14",
+      "team": "atletico-madrid",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2014-15",
+      "team": "fc-barcelona",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2014-15",
+      "team": "juventus",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2015-16",
+      "team": "real-madrid",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2015-16",
+      "team": "atletico-madrid",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2016-17",
+      "team": "real-madrid",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2016-17",
+      "team": "juventus",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2017-18",
+      "team": "real-madrid",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2017-18",
+      "team": "liverpool-fc",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2018-19",
+      "team": "liverpool-fc",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2018-19",
+      "team": "tottenham-hotspur",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2019-20",
+      "team": "bayern-munich",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2019-20",
+      "team": "paris-saint-germain",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2020-21",
+      "team": "chelsea-fc",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2020-21",
+      "team": "manchester-city",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2021-22",
+      "team": "real-madrid",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2021-22",
+      "team": "liverpool-fc",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2022-23",
+      "team": "manchester-city",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2022-23",
+      "team": "inter-milan",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2023-24",
+      "team": "real-madrid",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2023-24",
+      "team": "borussia-dortmund",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2024-25",
+      "team": "paris-saint-germain",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2024-25",
+      "team": "inter-milan",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals"
+    },
+    {
+      "season": "champions-league-2025-26",
+      "team": "paris-saint-germain",
+      "final_rank": 1,
+      "source": "https://en.wikipedia.org/wiki/2026_UEFA_Champions_League_final"
+    },
+    {
+      "season": "champions-league-2025-26",
+      "team": "arsenal-fc",
+      "final_rank": 2,
+      "source": "https://en.wikipedia.org/wiki/2026_UEFA_Champions_League_final"
+    }
+  ],
+  "matches": [
+    {
+      "ref": "final-mundial-1930",
+      "season": "mundial-1930",
+      "stage": "Final",
+      "match_date": "1930-07-30",
+      "home_team": "seleccion-uruguay",
+      "away_team": "seleccion-argentina",
+      "home_goals": 4,
+      "away_goals": 2,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Estadio Centenario, Montevideo",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-1934",
+      "season": "mundial-1934",
+      "stage": "Final",
+      "match_date": "1934-06-10",
+      "home_team": "seleccion-italia",
+      "away_team": "seleccion-checoslovaquia",
+      "home_goals": 2,
+      "away_goals": 1,
+      "extra_time": true,
+      "penalties": null,
+      "venue": "Stadio Nazionale PNF, Roma",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-1938",
+      "season": "mundial-1938",
+      "stage": "Final",
+      "match_date": "1938-06-19",
+      "home_team": "seleccion-italia",
+      "away_team": "seleccion-hungria",
+      "home_goals": 4,
+      "away_goals": 2,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Stade Olympique de Colombes, Colombes",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-1950",
+      "season": "mundial-1950",
+      "stage": "Partido decisivo (liguilla final)",
+      "match_date": "1950-07-16",
+      "home_team": "seleccion-uruguay",
+      "away_team": "seleccion-brasil",
+      "home_goals": 2,
+      "away_goals": 1,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Estadio Maracaná, Río de Janeiro",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-1954",
+      "season": "mundial-1954",
+      "stage": "Final",
+      "match_date": "1954-07-04",
+      "home_team": "seleccion-alemania-federal",
+      "away_team": "seleccion-hungria",
+      "home_goals": 3,
+      "away_goals": 2,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Wankdorfstadion, Berna",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-1958",
+      "season": "mundial-1958",
+      "stage": "Final",
+      "match_date": "1958-06-29",
+      "home_team": "seleccion-brasil",
+      "away_team": "seleccion-suecia",
+      "home_goals": 5,
+      "away_goals": 2,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Estadio Råsunda, Solna",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-1962",
+      "season": "mundial-1962",
+      "stage": "Final",
+      "match_date": "1962-06-17",
+      "home_team": "seleccion-brasil",
+      "away_team": "seleccion-checoslovaquia",
+      "home_goals": 3,
+      "away_goals": 1,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Estadio Nacional, Santiago de Chile",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-1966",
+      "season": "mundial-1966",
+      "stage": "Final",
+      "match_date": "1966-07-30",
+      "home_team": "seleccion-inglaterra",
+      "away_team": "seleccion-alemania-federal",
+      "home_goals": 4,
+      "away_goals": 2,
+      "extra_time": true,
+      "penalties": null,
+      "venue": "Estadio de Wembley, Londres",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-1970",
+      "season": "mundial-1970",
+      "stage": "Final",
+      "match_date": "1970-06-21",
+      "home_team": "seleccion-brasil",
+      "away_team": "seleccion-italia",
+      "home_goals": 4,
+      "away_goals": 1,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Estadio Azteca, Ciudad de México",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-1974",
+      "season": "mundial-1974",
+      "stage": "Final",
+      "match_date": "1974-07-07",
+      "home_team": "seleccion-alemania-federal",
+      "away_team": "seleccion-paises-bajos",
+      "home_goals": 2,
+      "away_goals": 1,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Estadio Olímpico, Múnich",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-1978",
+      "season": "mundial-1978",
+      "stage": "Final",
+      "match_date": "1978-06-25",
+      "home_team": "seleccion-argentina",
+      "away_team": "seleccion-paises-bajos",
+      "home_goals": 3,
+      "away_goals": 1,
+      "extra_time": true,
+      "penalties": null,
+      "venue": "Estadio Monumental, Buenos Aires",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-1982",
+      "season": "mundial-1982",
+      "stage": "Final",
+      "match_date": "1982-07-11",
+      "home_team": "seleccion-italia",
+      "away_team": "seleccion-alemania-federal",
+      "home_goals": 3,
+      "away_goals": 1,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Estadio Santiago Bernabéu, Madrid",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-1986",
+      "season": "mundial-1986",
+      "stage": "Final",
+      "match_date": "1986-06-29",
+      "home_team": "seleccion-argentina",
+      "away_team": "seleccion-alemania-federal",
+      "home_goals": 3,
+      "away_goals": 2,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Estadio Azteca, Ciudad de México",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-1990",
+      "season": "mundial-1990",
+      "stage": "Final",
+      "match_date": "1990-07-08",
+      "home_team": "seleccion-alemania-federal",
+      "away_team": "seleccion-argentina",
+      "home_goals": 1,
+      "away_goals": 0,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Stadio Olimpico, Roma",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-1994",
+      "season": "mundial-1994",
+      "stage": "Final",
+      "match_date": "1994-07-17",
+      "home_team": "seleccion-brasil",
+      "away_team": "seleccion-italia",
+      "home_goals": 0,
+      "away_goals": 0,
+      "extra_time": true,
+      "penalties": "3-2",
+      "venue": "Rose Bowl, Pasadena",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-1998",
+      "season": "mundial-1998",
+      "stage": "Final",
+      "match_date": "1998-07-12",
+      "home_team": "seleccion-francia",
+      "away_team": "seleccion-brasil",
+      "home_goals": 3,
+      "away_goals": 0,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Stade de France, Saint-Denis",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-2002",
+      "season": "mundial-2002",
+      "stage": "Final",
+      "match_date": "2002-06-30",
+      "home_team": "seleccion-brasil",
+      "away_team": "seleccion-alemania",
+      "home_goals": 2,
+      "away_goals": 0,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Estadio Internacional, Yokohama",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-2006",
+      "season": "mundial-2006",
+      "stage": "Final",
+      "match_date": "2006-07-09",
+      "home_team": "seleccion-italia",
+      "away_team": "seleccion-francia",
+      "home_goals": 1,
+      "away_goals": 1,
+      "extra_time": true,
+      "penalties": "5-3",
+      "venue": "Estadio Olímpico, Berlín",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-2010",
+      "season": "mundial-2010",
+      "stage": "Final",
+      "match_date": "2010-07-11",
+      "home_team": "seleccion-espana",
+      "away_team": "seleccion-paises-bajos",
+      "home_goals": 1,
+      "away_goals": 0,
+      "extra_time": true,
+      "penalties": null,
+      "venue": "Soccer City, Johannesburgo",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-2014",
+      "season": "mundial-2014",
+      "stage": "Final",
+      "match_date": "2014-07-13",
+      "home_team": "seleccion-alemania",
+      "away_team": "seleccion-argentina",
+      "home_goals": 1,
+      "away_goals": 0,
+      "extra_time": true,
+      "penalties": null,
+      "venue": "Estadio Maracaná, Río de Janeiro",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-2018",
+      "season": "mundial-2018",
+      "stage": "Final",
+      "match_date": "2018-07-15",
+      "home_team": "seleccion-francia",
+      "away_team": "seleccion-croacia",
+      "home_goals": 4,
+      "away_goals": 2,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Estadio Luzhniki, Moscú",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-2022",
+      "season": "mundial-2022",
+      "stage": "Final",
+      "match_date": "2022-12-18",
+      "home_team": "seleccion-argentina",
+      "away_team": "seleccion-francia",
+      "home_goals": 3,
+      "away_goals": 3,
+      "extra_time": true,
+      "penalties": "4-2",
+      "venue": "Estadio de Lusail, Lusail",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals"
+    },
+    {
+      "ref": "final-mundial-2026",
+      "season": "mundial-2026",
+      "stage": "Final",
+      "match_date": "2026-07-19",
+      "home_team": "seleccion-espana",
+      "away_team": "seleccion-argentina",
+      "home_goals": 1,
+      "away_goals": 0,
+      "extra_time": true,
+      "penalties": null,
+      "venue": "MetLife Stadium, East Rutherford",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_final"
+    },
+    {
+      "ref": "final-eurocopa-1960",
+      "season": "eurocopa-1960",
+      "stage": "Final",
+      "match_date": null,
+      "home_team": "seleccion-urss",
+      "away_team": "seleccion-yugoslavia",
+      "home_goals": 2,
+      "away_goals": 1,
+      "extra_time": true,
+      "penalties": null,
+      "venue": "Parque de los Príncipes, París",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "final-eurocopa-1964",
+      "season": "eurocopa-1964",
+      "stage": "Final",
+      "match_date": null,
+      "home_team": "seleccion-espana",
+      "away_team": "seleccion-urss",
+      "home_goals": 2,
+      "away_goals": 1,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Estadio Santiago Bernabéu, Madrid",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "final-eurocopa-1968",
+      "season": "eurocopa-1968",
+      "stage": "Final (partido de desempate)",
+      "match_date": "1968-06-10",
+      "home_team": "seleccion-italia",
+      "away_team": "seleccion-yugoslavia",
+      "home_goals": 2,
+      "away_goals": 0,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Stadio Olimpico, Roma",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "final-eurocopa-1972",
+      "season": "eurocopa-1972",
+      "stage": "Final",
+      "match_date": "1972-06-18",
+      "home_team": "seleccion-alemania-federal",
+      "away_team": "seleccion-urss",
+      "home_goals": 3,
+      "away_goals": 0,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Estadio de Heysel, Bruselas",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "final-eurocopa-1976",
+      "season": "eurocopa-1976",
+      "stage": "Final",
+      "match_date": "1976-06-20",
+      "home_team": "seleccion-checoslovaquia",
+      "away_team": "seleccion-alemania-federal",
+      "home_goals": 2,
+      "away_goals": 2,
+      "extra_time": true,
+      "penalties": "5-3",
+      "venue": "Estadio del Estrella Roja, Belgrado",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "final-eurocopa-1980",
+      "season": "eurocopa-1980",
+      "stage": "Final",
+      "match_date": "1980-06-22",
+      "home_team": "seleccion-alemania-federal",
+      "away_team": "seleccion-belgica",
+      "home_goals": 2,
+      "away_goals": 1,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Stadio Olimpico, Roma",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "final-eurocopa-1984",
+      "season": "eurocopa-1984",
+      "stage": "Final",
+      "match_date": "1984-06-27",
+      "home_team": "seleccion-francia",
+      "away_team": "seleccion-espana",
+      "home_goals": 2,
+      "away_goals": 0,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Parque de los Príncipes, París",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "final-eurocopa-1988",
+      "season": "eurocopa-1988",
+      "stage": "Final",
+      "match_date": "1988-06-25",
+      "home_team": "seleccion-paises-bajos",
+      "away_team": "seleccion-urss",
+      "home_goals": 2,
+      "away_goals": 0,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Estadio Olímpico, Múnich",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "final-eurocopa-1992",
+      "season": "eurocopa-1992",
+      "stage": "Final",
+      "match_date": "1992-06-26",
+      "home_team": "seleccion-dinamarca",
+      "away_team": "seleccion-alemania",
+      "home_goals": 2,
+      "away_goals": 0,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Estadio Ullevi, Gotemburgo",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "final-eurocopa-1996",
+      "season": "eurocopa-1996",
+      "stage": "Final",
+      "match_date": "1996-06-30",
+      "home_team": "seleccion-alemania",
+      "away_team": "seleccion-republica-checa",
+      "home_goals": 2,
+      "away_goals": 1,
+      "extra_time": true,
+      "penalties": null,
+      "venue": "Estadio de Wembley, Londres",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "final-eurocopa-2000",
+      "season": "eurocopa-2000",
+      "stage": "Final",
+      "match_date": "2000-07-02",
+      "home_team": "seleccion-francia",
+      "away_team": "seleccion-italia",
+      "home_goals": 2,
+      "away_goals": 1,
+      "extra_time": true,
+      "penalties": null,
+      "venue": "De Kuip, Róterdam",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "final-eurocopa-2004",
+      "season": "eurocopa-2004",
+      "stage": "Final",
+      "match_date": "2004-07-04",
+      "home_team": "seleccion-grecia",
+      "away_team": "seleccion-portugal",
+      "home_goals": 1,
+      "away_goals": 0,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Estádio da Luz, Lisboa",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "final-eurocopa-2008",
+      "season": "eurocopa-2008",
+      "stage": "Final",
+      "match_date": "2008-06-29",
+      "home_team": "seleccion-espana",
+      "away_team": "seleccion-alemania",
+      "home_goals": 1,
+      "away_goals": 0,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Estadio Ernst Happel, Viena",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "final-eurocopa-2012",
+      "season": "eurocopa-2012",
+      "stage": "Final",
+      "match_date": "2012-07-01",
+      "home_team": "seleccion-espana",
+      "away_team": "seleccion-italia",
+      "home_goals": 4,
+      "away_goals": 0,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Estadio Olímpico, Kiev",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "final-eurocopa-2016",
+      "season": "eurocopa-2016",
+      "stage": "Final",
+      "match_date": "2016-07-10",
+      "home_team": "seleccion-portugal",
+      "away_team": "seleccion-francia",
+      "home_goals": 1,
+      "away_goals": 0,
+      "extra_time": true,
+      "penalties": null,
+      "venue": "Stade de France, Saint-Denis",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "final-eurocopa-2020",
+      "season": "eurocopa-2020",
+      "stage": "Final",
+      "match_date": "2021-07-11",
+      "home_team": "seleccion-italia",
+      "away_team": "seleccion-inglaterra",
+      "home_goals": 1,
+      "away_goals": 1,
+      "extra_time": true,
+      "penalties": "3-2",
+      "venue": "Estadio de Wembley, Londres",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    },
+    {
+      "ref": "final-eurocopa-2024",
+      "season": "eurocopa-2024",
+      "stage": "Final",
+      "match_date": "2024-07-14",
+      "home_team": "seleccion-espana",
+      "away_team": "seleccion-inglaterra",
+      "home_goals": 2,
+      "away_goals": 1,
+      "extra_time": false,
+      "penalties": null,
+      "venue": "Estadio Olímpico, Berlín",
+      "scorers": [],
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_European_Championship_finals"
+    }
+  ]
+}

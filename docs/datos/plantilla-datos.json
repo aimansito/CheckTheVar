@@ -1,0 +1,186 @@
+{
+  "_instrucciones": {
+    "referencias": "Los elementos se enlazan por su 'ref' (texto en minúsculas con guiones, único dentro de su lista). Ej.: un jugador usa \"team\": \"fc-barcelona\" en vez de un id numérico.",
+    "fechas": "Formato YYYY-MM-DD. Si solo sabes el año, pon YYYY. Si un dato no se sabe, usa null; nunca te lo inventes.",
+    "paises": "Código ISO de 2 letras (ES, AR, PT, BR, FR...). Inglaterra/Escocia/Gales usan GB-ENG, GB-SCT, GB-WLS en 'country'; se convierten al importar.",
+    "fuente": "Cada elemento lleva 'source' con la URL donde se comprobó el dato (Wikipedia, web oficial de la UEFA/FIFA...). Sin fuente, el elemento entra como borrador y no se usa en preguntas.",
+    "enums": {
+      "team.type": ["club", "national"],
+      "competition.type": ["league", "cup", "continental_club", "international", "friendly", "other"],
+      "player.position": ["GK", "DF", "MF", "FW"],
+      "player.foot": ["left", "right", "both"],
+      "transfer.type": ["transfer", "loan", "loan_return", "free", "youth_promotion", "retirement"],
+      "award.scope": ["individual", "team"],
+      "question.format": ["multiple_choice", "true_false"],
+      "question.category": ["liga", "champions", "mundial", "eurocopa", "premios", "fichajes", "leyendas", "records", "trayectorias"],
+      "question.difficulty": "1 (muy fácil) a 5 (muy difícil)"
+    },
+    "ejemplos": "Cada lista trae 1 ejemplo con datos reales. Puedes dejarlo o borrarlo."
+  },
+
+  "countries": [
+    { "code": "ES", "name_es": "España", "name_en": "Spain", "confederation": "UEFA" }
+  ],
+
+  "teams": [
+    {
+      "ref": "fc-barcelona",
+      "type": "club",
+      "name": "FC Barcelona",
+      "short_name": "Barça",
+      "country": "ES",
+      "founded_year": 1899,
+      "source": "https://es.wikipedia.org/wiki/F%C3%BAtbol_Club_Barcelona"
+    }
+  ],
+
+  "competitions": [
+    {
+      "ref": "mundial",
+      "name": "Copa Mundial de la FIFA",
+      "type": "international",
+      "country": null,
+      "tier": null,
+      "source": "https://www.fifa.com"
+    }
+  ],
+
+  "seasons": [
+    {
+      "ref": "mundial-2010",
+      "competition": "mundial",
+      "label": "2010",
+      "start_date": "2010-06-11",
+      "end_date": "2010-07-11",
+      "host_country": "ZA",
+      "source": "https://es.wikipedia.org/wiki/Copa_Mundial_de_F%C3%BAtbol_de_2010"
+    }
+  ],
+
+  "competition_winners": [
+    { "season": "mundial-2010", "team": "seleccion-espana", "final_rank": 1, "source": "https://es.wikipedia.org/wiki/Copa_Mundial_de_F%C3%BAtbol_de_2010" },
+    { "season": "mundial-2010", "team": "seleccion-paises-bajos", "final_rank": 2, "source": "https://es.wikipedia.org/wiki/Copa_Mundial_de_F%C3%BAtbol_de_2010" }
+  ],
+
+  "players": [
+    {
+      "ref": "lionel-messi",
+      "full_name": "Lionel Andrés Messi Cuccittini",
+      "known_as": "Messi",
+      "aliases": ["Leo Messi", "La Pulga"],
+      "birth_date": "1987-06-24",
+      "death_date": null,
+      "nationality": "AR",
+      "second_nationality": "ES",
+      "position": "FW",
+      "height_cm": 170,
+      "foot": "left",
+      "retired": false,
+      "popularity": 100,
+      "source": "https://es.wikipedia.org/wiki/Lionel_Messi"
+    }
+  ],
+
+  "player_spells": [
+    {
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "start_date": "2004",
+      "end_date": "2021",
+      "is_loan": false,
+      "appearances": null,
+      "goals": null,
+      "assists": null,
+      "source": "https://es.wikipedia.org/wiki/Lionel_Messi"
+    }
+  ],
+
+  "transfers": [
+    {
+      "player": "neymar",
+      "from_team": "fc-barcelona",
+      "to_team": "paris-saint-germain",
+      "transfer_date": "2017-08-03",
+      "type": "transfer",
+      "fee_amount": 222000000,
+      "fee_currency": "EUR",
+      "fee_is_estimate": false,
+      "source": "https://es.wikipedia.org/wiki/Neymar"
+    }
+  ],
+
+  "awards": [
+    {
+      "ref": "balon-de-oro",
+      "name": "Balón de Oro",
+      "scope": "individual",
+      "organizer": "France Football",
+      "competition": null,
+      "source": "https://es.wikipedia.org/wiki/Bal%C3%B3n_de_Oro"
+    }
+  ],
+
+  "award_winners": [
+    {
+      "award": "balon-de-oro",
+      "year_label": "2009",
+      "player": "lionel-messi",
+      "team": "fc-barcelona",
+      "rank": 1,
+      "source": "https://es.wikipedia.org/wiki/Bal%C3%B3n_de_Oro_2009"
+    }
+  ],
+
+  "matches": [
+    {
+      "ref": "final-mundial-2010",
+      "season": "mundial-2010",
+      "stage": "Final",
+      "match_date": "2010-07-11",
+      "home_team": "seleccion-paises-bajos",
+      "away_team": "seleccion-espana",
+      "home_goals": 0,
+      "away_goals": 1,
+      "extra_time": true,
+      "penalties": null,
+      "venue": "Soccer City, Johannesburgo",
+      "scorers": [{ "player": "andres-iniesta", "team": "seleccion-espana", "goals": 1 }],
+      "source": "https://es.wikipedia.org/wiki/Final_de_la_Copa_Mundial_de_F%C3%BAtbol_de_2010"
+    }
+  ],
+
+  "records": [
+    {
+      "title": "Máximo goleador de la historia de la Champions League",
+      "description": "Goles en la Copa de Europa / Champions League, sin contar fases previas.",
+      "value_numeric": 140,
+      "value_text": "140 goles",
+      "player": "cristiano-ronaldo",
+      "team": null,
+      "competition": "champions-league",
+      "achieved_on": null,
+      "still_standing": true,
+      "source": "https://www.uefa.com"
+    }
+  ],
+
+  "questions": [
+    {
+      "format": "multiple_choice",
+      "category": "mundial",
+      "competition": "mundial",
+      "difficulty": 1,
+      "era_from": 2010,
+      "era_to": 2010,
+      "prompt": "¿Qué selección ganó el Mundial de 2010?",
+      "options": [
+        { "label": "Países Bajos", "correct": false },
+        { "label": "España", "correct": true },
+        { "label": "Alemania", "correct": false }
+      ],
+      "explanation": "España ganó la final 1-0 a Países Bajos en la prórroga, con gol de Iniesta.",
+      "entities": { "players": ["andres-iniesta"], "teams": ["seleccion-espana"], "competitions": ["mundial"] },
+      "source": "https://es.wikipedia.org/wiki/Copa_Mundial_de_F%C3%BAtbol_de_2010"
+    }
+  ]
+}

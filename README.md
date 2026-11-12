@@ -36,6 +36,15 @@ NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=...
 SUPABASE_SECRET_KEY=...        # solo servidor; nunca en componentes de cliente
 ```
 
+Opcionales:
+
+```
+NEXT_PUBLIC_SITE_URL=https://checkthevar.app   # origen para los enlaces de email y OAuth (en Vercel)
+NEXT_PUBLIC_OAUTH_PROVIDERS=google,apple       # botones "Continuar con…" (el proveedor se activa en Supabase → Auth)
+UPSTASH_REDIS_REST_URL=...                     # límite de peticiones compartido entre instancias
+UPSTASH_REDIS_REST_TOKEN=...                   # (sin ellas, el límite se lleva en memoria)
+```
+
 Los valores salen de Supabase → *Project Settings → API Keys*. En local, salen de
 `pnpm exec supabase status -o env` (`API_URL`, `PUBLISHABLE_KEY` y `SECRET_KEY`).
 
@@ -50,10 +59,14 @@ Los valores salen de Supabase → *Project Settings → API Keys*. En local, sal
 | `pnpm dev` | Arranca todas las apps |
 | `pnpm --filter web dev` | Solo la web |
 | `pnpm test` | Tests (Vitest) |
-| `pnpm --filter web test:e2e [url]` | Prueba de integración del reto diario (con Supabase local y la web arrancadas) |
+| `pnpm --filter web test:e2e [url]` | Prueba de integración del reto diario como invitado (con Supabase local y la web arrancadas) |
+| `pnpm --filter web test:e2e:modos [url]` | Prueba de los modos con cuenta: supervivencia, contrarreloj, más o menos, pistas y límite de peticiones |
 | `pnpm typecheck` / `pnpm lint` | Comprobaciones de tipos y estilo |
 | `pnpm db:new <nombre>` | Nueva migración en `supabase/migrations/` |
 | `pnpm db:reset` | Reaplica migraciones y seed en local |
 | `pnpm db:types` | Genera tipos TS de la BD en `packages/shared` |
+| `pnpm datos:validar [lotes…]` | Valida los lotes JSON de `docs/datos` sin escribir nada |
+| `pnpm datos:importar [lotes…]` | Valida e importa los lotes en Supabase (reimportar no duplica) |
+| `pnpm datos:preguntas [--publicar] [--simular] [--solo plantilla] [--regenerar]` | Genera preguntas a partir de los datos (en `review`; `--publicar` las publica) |
 | `pnpm --filter video studio` | Editor visual de los vídeos |
 | `pnpm --filter video render` | Renderiza los vídeos de `apps/video/data/lote.json` |

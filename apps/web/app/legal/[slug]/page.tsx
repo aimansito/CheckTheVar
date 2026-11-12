@@ -1,57 +1,86 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
-
-const DOCS: Record<string, string> = {
-  aviso: "Aviso legal",
-  privacidad: "Política de privacidad",
-  cookies: "Política de cookies",
-};
+import { LEGAL_DOCS, LEGAL_UPDATED, type LegalDoc } from "@/lib/legal";
 
 export function generateStaticParams() {
-  return Object.keys(DOCS).map((slug) => ({ slug }));
+  return Object.keys(LEGAL_DOCS).map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: PageProps<"/legal/[slug]">): Promise<Metadata> {
   const { slug } = await params;
-  return { title: DOCS[slug] ?? "Legal" };
+  return { title: LEGAL_DOCS[slug]?.title ?? "Legal" };
 }
 
-/**
- * PROVISIONAL: estos textos los debe redactar/revisar una persona responsable antes de abrir
- * la web al público (RGPD). Aquí solo se indica qué datos se usan hoy.
- */
-export default async function LegalPage({ params }: PageProps<"/legal/[slug]">) {
-  const { slug } = await params;
-  const title = DOCS[slug];
-  if (!title) notFound();
-
+export default function LegalPage({ params }: PageProps<"/legal/[slug]">) {
   return (
     <>
       <SiteHeader />
-      <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-12">
-        <h1 className="font-display text-5xl uppercase">{title}</h1>
-        <p className="mt-6 rounded-xl border border-dashed border-line p-4 text-muted">
-          Documento en preparación. Mientras tanto, esto es lo que hace CHECK THE VAR con tus datos:
-        </p>
-        <ul className="mt-6 list-disc space-y-2 pl-6 text-muted">
-          <li>
-            <strong className="text-text">Cookie técnica de invitado</strong> (<code>ctv_guest</code>): un
-            identificador aleatorio para que puedas jugar el reto diario sin cuenta y guardar tus puntos al
-            registrarte. Es necesaria para el juego y no se usa para publicidad.
-          </li>
-          <li>
-            <strong className="text-text">Cookies de sesión</strong> de Supabase si inicias sesión.
-          </li>
-          <li>
-            <strong className="text-text">Datos de cuenta</strong>: nombre de jugador, email y tus resultados,
-            alojados en la Unión Europea.
-          </li>
-          <li>No usamos todavía analítica ni publicidad.</li>
-        </ul>
+      <main className="mx-auto w-full max-w-2xl flex-1 px-4 py-12 sm:py-16">
+        <Suspense fallback={<div className="h-96" aria-hidden />}>
+          <LegalContent params={params} />
+        </Suspense>
       </main>
       <SiteFooter />
     </>
+  );
+}
+
+async function LegalContent({ params }: { params: PageProps<"/legal/[slug]">["params"] }) {
+  const { slug } = await params;
+  const doc = LEGAL_DOCS[slug];
+  if (!doc) notFound();
+  return <LegalArticle doc={doc} current={slug} />;
+}
+
+function LegalArticle({ doc, current }: { doc: LegalDoc; current: string }) {
+  return (
+    <article>
+      <nav className="flex flex-wrap gap-2 text-sm" aria-label="Documentos legales">
+        {Object.entries(LEGAL_DOCS).map(([slug, d]) => (
+          <Link
+            key={slug}
+            href={`/legal/${slug}`}
+            aria-current={slug === current ? "page" : undefined}
+            className={`rounded-full border px-3 py-1 transition ${
+              slug === current ? "border-var text-text" : "border-line text-muted hover:text-text"
+            }`}
+          >
+            {d.title}
+          </Link>
+        ))}
+      </nav>
+      <h1 className="mt-8 text-4xl font-bold tracking-tight text-balance sm:text-5xl">{doc.title}</h1>
+      <p className="mt-3 text-xs text-muted">Última actualización: {LEGAL_UPDATED}</p>
+      <p className="mt-6 text-lg leading-relaxed text-muted text-pretty">{doc.intro}</p>
+
+      <div className="mt-10 space-y-10">
+        {doc.sections.map((s) => (
+          <section key={s.title}>
+            <h2 className="text-xl font-bold">{s.title}</h2>
+            <div className="mt-3 space-y-3 leading-relaxed text-muted">
+              {s.body.map((b, i) =>
+                Array.isArray(b) ? (
+                  <ul key={i} className="list-disc space-y-2 pl-5 marker:text-var">
+                    {b.map((li) => (
+                      <li key={li} className="text-pretty">
+                        {li}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p key={i} className="text-pretty">
+                    {b}
+                  </p>
+                ),
+              )}
+            </div>
+          </section>
+        ))}
+      </div>
+    </article>
   );
 }
