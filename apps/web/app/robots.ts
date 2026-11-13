@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
       // Zonas privadas o sin contenido útil para buscadores.
-      disallow: ["/api/", "/auth/", "/perfil", "/nueva-contrasena", "/recuperar", "/ligas/"],
+      disallow: ["/api/", "/auth/", "/bienvenida", "/perfil", "/nueva-contrasena", "/recuperar", "/ligas/"],
     },
     sitemap: `${SITE_URL}/sitemap.xml`,
     host: SITE_URL,

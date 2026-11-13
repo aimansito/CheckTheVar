@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useActionState } from "react";
 import { DifficultyPicker } from "@/components/game/DifficultyPicker";
-import { requestPasswordReset, signIn, signInWithProvider, signUp, updatePassword } from "@/lib/auth-actions";
+import { requestPasswordReset, resendConfirmation, signIn, signInWithProvider, signUp, updatePassword } from "@/lib/auth-actions";
 
 const input =
   "mt-1.5 block w-full rounded-xl border border-line bg-bg px-4 py-3 text-base outline-none transition focus:border-var";
@@ -81,6 +81,7 @@ export function OAuthButtons({ providers }: { providers: string[] }) {
 export function SignUpForm({ providers = [], next }: { providers?: string[]; next?: string }) {
   const [state, action, pending] = useActionState(signUp, {});
   const fe = state.fieldErrors ?? {};
+  if (state.sent) return <AccountCreated email={state.sent} />;
   return (
     <div className="space-y-4">
       <OAuthButtons providers={providers} />
@@ -110,6 +111,41 @@ export function SignUpForm({ providers = [], next }: { providers?: string[]; nex
           {pending ? "Creando cuenta…" : "Crear cuenta gratis"}
         </button>
       </form>
+    </div>
+  );
+}
+
+/** Sustituye al formulario de registro cuando la cuenta se ha creado y falta confirmar el email. */
+function AccountCreated({ email }: { email: string }) {
+  const [state, action, pending] = useActionState(resendConfirmation, {});
+  return (
+    <div className="text-center">
+      <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-ok-bg text-var" aria-hidden>
+        <svg viewBox="0 0 64 64" className="h-9 w-9">
+          <path d="M14 33.5 27 46 50 20" fill="none" stroke="currentColor" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </span>
+      <p className="mt-5 font-display text-4xl uppercase leading-none">Gol confirmado</p>
+      <p className="mt-2 font-semibold">Tu cuenta se ha creado correctamente.</p>
+      <p className="mt-4 text-sm leading-relaxed text-muted">
+        Te hemos enviado un correo a <span className="font-semibold text-text">{email}</span>. Pulsa el enlace del
+        correo para activar la cuenta y empezar a jugar.
+      </p>
+      <p className="mt-2 text-xs text-muted">¿No lo ves? Mira en la carpeta de spam o promociones.</p>
+
+      <form action={action} className="mt-6 space-y-3">
+        <input type="hidden" name="email" value={email} />
+        <Alerts state={state} />
+        <button
+          disabled={pending}
+          className="w-full rounded-xl border border-line bg-bg py-3.5 font-bold transition hover:border-var disabled:opacity-60"
+        >
+          {pending ? "Enviando…" : "Reenviar el correo"}
+        </button>
+      </form>
+      <Link href="/jugar/diario" className="mt-3 block text-sm font-semibold text-muted underline hover:text-text">
+        Mientras tanto, juega el reto de hoy
+      </Link>
     </div>
   );
 }

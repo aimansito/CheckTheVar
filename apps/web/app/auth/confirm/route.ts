@@ -27,5 +27,6 @@ export async function GET(request: NextRequest) {
   if (guestId) {
     await getSupabaseAdmin().rpc("claim_guest", { p_user: data.user.id, p_guest: guestId });
   }
-  redirect(next ?? "/perfil?bienvenida=1");
+  // Si venía de una invitación a liga, vuelve allí; si no, a la bienvenida.
+  redirect(next ?? safeNext(data.user.user_metadata?.next) ?? "/bienvenida");
 }

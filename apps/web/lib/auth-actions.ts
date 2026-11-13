@@ -13,6 +13,8 @@ export type AuthState = {
   error?: string;
   fieldErrors?: Partial<Record<string, string>>;
   info?: string;
+  /** Cuenta creada y pendiente de confirmar: email al que se ha enviado el enlace. */
+  sent?: string;
   values?: { username?: string; email?: string };
 };
 
@@ -70,9 +72,10 @@ export async function signUp(_prev: AuthState, form: FormData): Promise<AuthStat
     email,
     password,
     options: {
-      data: { username, display_name: username, difficulty },
-      // Siempre con "?next=": la plantilla de email añade "&token_hash=…" detrás de {{ .RedirectTo }}.
-      emailRedirectTo: `${origin}/auth/confirm?next=${encodeURIComponent(next ?? "/perfil?bienvenida=1")}`,
+      // "next" viaja en los metadatos: /auth/confirm lo lee de ahí al confirmar (la plantilla
+      // del email usa {{ .SiteURL }} y no depende de la URL de redirección).
+      data: { username, display_name: username, difficulty, ...(next ? { next } : {}) },
+      emailRedirectTo: `${origin}/auth/confirm`,
     },
   });
   if (error) {
@@ -84,11 +87,11 @@ export async function signUp(_prev: AuthState, form: FormData): Promise<AuthStat
 
   if (!data.session) {
     // Proyecto con confirmación de email: los puntos se traspasan al confirmar.
-    return { info: "Te hemos enviado un email para confirmar tu cuenta. Revisa tu bandeja de entrada.", values };
+    return { sent: email, values };
   }
 
   if (data.user) await claimGuestPoints(data.user.id);
-  redirect(next ?? "/perfil?bienvenida=1");
+  redirect(next ?? "/bienvenida");
 }
 
 export async function signIn(_prev: AuthState, form: FormData): Promise<AuthState> {
@@ -143,6 +146,26 @@ export async function requestPasswordReset(_prev: AuthState, form: FormData): Pr
   if (error) console.error("[auth] reset falló:", error.message);
   // Misma respuesta exista o no la cuenta: no se revela qué emails están registrados.
   return { info: "Si ese email tiene cuenta, te hemos enviado un enlace para cambiar la contraseña.", values };
+}
+
+/** Reenvía el email de confirmación de una cuenta recién creada. */
+export async function resendConfirmation(_prev: AuthState, form: FormData): Promise<AuthState> {
+  const parsed = resetRequestSchema.safeParse(Object.fromEntries(form));
+  if (!parsed.success) return { error: "Email no válido." };
+
+  const ip = await clientIp();
+  if (!(await rateLimit(`resend:${ip}`, LIMITS.resetPerIp.limit, LIMITS.resetPerIp.windowSec)).ok) {
+    return { error: TOO_MANY };
+  }
+
+  const supabase = await getSupabaseServer();
+  const { error } = await supabase.auth.resend({
+    type: "signup",
+    email: parsed.data.email,
+    options: { emailRedirectTo: `${await siteOrigin()}/auth/confirm` },
+  });
+  if (error) console.error("[auth] reenvío de confirmación falló:", error.message);
+  return { info: "Listo: te hemos enviado otro correo. Puede tardar un par de minutos." };
 }
 
 export async function updatePassword(_prev: AuthState, form: FormData): Promise<AuthState> {

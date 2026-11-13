@@ -1,9 +1,9 @@
 <div style="background:#0b0f0d;padding:32px 16px;font-family:Arial,Helvetica,sans-serif;color:#ffffff">
   <div style="max-width:480px;margin:0 auto;background:#121815;border:1px solid #24302a;border-radius:16px;padding:32px">
     <p style="margin:0;font-size:22px;font-weight:900;letter-spacing:1px">CHECK THE <span style="color:#22e07a">VAR</span></p>
-    <h1 style="margin:24px 0 8px;font-size:24px">Revisando la jugada…</h1>
-    <p style="margin:0 0 24px;color:#a9b5ae;line-height:1.5">Confirma tu email para activar tu cuenta y guardar tus puntos.</p>
-    <a href="{{ .RedirectTo }}&amp;token_hash={{ .TokenHash }}&amp;type=email" style="display:inline-block;background:#22e07a;color:#0b0f0d;font-weight:800;text-decoration:none;padding:14px 24px;border-radius:12px">Confirmar mi cuenta</a>
+    <h1 style="margin:24px 0 8px;font-size:24px">¡Cuenta creada!</h1>
+    <p style="margin:0 0 24px;color:#a9b5ae;line-height:1.5">Tu cuenta de CHECK THE VAR se ha creado correctamente. Pulsa el botón para activarla y empezar a jugar.</p>
+    <a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&amp;type=email" style="display:inline-block;background:#22e07a;color:#0b0f0d;font-weight:800;text-decoration:none;padding:14px 24px;border-radius:12px">Activar mi cuenta</a>
     <p style="margin:24px 0 0;color:#6f7d75;font-size:13px;line-height:1.5">Si no te has registrado en CHECK THE VAR, ignora este correo.</p>
   </div>
 </div>
