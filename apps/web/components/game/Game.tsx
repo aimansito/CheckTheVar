@@ -4,7 +4,9 @@ import Link from "next/link";
 import { useEffect, useEffectEvent, useRef, useState } from "react";
 import {
   DIFFICULTY_LEVELS,
+  MODE_RULES,
   type ClueReveal,
+  type ClueRetry,
   type DifficultyLevel,
   type GameModeSlug,
   type GameStart,
@@ -25,8 +27,8 @@ import { modeBySlug } from "@/lib/game/modes";
 type Phase =
   | { kind: "setup" }
   | { kind: "loading"; text?: string }
-  | { kind: "question"; q: PublicQuestion; startedAt: number }
-  | { kind: "reviewing"; q: PublicQuestion; choice: string | null }
+  | { kind: "question"; q: PublicQuestion; startedAt: number; miss?: string }
+  | { kind: "reviewing"; q: PublicQuestion; choice: string | null; startedAt: number }
   | { kind: "verdict"; q: PublicQuestion; v: VarVerdict }
   | { kind: "summary"; s: SessionSummary }
   | { kind: "error"; message: string };
@@ -41,6 +43,7 @@ const ERRORS: Record<string, string> = {
   rate_limited: "Demasiadas jugadas seguidas. Espera un momento.",
   matchday_closed: "Esta jornada ya está cerrada. Mira la clasificación de tu liga.",
   not_member: "No eres miembro de esta liga.",
+  daily_limit: "Ya has jugado las 2 partidas de hoy a este juego. Cuenta tu mejor puntuación. ¡Vuelve mañana!",
   server_error: "El VAR se ha caído. Prueba de nuevo en unos segundos.",
 };
 
@@ -142,15 +145,28 @@ export function Game({
     if (phase.kind !== "question" || !session || submitting.current) return;
     submitting.current = true;
     const q = phase.q;
-    setPhase({ kind: "reviewing", q, choice: answer.optionId ?? answer.text ?? null });
+    const startedAt = phase.startedAt;
+    setPhase({ kind: "reviewing", q, choice: answer.optionId ?? answer.text ?? null, startedAt });
     try {
       const [v] = await Promise.all([
-        api<VarVerdict>(`/api/game/${session.sessionId}/answer`, {
+        api<VarVerdict | ClueRetry>(`/api/game/${session.sessionId}/answer`, {
           method: "POST",
           body: JSON.stringify({ position: q.position, ...answer }),
         }),
         wait(REVIEW_MS),
       ]);
+      if ("retry" in v) {
+        // No es ese jugador: nueva pista y se sigue intentando (el reloj no se reinicia).
+        setText("");
+        submitting.current = false;
+        setPhase({
+          kind: "question",
+          q: { ...q, clues: v.clues, cluesUsed: v.cluesUsed, cluesTotal: v.cluesTotal },
+          startedAt,
+          miss: v.answerText ?? answer.text,
+        });
+        return;
+      }
       setScore(v.sessionScore);
       setPhase({ kind: "verdict", q, v });
     } catch (err) {
@@ -165,7 +181,7 @@ export function Game({
         method: "POST",
         body: JSON.stringify({ position: phase.q.position }),
       });
-      setPhase({ ...phase, q: { ...phase.q, clues: r.clues, cluesUsed: r.cluesUsed, cluesTotal: r.cluesTotal } });
+      setPhase({ ...phase, miss: undefined, q: { ...phase.q, clues: r.clues, cluesUsed: r.cluesUsed, cluesTotal: r.cluesTotal } });
     } catch (err) {
       fail(err);
     }
@@ -195,7 +211,7 @@ export function Game({
   };
 
   if (phase.kind === "setup")
-    return <Setup modeName={info.name} howTo={info.howTo} difficulty={difficulty} onDifficulty={setDifficulty} onStart={begin} />;
+    return <Setup modeName={info.name} howTo={info.howTo} playsPerDay={MODE_RULES[mode].playsPerDay} difficulty={difficulty} onDifficulty={setDifficulty} onStart={begin} />;
   if (phase.kind === "loading") return <Centered>{phase.text ?? `Preparando ${info.name.toLowerCase()}…`}</Centered>;
   if (phase.kind === "error")
     return (
@@ -315,12 +331,14 @@ function Centered({ children }: { children: React.ReactNode }) {
 function Setup({
   modeName,
   howTo,
+  playsPerDay,
   difficulty,
   onDifficulty,
   onStart,
 }: {
   modeName: string;
   howTo: string;
+  playsPerDay: number | null;
   difficulty: DifficultyLevel;
   onDifficulty: (d: DifficultyLevel) => void;
   onStart: () => void;
@@ -331,6 +349,11 @@ function Setup({
         <Corners />
         <h1 className="relative font-display text-4xl uppercase leading-none">{modeName}</h1>
         <p className="relative mt-2 text-sm text-muted">{howTo}</p>
+        {playsPerDay && (
+          <p className="relative mt-3 text-xs font-bold uppercase tracking-wider text-var">
+            {playsPerDay} partidas al día · cuenta la mejor
+          </p>
+        )}
       </div>
       <p className="mt-6 text-sm font-bold uppercase tracking-wider text-var">Elige tu nivel</p>
       <p className="mt-1 text-sm text-muted">Cuanto más alto, más difíciles las preguntas y más puntos por acierto.</p>
@@ -485,6 +508,11 @@ function Clues({
           </li>
         ))}
       </ol>
+      {phase.kind === "question" && phase.miss && (
+        <p role="status" className="mt-3 animate-pop rounded-xl border border-ko bg-ko-bg px-4 py-3 text-sm font-semibold">
+          No es «{phase.miss}». Te destapamos otra pista: sigue intentándolo.
+        </p>
+      )}
       <div className="mt-3 flex items-center justify-between text-xs text-muted">
         <span>
           Pista {used} de {total}

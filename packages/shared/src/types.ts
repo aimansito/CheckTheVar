@@ -8,6 +8,7 @@ export const GAME_MODES = [
   "higher-lower",
   "time-attack",
   "survival",
+  "retro",
   "league",
 ] as const;
 export type GameModeSlug = (typeof GAME_MODES)[number];
@@ -85,6 +86,19 @@ export type VarVerdict = {
   isLast: boolean;
 };
 
+/**
+ * Respuesta escrita incorrecta con pistas pendientes: la pregunta sigue abierta y se destapa
+ * la siguiente pista (no se revela la respuesta).
+ */
+export type ClueRetry = {
+  retry: true;
+  position: number;
+  answerText: string | null;
+  clues: string[];
+  cluesUsed: number;
+  cluesTotal: number;
+};
+
 /** Pistas tras pedir una más. */
 export type ClueReveal = {
   position: number;
@@ -127,6 +141,7 @@ export type GameErrorCode =
   | "no_questions"
   | "rate_limited"
   | "already_played"
+  | "daily_limit"
   | "matchday_closed"
   | "not_member"
   | "server_error";

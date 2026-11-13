@@ -669,7 +669,7 @@ const guessPlayer: Template = (d) => {
     const country = d.countries.get(p.nationality)!;
     const first = clubs[0]!;
     const longest = [...clubs].filter((c) => c.team.id !== first.team.id).sort((a, b) => ((b.to ?? 2026) - (b.from ?? 0)) - ((a.to ?? 2026) - (a.from ?? 0)))[0];
-    const clues = [
+    const facts = [
       `Nació en ${p.birth_date.slice(0, 4)} y ${p.retired === false ? "juega" : "jugó"} de ${POSITIONS[p.position] ?? p.position}.`,
       `Su primer club profesional fue el ${teamLabel(first.team)}${first.from ? ` (${first.from})` : ""}.`,
       `Es ${country.name_es === "España" ? "español" : `de ${country.name_es}`}.`,
@@ -677,6 +677,15 @@ const guessPlayer: Template = (d) => {
       awards.length
         ? `Ganó ${awardLabel(d.awards.get(awards[0]!.award_id)!.slug, awards[0]!.year_label)}.`
         : `Pasó por ${unique(clubs, (c) => c.team.id).length} clubes distintos.`,
+    ];
+    // Orden aleatorio (estable por jugador): la de nacimiento y posición nunca abre, y las
+    // iniciales, que casi lo regalan, siempre cierran.
+    const rnd = seededRandom(`pistas:${p.slug}`);
+    const [birth, ...rest] = facts;
+    const shuffled = rest.map((f) => [rnd(), f] as const).sort((x, y) => x[0] - y[0]).map(([, f]) => f);
+    shuffled.splice(1 + Math.floor(rnd() * shuffled.length), 0, birth!);
+    const clues = [
+      ...shuffled,
       `Sus iniciales son ${p.full_name.split(" ").filter((w) => /^[A-ZÁÉÍÓÚÑ]/.test(w)).map((w) => w[0] + ".").join(" ")}`,
     ];
     out.push({

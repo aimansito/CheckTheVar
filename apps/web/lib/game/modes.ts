@@ -67,6 +67,15 @@ export const MODES: ModeInfo[] = [
     available: true,
   },
   {
+    slug: "retro",
+    path: "retro",
+    name: "Retro",
+    tagline: "Finales, goles y campeones de antes de 1995.",
+    howTo: "10 preguntas de fútbol antiguo, 20 segundos cada una. Para los que se acuerdan de todo.",
+    free: false,
+    available: true,
+  },
+  {
     slug: "grid",
     path: "grid",
     name: "Grid",

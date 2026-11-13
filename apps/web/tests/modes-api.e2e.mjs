@@ -113,8 +113,16 @@ const leaks = (obj) => /is_?correct|answer_norm|accepted/i.test(JSON.stringify(o
   const c = await call("POST", `/api/game/${sid}/clue`, { position: 1 });
   check(c.body.cluesUsed === 2 && c.body.clues.length === 2, `pedir pista → 2/${c.body.cluesTotal}: "${c.body.clues[1]}"`);
   check((await call("POST", `/api/game/${sid}/answer`, { position: 1, optionId: "A" })).status === 400, "opción de letra en texto libre → 400");
-  const wrong = await call("POST", `/api/game/${sid}/answer`, { position: 1, text: "zzzz jugador inventado" });
-  check(wrong.status === 200 && wrong.body.isCorrect === false && wrong.body.correctLabel, `respuesta errónea → GOL ANULADO, era ${wrong.body.correctLabel}`);
+  // Un fallo con pistas pendientes no cierra la pregunta: destapa otra y no revela la respuesta.
+  const retry = await call("POST", `/api/game/${sid}/answer`, { position: 1, text: "zzzz jugador inventado" });
+  check(retry.status === 200 && retry.body.retry === true && retry.body.cluesUsed === 3 && !retry.body.correctLabel && !leaks(retry.body),
+    `fallo con pistas pendientes → nueva pista (3/${retry.body.cluesTotal}), sin revelar la respuesta`);
+  // Fallando hasta destapar todas, el último fallo sí es GOL ANULADO.
+  let wrong = retry;
+  for (let i = 0; i < 10 && wrong.body.retry; i++) {
+    wrong = await call("POST", `/api/game/${sid}/answer`, { position: 1, text: "zzzz jugador inventado" });
+  }
+  check(wrong.status === 200 && wrong.body.isCorrect === false && wrong.body.correctLabel, `fallo con todas las pistas → GOL ANULADO, era ${wrong.body.correctLabel}`);
   check((await call("POST", `/api/game/${sid}/clue`, { position: 1 })).status === 409, "no se pueden pedir pistas tras responder");
   // Segunda pregunta: respondemos con el apellido correcto obtenido de la primera no vale; probamos idempotencia.
   const again = await call("POST", `/api/game/${sid}/answer`, { position: 1, text: wrong.body.correctLabel });

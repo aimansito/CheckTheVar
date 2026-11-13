@@ -116,8 +116,8 @@ export function scoreClueAnswer(input: ClueScoreInput, config: ScoringConfig = S
 export type ModeRule = {
   /** Nombre en español. */
   name: string;
-  /** Bolsa de preguntas de la que se sirve. */
-  kind: "quiz" | "higher_lower" | "guess_player" | "career_path";
+  /** Bolsa de preguntas de la que se sirve ("retro" = tipo test de antes de 1995). */
+  kind: "quiz" | "retro" | "higher_lower" | "guess_player" | "career_path";
   /** Nº de preguntas por partida (null = sin límite). */
   questions: number | null;
   /** Tiempo por pregunta en ms. */
@@ -128,19 +128,25 @@ export type ModeRule = {
   endsOnMiss: boolean;
   /** Preguntas con pistas progresivas y respuesta escrita. */
   clues: boolean;
+  /** Partidas al día por jugador (null = sin límite propio: el reto diario y la liga ya son 1). */
+  playsPerDay: number | null;
   /** Disponible para jugar. */
   available: boolean;
 };
 
+/** Partidas al día en cada juego. De las de un mismo día, a los puntos totales solo suma la mejor. */
+export const PLAYS_PER_DAY = 2;
+
 export const MODE_RULES = {
-  daily: { name: "Reto diario", kind: "quiz", questions: 10, questionTimeMs: 20_000, durationMs: null, endsOnMiss: false, clues: false, available: true },
-  survival: { name: "Supervivencia", kind: "quiz", questions: null, questionTimeMs: 15_000, durationMs: null, endsOnMiss: true, clues: false, available: true },
-  "time-attack": { name: "Contrarreloj", kind: "quiz", questions: null, questionTimeMs: 10_000, durationMs: 90_000, endsOnMiss: false, clues: false, available: true },
-  "higher-lower": { name: "Más o menos", kind: "higher_lower", questions: null, questionTimeMs: 15_000, durationMs: null, endsOnMiss: true, clues: false, available: true },
-  "guess-player": { name: "Adivina el jugador", kind: "guess_player", questions: 5, questionTimeMs: 90_000, durationMs: null, endsOnMiss: false, clues: true, available: true },
-  "career-path": { name: "Trayectoria", kind: "career_path", questions: 5, questionTimeMs: 90_000, durationMs: null, endsOnMiss: false, clues: true, available: true },
-  grid: { name: "Grid", kind: "quiz", questions: 9, questionTimeMs: 60_000, durationMs: null, endsOnMiss: false, clues: false, available: false },
-  league: { name: "Jornada de liga", kind: "quiz", questions: 10, questionTimeMs: 20_000, durationMs: null, endsOnMiss: false, clues: false, available: true },
+  daily: { name: "Reto diario", kind: "quiz", questions: 10, questionTimeMs: 20_000, durationMs: null, endsOnMiss: false, clues: false, playsPerDay: null, available: true },
+  survival: { name: "Supervivencia", kind: "quiz", questions: null, questionTimeMs: 15_000, durationMs: null, endsOnMiss: true, clues: false, playsPerDay: PLAYS_PER_DAY, available: true },
+  "time-attack": { name: "Contrarreloj", kind: "quiz", questions: null, questionTimeMs: 10_000, durationMs: 90_000, endsOnMiss: false, clues: false, playsPerDay: PLAYS_PER_DAY, available: true },
+  "higher-lower": { name: "Más o menos", kind: "higher_lower", questions: null, questionTimeMs: 15_000, durationMs: null, endsOnMiss: true, clues: false, playsPerDay: PLAYS_PER_DAY, available: true },
+  "guess-player": { name: "Adivina el jugador", kind: "guess_player", questions: 5, questionTimeMs: 90_000, durationMs: null, endsOnMiss: false, clues: true, playsPerDay: PLAYS_PER_DAY, available: true },
+  "career-path": { name: "Trayectoria", kind: "career_path", questions: 5, questionTimeMs: 90_000, durationMs: null, endsOnMiss: false, clues: true, playsPerDay: PLAYS_PER_DAY, available: true },
+  retro: { name: "Retro", kind: "retro", questions: 10, questionTimeMs: 20_000, durationMs: null, endsOnMiss: false, clues: false, playsPerDay: PLAYS_PER_DAY, available: true },
+  grid: { name: "Grid", kind: "quiz", questions: 9, questionTimeMs: 60_000, durationMs: null, endsOnMiss: false, clues: false, playsPerDay: PLAYS_PER_DAY, available: false },
+  league: { name: "Jornada de liga", kind: "quiz", questions: 10, questionTimeMs: 20_000, durationMs: null, endsOnMiss: false, clues: false, playsPerDay: null, available: true },
 } as const satisfies Record<string, ModeRule>;
 
 export type ModeSlug = keyof typeof MODE_RULES;
@@ -155,7 +161,7 @@ export const DIFFICULTY_LEVELS = {
   aficionado: { name: "Aficionado", min: 1, max: 3, multiplier: 1.2, oldEra: false, hint: "Ves los partidos y te sabes las finales." },
   estrella: { name: "Estrella", min: 2, max: 4, multiplier: 1.4, oldEra: false, hint: "Goleadores, fichajes y premios de cada año." },
   leyenda: { name: "Leyenda", min: 3, max: 5, multiplier: 1.7, oldEra: false, hint: "Datos que solo recuerdan los muy futboleros." },
-  historico: { name: "Histórico", min: 4, max: 5, multiplier: 2, oldEra: true, hint: "Lo más difícil, con mucho fútbol de antes de 1990." },
+  historico: { name: "Histórico", min: 4, max: 5, multiplier: 2, oldEra: true, hint: "Lo más difícil. También mezcla fútbol de antes de 1995." },
 } as const;
 
 export type DifficultyLevel = keyof typeof DIFFICULTY_LEVELS;

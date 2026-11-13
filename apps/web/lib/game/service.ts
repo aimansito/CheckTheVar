@@ -12,6 +12,7 @@ import {
   type AnswerInput,
   type DifficultyLevel,
   type ClueReveal,
+  type ClueRetry,
   type GameErrorCode,
   type GameModeSlug,
   type GameStart,
@@ -51,6 +52,7 @@ const SQL_ERRORS: Record<string, [GameErrorCode, number]> = {
   not_member: ["not_member", 403],
   matchday_closed: ["matchday_closed", 409],
   invalid_input: ["invalid_input", 400],
+  daily_limit: ["daily_limit", 429],
 };
 
 async function rpc<T>(fn: string, args: Record<string, unknown>): Promise<T> {
@@ -88,7 +90,7 @@ export async function startGame(input: StartGameInput, player: Player): Promise<
     // El reto diario es igual para todos: sin nivel.
     return rpc<GameStart>("game_start", {
       ...who(player), p_mode: "daily", p_kind: rule.kind, p_total: rule.questions, p_duration_ms: null,
-      p_level: null, p_min: null, p_max: null, p_old: false,
+      p_level: null, p_min: null, p_max: null, p_old: false, p_plays_per_day: null,
     });
   }
 
@@ -104,6 +106,7 @@ export async function startGame(input: StartGameInput, player: Player): Promise<
     p_min: d.min,
     p_max: d.max,
     p_old: d.oldEra,
+    p_plays_per_day: rule.playsPerDay,
   });
 }
 
@@ -158,8 +161,8 @@ export async function submitAnswer(
   sessionId: string,
   player: Player,
   input: AnswerInput,
-): Promise<VarVerdict> {
-  const sub = await rpc<SqlSubmit>("game_submit", {
+): Promise<VarVerdict | ClueRetry> {
+  const res = await rpc<SqlSubmit | ClueRetry>("game_submit", {
     p_session: sessionId,
     ...who(player),
     p_position: input.position,
@@ -167,6 +170,9 @@ export async function submitAnswer(
     p_text: input.timeout || input.text === undefined ? null : normalizeAnswer(input.text),
     p_lang: "es",
   });
+  // Fallo con pistas pendientes: no se puntúa todavía, sigue la misma pregunta.
+  if ("retry" in res) return res;
+  const sub = res;
 
   const mode: GameModeSlug = sub.mode in MODE_RULES ? sub.mode : "daily";
   const rule = MODE_RULES[mode];
