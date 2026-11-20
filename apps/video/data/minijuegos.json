@@ -1,0 +1,207 @@
+[
+  {
+    "slug": "06-torres-euro-2008",
+    "mode_label": "Reto diario",
+    "hook": "Viena 2008",
+    "hook_accent": "Eurocopa",
+    "category_label": "Eurocopa",
+    "question": {
+      "mode": "daily",
+      "prompt": "¿Quién marcó el gol de España en la final de la Euro 2008?",
+      "options": ["David Villa", "Fernando Torres", "Cesc Fàbregas"],
+      "correct_index": 1
+    },
+    "answer_title": "Fernando Torres",
+    "explanation_es": "Viena, 29 de junio de 2008: 1-0 a Alemania en el minuto 33. Primer gran título de España en 44 años.",
+    "reels": [],
+    "cta": "¿Acertaste? Juega el reto de hoy",
+    "source": "UEFA – Final de la Eurocopa 2008 (29/06/2008, Ernst Happel, Viena): Alemania 0-1 España, gol de Torres (33')."
+  },
+  {
+    "slug": "07-messi-91-goles",
+    "mode_label": "Reto diario",
+    "hook": "Año 2012",
+    "hook_accent": "Récord",
+    "category_label": "Récords",
+    "question": {
+      "mode": "daily",
+      "prompt": "¿Cuántos goles marcó Messi en el año 2012?",
+      "options": ["73", "86", "91"],
+      "correct_index": 2
+    },
+    "answer_title": "91 goles",
+    "explanation_es": "Con el Barça y Argentina en el año natural 2012. Superó los 85 de Gerd Müller en 1972.",
+    "reels": [],
+    "cta": "¿Acertaste? Juega el reto de hoy",
+    "source": "Guinness World Records – Más goles en un año natural: Lionel Messi, 91 (2012)."
+  },
+  {
+    "slug": "08-ronaldo-trayectoria",
+    "mode_label": "Trayectoria",
+    "hook": "¿Quién es?",
+    "hook_accent": "Trayectoria",
+    "category_label": "Leyendas",
+    "question": {
+      "mode": "career-path",
+      "prompt": "Sus clubes en Europa. ¿Quién es?",
+      "clubs": [
+        { "years": "1994–1996", "club": "PSV" },
+        { "years": "1996–1997", "club": "FC Barcelona" },
+        { "years": "1997–2002", "club": "Inter de Milán" },
+        { "years": "2002–2007", "club": "Real Madrid" },
+        { "years": "2007–2008", "club": "AC Milan" }
+      ]
+    },
+    "answer_title": "Ronaldo Nazário",
+    "explanation_es": "El Fenómeno: dos Balones de Oro (1997 y 2002) y dos Mundiales con Brasil (1994 y 2002).",
+    "reels": [],
+    "cta": "¿Acertaste? Juega a Trayectoria",
+    "source": "Historial oficial de PSV, FC Barcelona, Inter, Real Madrid y AC Milan; palmarés del Ballon d'Or y de la FIFA."
+  },
+  {
+    "slug": "09-beckham-trayectoria",
+    "mode_label": "Trayectoria",
+    "hook": "¿Quién es?",
+    "hook_accent": "Trayectoria",
+    "category_label": "Leyendas",
+    "question": {
+      "mode": "career-path",
+      "prompt": "Sus clubes, sin contar cesiones. ¿Quién es?",
+      "clubs": [
+        { "years": "1992–2003", "club": "Manchester United" },
+        { "years": "2003–2007", "club": "Real Madrid" },
+        { "years": "2007–2012", "club": "LA Galaxy" },
+        { "years": "2013", "club": "PSG" }
+      ]
+    },
+    "answer_title": "David Beckham",
+    "explanation_es": "Debutó con el United de Ferguson y se retiró en el PSG en 2013. Jugó cedido en el Milan en 2009 y 2010.",
+    "reels": [],
+    "cta": "¿Acertaste? Juega a Trayectoria",
+    "source": "Historial oficial de Manchester United, Real Madrid, LA Galaxy y PSG."
+  },
+  {
+    "slug": "10-cristiano-adivina",
+    "mode_label": "Adivina el jugador",
+    "hook": "Adivina",
+    "hook_accent": "el jugador",
+    "category_label": "Champions",
+    "question": {
+      "mode": "guess-player",
+      "prompt": "¿Quién es? Cada pista lo pone más fácil.",
+      "clues": [
+        "Debutó como profesional en el Sporting de Portugal",
+        "Ganó la Champions con dos clubes distintos",
+        "Campeón de la Eurocopa 2016 con su selección",
+        "Máximo goleador de la historia de la Champions"
+      ]
+    },
+    "answer_title": "Cristiano Ronaldo",
+    "explanation_es": "140 goles en la Champions y cinco títulos: uno con el Manchester United y cuatro con el Real Madrid.",
+    "reels": [],
+    "cta": "¿Acertaste? Juega a Adivina el jugador",
+    "source": "UEFA – Máximos goleadores históricos de la Champions League y palmarés por club. Comprobado el 03/11/2026."
+  },
+  {
+    "slug": "11-modric-adivina",
+    "mode_label": "Adivina el jugador",
+    "hook": "Adivina",
+    "hook_accent": "el jugador",
+    "category_label": "Leyendas",
+    "question": {
+      "mode": "guess-player",
+      "prompt": "¿Quién es? Cada pista lo pone más fácil.",
+      "clues": [
+        "Nació en Zadar (Croacia) en 1985",
+        "Llegó al Real Madrid desde el Tottenham en 2012",
+        "Subcampeón del mundo en 2018 con su selección",
+        "Balón de Oro 2018, entre Messi y Cristiano"
+      ]
+    },
+    "answer_title": "Luka Modrić",
+    "explanation_es": "Balón de Oro 2018 tras una década de Messi y Cristiano. Con el Real Madrid ganó seis Champions.",
+    "reels": [],
+    "cta": "¿Acertaste? Juega a Adivina el jugador",
+    "source": "France Football – Ballon d'Or 2018; Real Madrid – palmarés (Champions 2014, 2016, 2017, 2018, 2022 y 2024)."
+  },
+  {
+    "slug": "12-barca-supervivencia",
+    "mode_label": "Supervivencia",
+    "hook": "Leyendas",
+    "hook_accent": "del Barça",
+    "category_label": "FC Barcelona",
+    "question": {
+      "mode": "survival",
+      "questions": [
+        { "prompt": "¿Con qué dorsal jugaba Xavi en el Barça?", "options": ["6", "8", "10"], "correct_index": 0 },
+        { "prompt": "¿Quién entrenaba al Barça del triplete de 2009?", "options": ["Rijkaard", "Guardiola", "Luis Enrique"], "correct_index": 1 },
+        { "prompt": "¿Cuántas Champions ganó Messi con el Barça?", "options": ["3", "4", "5"], "correct_index": 1 }
+      ]
+    },
+    "answer_title": "4 Champions",
+    "explanation_es": "2006, 2009, 2011 y 2015. La final de 2006 se la perdió por lesión.",
+    "reels": [],
+    "cta": "¿Acertaste? Juega a Supervivencia",
+    "source": "FC Barcelona – palmarés oficial y fichas de Xavi Hernández, Pep Guardiola y Lionel Messi."
+  },
+  {
+    "slug": "13-mundiales-supervivencia",
+    "mode_label": "Supervivencia",
+    "hook": "Campeones",
+    "hook_accent": "del mundo",
+    "category_label": "Mundial",
+    "question": {
+      "mode": "survival",
+      "questions": [
+        { "prompt": "¿Quién ganó el Mundial de 2014?", "options": ["Argentina", "Alemania", "Países Bajos"], "correct_index": 1 },
+        { "prompt": "¿Quién ganó el Mundial de 2018?", "options": ["Croacia", "Bélgica", "Francia"], "correct_index": 2 },
+        { "prompt": "¿Qué selección tiene más Mundiales?", "options": ["Alemania", "Brasil", "Italia"], "correct_index": 1 }
+      ]
+    },
+    "answer_title": "Brasil",
+    "explanation_es": "Cinco títulos: 1958, 1962, 1970, 1994 y 2002. Alemania e Italia le siguen con cuatro.",
+    "reels": [],
+    "cta": "¿Acertaste? Juega a Supervivencia",
+    "source": "FIFA – Palmarés de la Copa Mundial (incluida la edición 2026, ganada por España). Comprobado el 03/11/2026."
+  },
+  {
+    "slug": "14-messi-cristiano-mas-o-menos",
+    "mode_label": "Más o menos",
+    "hook": "Goleadores",
+    "hook_accent": "¿Más o menos?",
+    "category_label": "Goles",
+    "question": {
+      "mode": "higher-lower",
+      "prompt": "¿Messi marcó MÁS o MENOS goles en el Barça que Cristiano en el Madrid?",
+      "reference": { "name": "Cristiano Ronaldo", "detail": "Real Madrid · 2009–2018", "value": "450 goles" },
+      "target": { "name": "Lionel Messi", "detail": "FC Barcelona · 2004–2021", "value": "?" },
+      "target_value": "672 goles",
+      "answer": "MÁS"
+    },
+    "answer_title": "Más: 672 goles",
+    "explanation_es": "Messi es el máximo goleador de la historia del Barça; Cristiano, el del Real Madrid con 450.",
+    "reels": [],
+    "cta": "¿Acertaste? Juega a Más o menos",
+    "source": "FC Barcelona y Real Madrid – máximos goleadores históricos en partidos oficiales."
+  },
+  {
+    "slug": "15-neymar-mas-o-menos",
+    "mode_label": "Más o menos",
+    "hook": "Fichajes",
+    "hook_accent": "¿Más o menos?",
+    "category_label": "Fichajes",
+    "question": {
+      "mode": "higher-lower",
+      "prompt": "¿El PSG pagó MÁS o MENOS por Neymar que por Mbappé?",
+      "reference": { "name": "Kylian Mbappé", "detail": "Mónaco → PSG · 2018", "value": "180 M€" },
+      "target": { "name": "Neymar", "detail": "Barça → PSG · 2017", "value": "?" },
+      "target_value": "222 M€",
+      "answer": "MÁS"
+    },
+    "answer_title": "Más: 222 M€",
+    "explanation_es": "El PSG pagó la cláusula de Neymar en 2017: sigue siendo el fichaje más caro de la historia.",
+    "reels": [],
+    "cta": "¿Acertaste? Juega a Más o menos",
+    "source": "Comunicados oficiales FC Barcelona / PSG (agosto de 2017). Récord vigente comprobado el 03/11/2026."
+  }
+]

@@ -14,6 +14,8 @@ next-env.d.ts
 
 # Vídeos renderizados (se regeneran con pnpm --filter video render)
 apps/video/out/
+videos-tiktok/
+apps/video/public/clips/
 
 # Secretos: nunca se suben
 .env*

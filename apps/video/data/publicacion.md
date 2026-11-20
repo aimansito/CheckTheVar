@@ -17,35 +17,35 @@ Calendario sugerido (series fijas del guion):
 
 ## 01 · Mundial — `01-mundial-espana.mp4`
 **Pie:**
-> España ya tiene dos Mundiales… pero ¿en qué año ganó el primero? Dímelo en comentarios ⬇️ Reto diario en checkthevar.es
+> España ya tiene dos Mundiales… pero ¿en qué año ganó el primero? Dímelo en comentarios ⬇️ Reto diario en checkthevar.app
 > #futbol #quizfutbol #checkthevar #mundial #seleccionespañola #iniesta
 
 **Comentario fijado:** ¿Qué respondiste? A, B o C 👇
 
 ## 02 · Champions — `02-champions-goleador.mp4`
 **Pie:**
-> El máximo goleador de la historia de la Champions… ¿lo sabías? ⬇️ Reto diario en checkthevar.es
+> El máximo goleador de la historia de la Champions… ¿lo sabías? ⬇️ Reto diario en checkthevar.app
 > #futbol #quizfutbol #checkthevar #champions #cristianoronaldo #messi
 
 **Comentario fijado:** ¿Qué respondiste? A, B o C 👇
 
 ## 03 · Balón de Oro — `03-balon-de-oro.mp4`
 **Pie:**
-> Messi o Cristiano: ¿quién tiene más Balones de Oro? Dímelo en comentarios ⬇️ Reto diario en checkthevar.es
+> Messi o Cristiano: ¿quién tiene más Balones de Oro? Dímelo en comentarios ⬇️ Reto diario en checkthevar.app
 > #futbol #quizfutbol #checkthevar #balondeoro #messi #cristianoronaldo
 
 **Comentario fijado:** ¿Qué respondiste? A, B o C 👇 (y sin peleas, que esto es un quiz 😅)
 
 ## 04 · Fichajes — `04-fichaje-mas-caro.mp4`
 **Pie:**
-> ¿Cuál es el fichaje más caro de la historia? Dímelo en comentarios ⬇️ Reto diario en checkthevar.es
+> ¿Cuál es el fichaje más caro de la historia? Dímelo en comentarios ⬇️ Reto diario en checkthevar.app
 > #futbol #quizfutbol #checkthevar #fichajes #neymar #mercadodefichajes
 
 **Comentario fijado:** ¿Qué respondiste? A, B o C 👇
 
 ## 05 · Leyendas — `05-leyendas-barca-madrid.mp4`
 **Pie:**
-> Jugó en el Barça y en el Madrid… ¿quién es? Dímelo en comentarios ⬇️ Reto diario en checkthevar.es
+> Jugó en el Barça y en el Madrid… ¿quién es? Dímelo en comentarios ⬇️ Reto diario en checkthevar.app
 > #futbol #quizfutbol #checkthevar #elclasico #figo #leyendas
 
 **Comentario fijado:** ¿Qué respondiste? A, B o C 👇 ¿Se te ocurre otro que jugara en los dos?

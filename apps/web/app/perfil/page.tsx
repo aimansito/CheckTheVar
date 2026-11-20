@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { DifficultyForm } from "@/components/leagues/LeagueForms";
+import { isCurrentUserAdmin } from "@/lib/admin";
 import { getCurrentProfile, getModeStats, getTrophies } from "@/lib/auth";
 import { signOut } from "@/lib/auth-actions";
 import { MODES } from "@/lib/game/modes";
@@ -28,7 +29,7 @@ export default function ProfilePage({ searchParams }: PageProps<"/perfil">) {
 async function Profile({ searchParams }: { searchParams: PageProps<"/perfil">["searchParams"] }) {
   const [profile, params] = await Promise.all([getCurrentProfile(), searchParams]);
   if (!profile) redirect("/entrar");
-  const [modeStats, trophies] = await Promise.all([getModeStats(), getTrophies()]);
+  const [modeStats, trophies, isAdmin] = await Promise.all([getModeStats(), getTrophies(), isCurrentUserAdmin(profile.id)]);
 
   const accuracy = profile.answersTotal ? Math.round((profile.answersCorrect / profile.answersTotal) * 100) : null;
   const stats = [
@@ -49,6 +50,18 @@ async function Profile({ searchParams }: { searchParams: PageProps<"/perfil">["s
       )}
       {params.contrasena && (
         <div className="mb-6 rounded-2xl border border-var bg-ok-bg p-4 text-sm font-semibold">Contraseña cambiada. Ya puedes seguir jugando.</div>
+      )}
+      {isAdmin && (
+        <Link
+          href="/admin"
+          className="mb-6 flex items-center justify-between rounded-2xl border border-var/60 bg-ok-bg/50 px-5 py-4 font-semibold hover:border-var"
+        >
+          <span>
+            <span className="mr-2 rounded bg-var px-1.5 py-0.5 text-xs font-bold uppercase text-bg">Admin</span>
+            Panel de administración
+          </span>
+          <span className="text-var">Entrar →</span>
+        </Link>
       )}
       <p className="text-sm font-semibold uppercase tracking-wider text-var">Mi perfil</p>
       <h1 className="font-display text-5xl uppercase">@{profile.username}</h1>

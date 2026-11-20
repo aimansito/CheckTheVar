@@ -12,6 +12,7 @@ import {
   useVideoConfig,
 } from "remotion";
 import { CONTENT_WIDTH, SAFE, T, colors, fonts } from "./brand";
+import { Background } from "./components/Background";
 import { CheckTheVarButton } from "./components/CheckTheVarButton";
 import { Corners, Logo, Scanlines, VarMonitor } from "./components/Logo";
 import type { QuizItem } from "./types";
@@ -45,61 +46,6 @@ export const QuizShort: React.FC<QuizShortProps> = ({ item }) => {
       <Outro item={item} />
 
       <Sfx />
-    </AbsoluteFill>
-  );
-};
-
-/* ───────────────────────── Fondo ───────────────────────── */
-
-const Background: React.FC = () => {
-  const frame = useCurrentFrame();
-  const drift = Math.sin(frame / 40) * 30;
-  return (
-    <AbsoluteFill>
-      {/* Brillo verde como en la landing */}
-      <div
-        style={{
-          position: "absolute",
-          width: 1400,
-          height: 1400,
-          left: -520 + drift,
-          top: -620,
-          background: "radial-gradient(circle, rgba(57,226,122,0.16) 0%, rgba(57,226,122,0) 62%)",
-        }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          width: 1200,
-          height: 1200,
-          right: -600 - drift,
-          bottom: -500,
-          background: "radial-gradient(circle, rgba(57,226,122,0.08) 0%, rgba(57,226,122,0) 60%)",
-        }}
-      />
-      {/* Líneas de campo muy sutiles */}
-      <div
-        style={{
-          position: "absolute",
-          left: 540 - 330,
-          top: 960 - 330,
-          width: 660,
-          height: 660,
-          borderRadius: "50%",
-          border: "3px solid rgba(244,247,245,0.035)",
-        }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          left: 0,
-          right: 0,
-          top: 958,
-          height: 3,
-          background: "rgba(244,247,245,0.035)",
-        }}
-      />
-      <Scanlines opacity={0.35} />
     </AbsoluteFill>
   );
 };
@@ -713,7 +659,7 @@ const Outro: React.FC<{ item: QuizItem }> = ({ item }) => {
           boxShadow: "0 0 60px rgba(57,226,122,0.35)",
         }}
       >
-        checkthevar.es
+        checkthevar.app
       </div>
     </div>
   );

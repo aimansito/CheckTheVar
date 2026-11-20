@@ -7,12 +7,14 @@ import {
   guestCookieOptions,
   newGuestToken,
 } from "@/lib/game/guest-cookie";
+import { getSupabaseAdmin } from "@/lib/supabase/admin";
 
 /**
  * 1) Da cookie de invitado en las rutas de juego ANTES de que lleguen peticiones en paralelo
  *    (si no, dos `start` simultáneos crearían dos invitados distintos).
  * 2) Refresca la sesión de Supabase (renueva el token y reescribe cookies).
- * No decide permisos: eso lo hacen las rutas y la BD (RLS).
+ * 3) Corta el acceso a /admin a quien no sea admin. El resto de permisos los deciden las
+ *    rutas y la BD (RLS).
  */
 export async function proxy(request: NextRequest) {
   let guestToken: string | null = null;
@@ -43,8 +45,25 @@ export async function proxy(request: NextRequest) {
   });
 
   // Importante: no meter lógica entre createServerClient y getUser (lo pide @supabase/ssr).
-  await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  // Panel: se corta aquí para responder con el código correcto (las páginas lo vuelven a comprobar).
+  if (request.nextUrl.pathname === "/admin" || request.nextUrl.pathname.startsWith("/admin/")) {
+    if (!user) return NextResponse.redirect(new URL("/entrar?next=/admin", request.url));
+    if (!(await isAdmin(user.id))) {
+      const notFound = NextResponse.rewrite(new URL("/no-encontrada", request.url), { status: 404 });
+      for (const c of response.cookies.getAll()) notFound.cookies.set(c);
+      return notFound;
+    }
+  }
   return withGuest(response);
+}
+
+async function isAdmin(userId: string): Promise<boolean> {
+  const { data } = await getSupabaseAdmin().from("users").select("is_admin").eq("id", userId).maybeSingle();
+  return Boolean(data?.is_admin);
 }
 
 export const config = {

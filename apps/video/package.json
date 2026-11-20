@@ -6,6 +6,8 @@
   "scripts": {
     "studio": "remotion studio src/index.ts",
     "render": "node scripts/render.mjs",
+    "render:clips": "node scripts/render.mjs --clips",
+    "clips:prepare": "node scripts/prepare-clips.mjs",
     "sfx": "node scripts/make-sfx.mjs",
     "typecheck": "tsc --noEmit"
   },

@@ -108,3 +108,30 @@ export const newPasswordSchema = z
 
 export const OAUTH_PROVIDERS = ["google", "apple"] as const;
 export const oauthSchema = z.object({ provider: z.enum(OAUTH_PROVIDERS) });
+
+/* ───────── Panel de administración ───────── */
+
+export const QUESTION_STATUSES = ["draft", "review", "published", "retired"] as const;
+export type QuestionStatus = (typeof QUESTION_STATUSES)[number];
+
+export const adminQuestionUpdateSchema = z.object({
+  id: z.coerce.number().int().positive(),
+  status: z.enum(QUESTION_STATUSES),
+  difficulty: z.coerce.number().int().min(1).max(5),
+  note: z.string().trim().max(500).optional().default(""),
+});
+export type AdminQuestionUpdate = z.infer<typeof adminQuestionUpdateSchema>;
+
+export const adminReportSchema = z.object({
+  id: z.coerce.number().int().positive(),
+  resolution: z.enum(["resolved", "dismissed"]),
+});
+
+export const adminQuestionFiltersSchema = z.object({
+  estado: z.enum(QUESTION_STATUSES).optional().catch(undefined),
+  tipo: z.enum(["quiz", "higher_lower", "guess_player", "career_path"]).optional().catch(undefined),
+  q: z.string().trim().max(80).optional().catch(undefined),
+  orden: z.enum(["recientes", "dificiles", "faciles", "reportadas"]).optional().catch(undefined),
+  pagina: z.coerce.number().int().min(1).max(500).optional().catch(undefined),
+});
+export type AdminQuestionFilters = z.infer<typeof adminQuestionFiltersSchema>;

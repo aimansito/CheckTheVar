@@ -1,0 +1,148 @@
+[
+  {
+    "slug": "01-iniesta-mundial",
+    "mode_label": "Reto diario",
+    "hook": "Minuto 116",
+    "hook_accent": "Mundial 2010",
+    "category_label": "Mundial",
+    "question": {
+      "mode": "daily",
+      "prompt": "¿Quién marcó el gol de la final del Mundial 2010?",
+      "options": ["Xavi Hernández", "Andrés Iniesta", "David Villa"],
+      "correct_index": 1
+    },
+    "answer_title": "Andrés Iniesta",
+    "explanation_es": "Prórroga, minuto 116: 1-0 a Países Bajos en Johannesburgo y primer Mundial de España.",
+    "reels": [
+      {
+        "segments": [
+          { "src": "iniesta.mp4", "from": 4.2, "to": 7.9, "label": "Final del Mundial 2010 · 116'" },
+          { "src": "iniesta.mp4", "from": 10.9, "to": 11.38, "label": "Johannesburgo, 11 de julio de 2010" }
+        ]
+      }
+    ],
+    "cta": "¿Acertaste? Juega el reto de hoy",
+    "source": "FIFA – Final Sudáfrica 2010 (11/07/2010): España 1-0 Países Bajos, gol de Iniesta (116')."
+  },
+  {
+    "slug": "02-figo-trayectoria",
+    "mode_label": "Trayectoria",
+    "hook": "¿Quién es?",
+    "hook_accent": "Trayectoria",
+    "category_label": "Leyendas",
+    "question": {
+      "mode": "career-path",
+      "prompt": "Adivina al jugador por sus clubes.",
+      "clubs": [
+        { "years": "1989–1995", "club": "Sporting CP" },
+        { "years": "1995–2000", "club": "FC Barcelona" },
+        { "years": "2000–2005", "club": "Real Madrid" },
+        { "years": "2005–2009", "club": "Inter de Milán" }
+      ]
+    },
+    "answer_title": "Luís Figo",
+    "explanation_es": "Capitán del Barça y, en 2000, fichaje récord del Real Madrid por 10.000 millones de pesetas (unos 60 M€).",
+    "reels": [
+      {
+        "segments": [
+          { "src": "figobarca.mp4", "from": 15.5, "to": 18.25, "label": "FC Barcelona · 1995–2000" },
+          { "src": "figobarca.mp4", "from": 18.3, "to": 20.2, "label": "FC Barcelona · 1995–2000" },
+          { "src": "figobarca.mp4", "from": 23.2, "to": 23.9, "label": "Capitán del Barça" }
+        ]
+      },
+      {
+        "segments": [
+          { "src": "figomadrid.mp4", "from": 0.05, "to": 1.9, "label": "Real Madrid · 2000" },
+          { "src": "figomadrid.mp4", "from": 15.0, "to": 17.4, "label": "Vuelta al Camp Nou" },
+          { "src": "figomadrid.mp4", "from": 34.2, "to": 36.85, "label": "La afición del Barça" }
+        ]
+      }
+    ],
+    "cta": "¿Acertaste? Juega el reto de hoy",
+    "source": "Historial oficial de plantillas de Sporting CP, FC Barcelona, Real Madrid e Inter; traspaso de julio de 2000."
+  },
+  {
+    "slug": "03-zidane-adivina",
+    "mode_label": "Adivina el jugador",
+    "hook": "Adivina",
+    "hook_accent": "el jugador",
+    "category_label": "Champions",
+    "question": {
+      "mode": "guess-player",
+      "prompt": "¿Quién es? Cada pista lo pone más fácil.",
+      "clues": [
+        "Campeón del mundo en 1998 con su selección",
+        "Balón de Oro ese mismo año",
+        "Fichaje récord mundial en 2001",
+        "Su volea decidió una final de Champions"
+      ]
+    },
+    "answer_title": "Zinedine Zidane",
+    "explanation_es": "Glasgow, 15 de mayo de 2002: volea con la zurda al centro de Roberto Carlos. Real Madrid 2-1 Bayer Leverkusen.",
+    "reels": [
+      {
+        "segments": [
+          { "src": "zidane.mp4", "from": 6.4, "to": 8.6, "label": "Final de Champions 2002 · 45'" },
+          { "src": "zidane.mp4", "from": 33.9, "to": 35.8, "label": "Repetición" },
+          { "src": "zidane.mp4", "from": 10.4, "to": 11.42, "label": "Hampden Park, Glasgow" }
+        ]
+      }
+    ],
+    "cta": "¿Acertaste? Juega el reto de hoy",
+    "source": "UEFA – Final de la Champions League 2001-02 (15/05/2002), Hampden Park: Real Madrid 2-1 Bayer Leverkusen."
+  },
+  {
+    "slug": "04-sergi-roberto-supervivencia",
+    "mode_label": "Supervivencia",
+    "hook": "La remontada",
+    "hook_accent": "6-1 al PSG",
+    "category_label": "Champions",
+    "question": {
+      "mode": "survival",
+      "questions": [
+        { "prompt": "¿Cómo acabó la ida en París?", "options": ["3-0", "4-0", "5-0"], "correct_index": 1 },
+        { "prompt": "¿Quién marcó dos goles en la vuelta?", "options": ["Messi", "Neymar", "Suárez"], "correct_index": 1 },
+        { "prompt": "¿Quién marcó el 6-1 en el minuto 95?", "options": ["Leo Messi", "Sergi Roberto", "Gerard Piqué"], "correct_index": 1 }
+      ]
+    },
+    "answer_title": "Sergi Roberto",
+    "explanation_es": "8 de marzo de 2017, Camp Nou. Centro de Neymar y gol en el 95': 6-1 al PSG y remontada histórica.",
+    "reels": [
+      {
+        "segments": [
+          { "src": "sergi.mp4", "from": 2.4, "to": 5.2, "label": "Barça 6-1 PSG · 95'" },
+          { "src": "sergi.mp4", "from": 6.45, "to": 7.52, "label": "Camp Nou, 8 de marzo de 2017" }
+        ]
+      }
+    ],
+    "cta": "¿Acertaste? Juega el reto de hoy",
+    "source": "UEFA – Octavos de la Champions 2016-17: PSG 4-0 Barcelona (14/02/2017) y Barcelona 6-1 PSG (08/03/2017)."
+  },
+  {
+    "slug": "05-mbappe-mas-o-menos",
+    "mode_label": "Más o menos",
+    "hook": "Fichajes",
+    "hook_accent": "¿Más o menos?",
+    "category_label": "Fichajes",
+    "question": {
+      "mode": "higher-lower",
+      "prompt": "¿El Real Madrid pagó MÁS o MENOS por Mbappé que por Bellingham?",
+      "reference": { "name": "Jude Bellingham", "detail": "Dortmund → Real Madrid · 2023", "value": "103 M€" },
+      "target": { "name": "Kylian Mbappé", "detail": "PSG → Real Madrid · 2024", "value": "?" },
+      "target_value": "0 €",
+      "answer": "MENOS"
+    },
+    "answer_title": "Menos: 0 €",
+    "explanation_es": "Llegó libre en 2024 al acabar su contrato con el PSG. Presentado en un Bernabéu lleno el 16 de julio de 2024.",
+    "reels": [
+      {
+        "segments": [
+          { "src": "mbappe.mp4", "from": 10.3, "to": 11.2, "label": "Bernabéu · 16 de julio de 2024" },
+          { "src": "mbappe.mp4", "from": 7.8, "to": 10.2, "label": "Presentación" }
+        ]
+      }
+    ],
+    "cta": "¿Acertaste? Juega el reto de hoy",
+    "source": "Comunicados oficiales del Real Madrid (fichaje de Mbappé, 03/06/2024, libre; Bellingham, 14/06/2023, 103 M€)."
+  }
+]
