@@ -1,0 +1,208 @@
+[
+  {
+    "slug": "16-liverpool-estambul",
+    "mode_label": "Reto diario",
+    "hook": "Estambul 2005",
+    "hook_accent": "Champions",
+    "category_label": "Champions",
+    "question": {
+      "mode": "daily",
+      "prompt": "¿Qué equipo ganó la Champions de 2005 tras ir perdiendo 3-0 al descanso?",
+      "options": ["Chelsea", "Liverpool", "Manchester United"],
+      "correct_index": 1
+    },
+    "answer_title": "Liverpool",
+    "explanation_es": "Estambul, 25 de mayo de 2005: del 3-0 del Milan al 3-3 en seis minutos. Ganó en los penaltis.",
+    "reels": [],
+    "cta": "¿Acertaste? Juega el reto de hoy",
+    "source": "UEFA – Final de la Champions League 2005 (25/05/2005, Estadio Olímpico Atatürk): AC Milan 3-3 Liverpool, 2-3 en los penaltis."
+  },
+  {
+    "slug": "17-cannavaro-balon-de-oro",
+    "mode_label": "Reto diario",
+    "hook": "Año 2006",
+    "hook_accent": "Balón de Oro",
+    "category_label": "Balón de Oro",
+    "question": {
+      "mode": "daily",
+      "prompt": "¿Quién ganó el Balón de Oro 2006?",
+      "options": ["Thierry Henry", "Gianluigi Buffon", "Fabio Cannavaro"],
+      "correct_index": 2
+    },
+    "answer_title": "Fabio Cannavaro",
+    "explanation_es": "Capitán de la Italia campeona del mundo en 2006. Segundo fue Buffon y tercero Henry.",
+    "reels": [],
+    "cta": "¿Acertaste? Juega el reto de hoy",
+    "source": "France Football – Ballon d'Or 2006: 1.º Fabio Cannavaro, 2.º Gianluigi Buffon, 3.º Thierry Henry."
+  },
+  {
+    "slug": "18-henry-trayectoria",
+    "mode_label": "Trayectoria",
+    "hook": "¿Quién es?",
+    "hook_accent": "Trayectoria",
+    "category_label": "Leyendas",
+    "question": {
+      "mode": "career-path",
+      "prompt": "Sus clubes, sin contar cesiones. ¿Quién es?",
+      "clubs": [
+        { "years": "1994–1999", "club": "AS Mónaco" },
+        { "years": "1999", "club": "Juventus" },
+        { "years": "1999–2007", "club": "Arsenal" },
+        { "years": "2007–2010", "club": "FC Barcelona" },
+        { "years": "2010–2014", "club": "New York Red Bulls" }
+      ]
+    },
+    "answer_title": "Thierry Henry",
+    "explanation_es": "Máximo goleador de la historia del Arsenal con 228 goles. Campeón del mundo en 1998 con Francia.",
+    "reels": [],
+    "cta": "¿Acertaste? Juega a Trayectoria",
+    "source": "Historial oficial de AS Mónaco, Juventus, Arsenal (máximos goleadores), FC Barcelona y New York Red Bulls; FIFA – Mundial 1998."
+  },
+  {
+    "slug": "19-suarez-trayectoria",
+    "mode_label": "Trayectoria",
+    "hook": "¿Quién es?",
+    "hook_accent": "Trayectoria",
+    "category_label": "Delanteros",
+    "question": {
+      "mode": "career-path",
+      "prompt": "Sus clubes en Europa. ¿Quién es?",
+      "clubs": [
+        { "years": "2006–2007", "club": "Groningen" },
+        { "years": "2007–2011", "club": "Ajax" },
+        { "years": "2011–2014", "club": "Liverpool" },
+        { "years": "2014–2020", "club": "FC Barcelona" },
+        { "years": "2020–2022", "club": "Atlético de Madrid" }
+      ]
+    },
+    "answer_title": "Luis Suárez",
+    "explanation_es": "Dos Botas de Oro (2014 y 2016) y LaLiga 2020-21 con el Atlético, tras salir del Barça.",
+    "reels": [],
+    "cta": "¿Acertaste? Juega a Trayectoria",
+    "source": "Historial oficial de Groningen, Ajax, Liverpool, FC Barcelona y Atlético de Madrid; ESM – Bota de Oro 2013-14 y 2015-16."
+  },
+  {
+    "slug": "20-casillas-adivina",
+    "mode_label": "Adivina el jugador",
+    "hook": "Adivina",
+    "hook_accent": "el jugador",
+    "category_label": "Selección",
+    "question": {
+      "mode": "guess-player",
+      "prompt": "¿Quién es? Cada pista lo pone más fácil.",
+      "clues": [
+        "Portero formado en la cantera del Real Madrid",
+        "Terminó su carrera en el Oporto",
+        "Capitán de España en la Euro 2008 y la Euro 2012",
+        "Levantó la Copa del Mundo en Johannesburgo"
+      ]
+    },
+    "answer_title": "Iker Casillas",
+    "explanation_es": "Capitán de la España de Euro 2008, Mundial 2010 y Euro 2012. Jugó en el Madrid de 1999 a 2015.",
+    "reels": [],
+    "cta": "¿Acertaste? Juega a Adivina el jugador",
+    "source": "RFEF – palmarés de la selección; Real Madrid y FC Porto – ficha de Iker Casillas."
+  },
+  {
+    "slug": "21-kaka-adivina",
+    "mode_label": "Adivina el jugador",
+    "hook": "Adivina",
+    "hook_accent": "el jugador",
+    "category_label": "Balón de Oro",
+    "question": {
+      "mode": "guess-player",
+      "prompt": "¿Quién es? Cada pista lo pone más fácil.",
+      "clues": [
+        "Nació en Brasilia en 1982",
+        "Fichó por el Milan desde el São Paulo en 2003",
+        "Campeón de Europa con el Milan en 2007",
+        "Balón de Oro 2007"
+      ]
+    },
+    "answer_title": "Kaká",
+    "explanation_es": "Balón de Oro 2007, el último antes de la década de Messi y Cristiano. Luego jugó en el Real Madrid.",
+    "reels": [],
+    "cta": "¿Acertaste? Juega a Adivina el jugador",
+    "source": "France Football – Ballon d'Or 2007 y siguientes; AC Milan – ficha de Kaká; UEFA – Final de Champions 2007."
+  },
+  {
+    "slug": "22-decima-supervivencia",
+    "mode_label": "Supervivencia",
+    "hook": "La Décima",
+    "hook_accent": "Lisboa 2014",
+    "category_label": "Champions",
+    "question": {
+      "mode": "survival",
+      "questions": [
+        { "prompt": "¿En qué ciudad se jugó la final de la Décima?", "options": ["Madrid", "Lisboa", "Milán"], "correct_index": 1 },
+        { "prompt": "¿Contra quién jugó el Real Madrid esa final?", "options": ["Atlético", "Juventus", "Bayern"], "correct_index": 0 },
+        { "prompt": "¿Quién marcó el 1-1 en el descuento?", "options": ["Bale", "Cristiano", "Sergio Ramos"], "correct_index": 2 }
+      ]
+    },
+    "answer_title": "Sergio Ramos",
+    "explanation_es": "Cabezazo en el 92:48 para forzar la prórroga. El Madrid ganó 4-1 y levantó su décima Copa de Europa.",
+    "reels": [],
+    "cta": "¿Acertaste? Juega a Supervivencia",
+    "source": "UEFA – Final de la Champions League 2014 (24/05/2014, Estádio da Luz, Lisboa): Real Madrid 4-1 Atlético de Madrid (pr.)."
+  },
+  {
+    "slug": "23-laliga-supervivencia",
+    "mode_label": "Supervivencia",
+    "hook": "Récords",
+    "hook_accent": "de LaLiga",
+    "category_label": "LaLiga",
+    "question": {
+      "mode": "survival",
+      "questions": [
+        { "prompt": "¿Quién es el máximo goleador de la historia de LaLiga?", "options": ["Cristiano", "Telmo Zarra", "Messi"], "correct_index": 2 },
+        { "prompt": "¿Quién ganó LaLiga 2013-14 en el Camp Nou en la última jornada?", "options": ["Atlético", "Real Madrid", "Barça"], "correct_index": 0 },
+        { "prompt": "¿Con cuántos puntos ganó LaLiga el Madrid de Mourinho en 2011-12?", "options": ["96", "100", "102"], "correct_index": 1 }
+      ]
+    },
+    "answer_title": "100 puntos",
+    "explanation_es": "Primer equipo en llegar a 100 puntos en LaLiga. El Barça lo igualó la temporada siguiente.",
+    "reels": [],
+    "cta": "¿Acertaste? Juega a Supervivencia",
+    "source": "LaLiga – clasificaciones 2011-12, 2012-13 y 2013-14; máximos goleadores históricos (Messi, 474)."
+  },
+  {
+    "slug": "24-klose-mas-o-menos",
+    "mode_label": "Más o menos",
+    "hook": "Mundiales",
+    "hook_accent": "¿Más o menos?",
+    "category_label": "Mundial",
+    "question": {
+      "mode": "higher-lower",
+      "prompt": "¿Klose marcó MÁS o MENOS goles en Mundiales que Ronaldo Nazário?",
+      "reference": { "name": "Ronaldo Nazário", "detail": "Brasil · 1998–2006", "value": "15 goles" },
+      "target": { "name": "Miroslav Klose", "detail": "Alemania · 2002–2014", "value": "?" },
+      "target_value": "16 goles",
+      "answer": "MÁS"
+    },
+    "answer_title": "Más: 16 goles",
+    "explanation_es": "Lo superó en el 7-1 a Brasil, en la semifinal de 2014, y después ganó el Mundial.",
+    "reels": [],
+    "cta": "¿Acertaste? Juega a Más o menos",
+    "source": "FIFA – goleadores de la Copa Mundial: Miroslav Klose 16 (2002–2014), Ronaldo 15 (1998–2006)."
+  },
+  {
+    "slug": "25-pichichis-mas-o-menos",
+    "mode_label": "Más o menos",
+    "hook": "Pichichis",
+    "hook_accent": "¿Más o menos?",
+    "category_label": "LaLiga",
+    "question": {
+      "mode": "higher-lower",
+      "prompt": "¿Telmo Zarra ganó MÁS o MENOS Pichichis que Messi?",
+      "reference": { "name": "Lionel Messi", "detail": "FC Barcelona · 2004–2021", "value": "8 Pichichis" },
+      "target": { "name": "Telmo Zarra", "detail": "Athletic · 1940–1955", "value": "?" },
+      "target_value": "6 Pichichis",
+      "answer": "MENOS"
+    },
+    "answer_title": "Menos: 6 Pichichis",
+    "explanation_es": "La leyenda del Athletic tuvo el récord más de 60 años, hasta el séptimo de Messi en 2019-20.",
+    "reels": [],
+    "cta": "¿Acertaste? Juega a Más o menos",
+    "source": "LaLiga / Diario MARCA – palmarés del Trofeo Pichichi: Messi 8, Zarra 6."
+  }
+]

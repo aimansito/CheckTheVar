@@ -1,13 +1,10 @@
 import Link from "next/link";
+import { Suspense } from "react";
+import { GameTiles } from "@/components/game/GameTiles";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Corners } from "@/components/brand/Logo";
-import { MODES as GAME_MODES } from "@/lib/game/modes";
-
-const MODES = [
-  ...GAME_MODES.filter((m) => m.available).map((m) => ({ name: m.name, desc: m.tagline, free: m.free, href: `/jugar/${m.path}`, star: false })),
-  { name: "Liga por temporada", desc: "Compite cada semana con tus amigos. Jornadas temáticas.", free: false, href: "/ligas", star: true },
-];
+import { getCurrentProfile, getModeStats } from "@/lib/auth";
 
 const STANDINGS = [
   { pos: 1, name: "Jugador 1", pts: 2840, form: "▲" },
@@ -24,8 +21,7 @@ export default function HomePage() {
     <>
       <SiteHeader />
       <main className="flex-1">
-        <Hero />
-        <Modes />
+        <Games />
         <Leagues />
         <HowItWorks />
         <FinalCta />
@@ -35,111 +31,30 @@ export default function HomePage() {
   );
 }
 
-function Hero() {
+function Games() {
   return (
-    <section className="glow-top">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-20 pt-14 md:grid-cols-[1.25fr_1fr] md:pt-20">
-        <div>
-          <span className="inline-block rounded-md bg-var px-2.5 py-1 text-xs font-extrabold uppercase tracking-wider text-bg">
-            Reto diario disponible
-          </span>
-          <h1 className="mt-5 font-display text-5xl uppercase leading-[0.95] sm:text-7xl">
-            ¿Sabes de fútbol?
-            <br />
-            <span className="text-var">Que lo diga el VAR.</span>
+    <section id="juegos" className="glow-top scroll-mt-24 sm:scroll-mt-28">
+      <div className="mx-auto max-w-6xl px-4 pb-16 pt-8 sm:pt-12">
+        <div className="mb-6 text-center sm:mb-8">
+          <h1 className="font-display text-4xl uppercase leading-none sm:text-6xl">
+            Juegos de fútbol <span className="text-var">cada día</span>
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-muted">
-            Retos diarios, rachas y ligas con tus amigos. Responde, pulsa CHECK THE VAR y descubre si es
-            gol confirmado.
+          <p className="mt-3 text-muted">
+            Responde, pulsa CHECK THE VAR y descubre si es gol. Sin cuenta: el reto diario. Con cuenta gratis: todos.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/jugar/diario"
-              className="rounded-xl bg-var px-6 py-3.5 font-bold text-bg transition hover:brightness-110"
-            >
-              Jugar el reto de hoy
-            </Link>
-            <Link
-              href="/ligas"
-              className="rounded-xl border border-line bg-surface px-6 py-3.5 font-bold transition hover:border-var"
-            >
-              Crear liga
-            </Link>
-          </div>
-          <p className="mt-4 text-sm text-muted">Sin registro: juega 1 reto al día. Con cuenta gratis: juegos, rachas y ligas.</p>
         </div>
-        <PhoneMock />
+        <Suspense fallback={<GameTiles bests={null} loggedIn={false} />}>
+          <GamesWithStats />
+        </Suspense>
       </div>
     </section>
   );
 }
 
-/** Maqueta del juego (ilustrativa, no interactiva). */
-function PhoneMock() {
-  return (
-    <div className="mx-auto w-full max-w-[330px] rounded-[2.2rem] border border-line bg-bezel p-3 shadow-[0_40px_120px_rgba(0,0,0,0.6)]">
-      <div className="rounded-[1.7rem] bg-bg p-5">
-        <div className="flex items-center justify-between text-xs font-semibold text-muted">
-          <span>Pregunta 4/10</span>
-          <span className="text-var">⏱ 12 s</span>
-        </div>
-        <p className="mt-4 text-lg font-bold leading-snug">¿Qué selección ganó el Mundial de 2010?</p>
-        <div className="mt-4 space-y-2 text-sm font-semibold">
-          <div className="rounded-xl border border-line bg-surface px-4 py-3">Países Bajos</div>
-          <div className="rounded-xl border-2 border-var bg-ok-bg px-4 py-3">España</div>
-          <div className="rounded-xl border border-line bg-surface px-4 py-3">Alemania</div>
-        </div>
-        <div className="mt-4 flex items-center justify-center gap-2 rounded-xl bg-text py-3 font-display text-xl text-bg">
-          CHECK THE <span className="rounded-md bg-screen px-2 text-var">VAR</span>
-        </div>
-        <div className="mt-3 rounded-xl bg-var py-2.5 text-center font-display text-xl text-bg">
-          GOL CONFIRMADO <span className="font-sans text-sm font-extrabold">+142</span>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Modes() {
-  return (
-    <section id="modos" className="scroll-mt-24 sm:scroll-mt-28 border-y border-line/60 bg-surface/40">
-      <div className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="font-display text-4xl uppercase">Modos de juego</h2>
-        <p className="mt-2 text-muted">Partidas cortas para cada día y retos para los que de verdad saben.</p>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {MODES.map((m) => {
-            const card = (
-              <div
-                className={`h-full rounded-2xl border bg-surface p-5 transition ${
-                  m.free ? "border-var/60 hover:border-var" : "border-line hover:border-var"
-                } ${m.star ? "bg-gradient-to-br from-ok-bg/60 to-surface" : ""}`}
-              >
-                <div className="flex items-start justify-between gap-3">
-                  <h3 className="font-display text-2xl uppercase">{m.name}</h3>
-                  <span
-                    className={`shrink-0 rounded-md px-2 py-0.5 text-[11px] font-extrabold uppercase ${
-                      m.free ? "bg-var text-bg" : "border border-line text-muted"
-                    }`}
-                  >
-                    {m.free ? "Gratis" : "Con cuenta"}
-                  </span>
-                </div>
-                <p className="mt-2 text-sm text-muted">{m.desc}</p>
-                {m.href && <p className="mt-4 text-sm font-bold text-var">{m.star ? "Ver ligas →" : m.free ? "Jugar ahora →" : "Jugar con cuenta →"}</p>}
-              </div>
-            );
-            return m.href ? (
-              <Link key={m.name} href={m.href}>
-                {card}
-              </Link>
-            ) : (
-              <div key={m.name}>{card}</div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  );
+async function GamesWithStats() {
+  const profile = await getCurrentProfile();
+  const bests = profile ? await getModeStats() : null;
+  return <GameTiles bests={bests} loggedIn={Boolean(profile)} />;
 }
 
 function Leagues() {

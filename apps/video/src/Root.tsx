@@ -7,9 +7,10 @@ import { assertQuizItem, type QuizItem } from "./types";
 import clips from "../data/clips.json";
 import lote from "../data/lote.json";
 import minijuegos from "../data/minijuegos.json";
+import minijuegos2 from "../data/minijuegos-2.json";
 
 const items: QuizItem[] = (lote as unknown[]).map(assertQuizItem);
-const clipItems: ClipItem[] = [...(clips as unknown[]), ...(minijuegos as unknown[])].map(assertClipItem);
+const clipItems: ClipItem[] = [...(clips as unknown[]), ...(minijuegos as unknown[]), ...(minijuegos2 as unknown[])].map(assertClipItem);
 
 export const RemotionRoot: React.FC = () => {
   return (

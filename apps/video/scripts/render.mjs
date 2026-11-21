@@ -4,7 +4,7 @@
 //      npm run render -- --props=./data/otro.json
 //      npm run render -- --only=03-balon-de-oro
 //      npm run render -- --covers             → portadas/*.png
-//      npm run render -- --stills             → stills/*.png (revisión); --frames=30,120,300 elige cuáles
+//      npm run render -- --stills             → stills/*.png (revisión); --frames=30,120,-130 elige cuáles (negativo = desde el final)
 import { bundle } from "@remotion/bundler";
 import { renderMedia, renderStill, selectComposition } from "@remotion/renderer";
 import { mkdirSync, readFileSync } from "node:fs";
@@ -45,7 +45,8 @@ for (const item of items) {
   if (stillsOnly) {
     // Fotogramas clave para revisar el diseño sin renderizar el vídeo entero.
     for (const f of frames) {
-      const frame = Math.min(f, composition.durationInFrames - 1);
+      // Negativo = contando desde el final (útil porque cada vídeo dura distinto).
+      const frame = Math.min(f < 0 ? composition.durationInFrames + f : f, composition.durationInFrames - 1);
       await renderStill({ composition, serveUrl, inputProps, frame, output: join(outDir, "stills", `${item.slug}-${frame}.png`) });
     }
     console.log(`✓ fotogramas de ${item.slug}`);
